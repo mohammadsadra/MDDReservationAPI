@@ -3,6 +3,7 @@ using System;
 using MDDReservationAPI.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MDDReservationAPI.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230913075035_ChangeSchoolEntity")]
+    partial class ChangeSchoolEntity
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "7.0.10");
@@ -197,7 +200,7 @@ namespace MDDReservationAPI.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2023, 9, 13, 7, 52, 36, 43, DateTimeKind.Utc).AddTicks(4242),
+                            CreatedAt = new DateTime(2023, 9, 13, 7, 50, 35, 479, DateTimeKind.Utc).AddTicks(4551),
                             Email = "mohammadsadrahaeri@gmail.com",
                             IsVerify = true,
                             Name = "MohammadSadra Haeri",
@@ -214,6 +217,11 @@ namespace MDDReservationAPI.Migrations
                         .IsRequired()
                         .HasMaxLength(200)
                         .HasColumnType("TEXT");
+
+                    b.Property<int>("SchoolId")
+                        .HasColumnType("INTEGER");
+
+                    b.HasIndex("SchoolId");
 
                     b.HasDiscriminator().HasValue("Manager");
                 });
@@ -284,6 +292,17 @@ namespace MDDReservationAPI.Migrations
                     b.HasOne("MDDReservationAPI.Models.School", null)
                         .WithMany("SchoolClasses")
                         .HasForeignKey("SchoolId");
+                });
+
+            modelBuilder.Entity("MDDReservationAPI.Models.Manager", b =>
+                {
+                    b.HasOne("MDDReservationAPI.Models.School", "School")
+                        .WithMany()
+                        .HasForeignKey("SchoolId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("School");
                 });
 
             modelBuilder.Entity("MDDReservationAPI.Models.Student", b =>

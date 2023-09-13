@@ -12,9 +12,4 @@ public class Manager : User
     
     [MaxLength(200)]
     public string Position { get; set; }
-    
-    // Relation
-    [ForeignKey("SchoolId")]
-    public School? School { get; set; }
-    public int SchoolId { get; set; }
 }

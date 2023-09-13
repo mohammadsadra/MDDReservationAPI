@@ -18,9 +18,14 @@ public class School
 
     [MaxLength(2)]
     public int? Gender { get; set; }
-    
+
+    // Relation
+    [ForeignKey("ManagerId")]
+    public Manager? manager { get; set; }
+    public int ManagerId { get; set; }
+
     [DataType(DataType.DateTime)]
-    public string CreatedAt { get; set; }
+    public DateTime CreatedAt { get; set; }
     
     public ICollection<SchoolClass>? SchoolClasses { get; set; }
 }

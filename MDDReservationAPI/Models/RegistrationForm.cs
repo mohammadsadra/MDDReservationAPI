@@ -19,6 +19,9 @@ public class RegistrationForm
     [Required]
     public SchoolClass SchoolClass { get; set; }
     
-
     public Project? Project { get; set; }
+
+    [Required]
+    [DataType(DataType.DateTime)]
+    public DateTime CreatedAt { get; set; }
 }

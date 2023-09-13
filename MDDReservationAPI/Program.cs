@@ -1,4 +1,5 @@
 ﻿using MDDReservationAPI.Data;
+using MDDReservationAPI.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
 
@@ -21,10 +22,12 @@ builder.Services.AddControllers(option =>
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddDbContext<ApplicationDbContext>(option =>
 {
     option.UseSqlite(builder.Configuration["ConnectionStrings:DefaultConnection"]);
 });
+builder.Services.AddScoped<IMDDReservationRepository, MDDReservationRepository>();
 
 var app = builder.Build();
 

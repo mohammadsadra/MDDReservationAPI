@@ -19,7 +19,7 @@ public class Project
     
     
     [DataType(DataType.DateTime)]
-    public string CreatedAt { get; set; }
+    public DateTime CreatedAt { get; set; }
     
     public ICollection<Student>? Students { get; set; }
 }
