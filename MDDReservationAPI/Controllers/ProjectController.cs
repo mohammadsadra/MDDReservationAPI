@@ -13,7 +13,7 @@ namespace MDDReservationAPI.Controllers
         private readonly IMapper _mapper;
         private readonly IMDDReservationRepository _reservationRepository;
 
-        public SchoolController(ILogger<ProjectController> logger, IMapper mapper, IMDDReservationRepository mddReservationRepository)
+        public ProjectController(ILogger<ProjectController> logger, IMapper mapper, IMDDReservationRepository mddReservationRepository)
         {
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
             _mapper = mapper ?? throw new ArgumentNullException(nameof(mapper));

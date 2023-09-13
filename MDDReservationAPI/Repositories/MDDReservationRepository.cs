@@ -40,9 +40,73 @@ namespace MDDReservationAPI.Repositories
 
         #endregion
 
+        #region Admin
+
+        public async Task<Admin> AddAdminAsync(Admin admin)
+        {
+            _context.Admins.Add(admin);
+            await SaveChangesAsync();
+
+            return admin;
+        }
+
+        #endregion
+
+        #region Student
+
+        public async Task<Student> AddStudentAsync(Student student)
+        {
+            _context.Students.Add(student);
+            await SaveChangesAsync();
+
+            return student;
+        }
+
+        #endregion
+
+        #region Project
+
+        public async Task<Project> AddProjectAsync(Project project)
+        {
+            _context.Projects.Add(project);
+            await SaveChangesAsync();
+
+            return project;
+        }
+
+        #endregion
+
+        #region SchoolClass
+
+        public async Task<SchoolClass> AddSchoolClassAsync(SchoolClass schoolClass)
+        {
+            _context.SchoolsClasses.Add(schoolClass);
+            await SaveChangesAsync();
+
+            return schoolClass;
+        }
+
+        #endregion
+
+        #region RegistrationForm
+
+        public async Task<RegistrationForm> AddProjectAsync(RegistrationForm registrationForm)
+        {
+            _context.RegistrationForms.Add(registrationForm);
+            await SaveChangesAsync();
+
+            return registrationForm;
+        }
+
+        #endregion
+
+        #region DB
+
         public async Task<bool> SaveChangesAsync()
         {
             return (await _context.SaveChangesAsync() > 0);
         }
+
+        #endregion
     }
 }
