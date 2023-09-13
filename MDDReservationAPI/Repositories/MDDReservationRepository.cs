@@ -90,7 +90,7 @@ namespace MDDReservationAPI.Repositories
 
         #region RegistrationForm
 
-        public async Task<RegistrationForm> AddProjectAsync(RegistrationForm registrationForm)
+        public async Task<RegistrationForm> AddRegistrationFormAsync(RegistrationForm registrationForm)
         {
             _context.RegistrationForms.Add(registrationForm);
             await SaveChangesAsync();

@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using MDDReservationAPI.DTO;
 using MDDReservationAPI.Models;
 using MDDReservationAPI.Repositories;
 using Microsoft.AspNetCore.Mvc;
@@ -7,7 +8,7 @@ namespace MDDReservationAPI.Controllers
 {
     [Route("schoolClass")]
     [ApiController]
-    public class SchoolClassController
+    public class SchoolClassController : ControllerBase
     {
         private readonly ILogger<SchoolClassController> _logger;
         private readonly IMapper _mapper;
@@ -19,5 +20,24 @@ namespace MDDReservationAPI.Controllers
             _mapper = mapper ?? throw new ArgumentNullException(nameof(mapper));
             _reservationRepository = mddReservationRepository ?? throw new ArgumentNullException(nameof(mddReservationRepository));
         }
+
+        #region POST
+        [HttpPost]
+        [Route("create")]
+        [Produces("application/json")]
+        public async Task<ActionResult<SchoolClass>> CreateSchoolClassAsync([FromBody] SchoolClassCreationDTO schoolClassCreationDto)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest();
+            }
+
+            var createdSchoolClass = _mapper.Map<SchoolClass>(schoolClassCreationDto);
+
+            var result = await _reservationRepository.AddSchoolClassAsync(createdSchoolClass);
+
+            return Ok(result);
+        }
+        #endregion
     }
 }

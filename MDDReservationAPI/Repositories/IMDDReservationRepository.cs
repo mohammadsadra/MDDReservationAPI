@@ -42,7 +42,7 @@ namespace MDDReservationAPI.Repositories
 
         #region RegistrationForm
 
-        Task<RegistrationForm> AddProjectAsync(RegistrationForm project);
+        Task<RegistrationForm> AddRegistrationFormAsync(RegistrationForm project);
 
         #endregion
 

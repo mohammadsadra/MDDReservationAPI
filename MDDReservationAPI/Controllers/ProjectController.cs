@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using MDDReservationAPI.DTO;
 using MDDReservationAPI.Models;
 using MDDReservationAPI.Repositories;
 using Microsoft.AspNetCore.Mvc;
@@ -19,5 +20,24 @@ namespace MDDReservationAPI.Controllers
             _mapper = mapper ?? throw new ArgumentNullException(nameof(mapper));
             _reservationRepository = mddReservationRepository ?? throw new ArgumentNullException(nameof(mddReservationRepository));
         }
+
+        #region POST
+        [HttpPost]
+        [Route("create")]
+        [Produces("application/json")]
+        public async Task<ActionResult<School>> CreateProjectAsync([FromBody] ProjectCreationDTO projectCreationDto)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest();
+            }
+
+            var createdProject = _mapper.Map<Project>(projectCreationDto);
+
+            var result = await _reservationRepository.AddProjectAsync(createdProject);
+
+            return Ok(result);
+        }
+        #endregion
     }
 }

@@ -21,6 +21,7 @@ namespace MDDReservationAPI.Controllers
             _reservationRepository = mddReservationRepository ?? throw new ArgumentNullException(nameof(mddReservationRepository));
         }
 
+        #region POST
         [HttpPost]
         [Route("create")]
         [Produces("application/json")]
@@ -31,22 +32,12 @@ namespace MDDReservationAPI.Controllers
                 return BadRequest();
             }
 
-            var createdManager = new Manager()
-            {
-                Name = managerDto.Name,
-                Password = managerDto.Password,
-                Email = managerDto.Email,
-                Phone = managerDto.Phone,
-                IsVerify = managerDto.IsVerify,
-                Position = managerDto.Position
-
-            };
+            var createdManager = _mapper.Map<Manager>(managerDto);
 
             var result = await _reservationRepository.AddManagerAsync(createdManager);
-            //await _reservationRepository.SaveChangesAsync();
-
 
             return Ok(result);
         }
+        #endregion
     }
 }

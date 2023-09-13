@@ -23,6 +23,8 @@ public class SchoolController : ControllerBase
     }
 
 
+    #region POST
+
     [HttpPost]
     [Route("create")]
     [Produces("application/json")]
@@ -39,4 +41,6 @@ public class SchoolController : ControllerBase
 
         return Ok(result);
     }
+
+    #endregion
 }

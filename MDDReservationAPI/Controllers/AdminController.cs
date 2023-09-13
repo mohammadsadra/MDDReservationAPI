@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using MDDReservationAPI.DTO;
 using MDDReservationAPI.Models;
 using MDDReservationAPI.Repositories;
 using Microsoft.AspNetCore.Mvc;
@@ -19,5 +20,26 @@ namespace MDDReservationAPI.Controllers
             _mapper = mapper ?? throw new ArgumentNullException(nameof(mapper));
             _reservationRepository = mddReservationRepository ?? throw new ArgumentNullException(nameof(mddReservationRepository));
         }
+
+        #region POST
+
+        [HttpPost]
+        [Route("create")]
+        [Produces("application/json")]
+        public async Task<ActionResult<School>> CreateAdminAsync([FromBody] AdminCreationDTO adminCreationDto)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest();
+            }
+
+            var createdAdmin = _mapper.Map<Admin>(adminCreationDto);
+            var result = await _reservationRepository.AddAdminAsync(createdAdmin);
+
+            return Ok(result);
+        }
+
+        #endregion
+
     }
 }
