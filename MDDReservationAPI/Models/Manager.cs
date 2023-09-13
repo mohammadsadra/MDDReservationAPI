@@ -8,6 +8,7 @@ public class Manager : User
     public Manager()
     {
         this.Role = (int) RoleEnum.Student;
+        this.CreatedAt = DateTime.UtcNow;
     }
     
     [MaxLength(200)]

@@ -3,6 +3,7 @@ using System;
 using MDDReservationAPI.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace MDDReservationAPI.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230913093157_AddNationalIdToStudent")]
+    partial class AddNationalIdToStudent
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "7.0.10");
@@ -116,6 +119,10 @@ namespace MDDReservationAPI.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("TEXT");
 
+                    b.Property<int?>("Gender")
+                        .HasMaxLength(2)
+                        .HasColumnType("INTEGER");
+
                     b.Property<int>("Grade")
                         .HasMaxLength(10)
                         .HasColumnType("INTEGER");
@@ -163,10 +170,6 @@ namespace MDDReservationAPI.Migrations
                         .HasMaxLength(200)
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("NationalId")
-                        .HasMaxLength(30)
-                        .HasColumnType("TEXT");
-
                     b.Property<string>("Password")
                         .HasMaxLength(200)
                         .HasColumnType("TEXT");
@@ -197,7 +200,7 @@ namespace MDDReservationAPI.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2023, 9, 13, 9, 46, 35, 85, DateTimeKind.Utc).AddTicks(9803),
+                            CreatedAt = new DateTime(2023, 9, 13, 9, 31, 57, 427, DateTimeKind.Utc).AddTicks(3045),
                             Email = "mohammadsadrahaeri@gmail.com",
                             IsVerify = true,
                             Name = "MohammadSadra Haeri",
@@ -221,6 +224,11 @@ namespace MDDReservationAPI.Migrations
             modelBuilder.Entity("MDDReservationAPI.Models.Student", b =>
                 {
                     b.HasBaseType("MDDReservationAPI.Models.User");
+
+                    b.Property<string>("NationalId")
+                        .IsRequired()
+                        .HasMaxLength(30)
+                        .HasColumnType("TEXT");
 
                     b.Property<int?>("ProjectId")
                         .HasColumnType("INTEGER");

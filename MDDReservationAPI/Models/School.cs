@@ -5,6 +5,11 @@ namespace MDDReservationAPI.Models;
 
 public class School
 {
+    public School()
+    {
+        this.CreatedAt = DateTime.UtcNow;
+    }
+
     [Key]
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public int Id { get; set; }

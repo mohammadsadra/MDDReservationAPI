@@ -5,6 +5,11 @@ namespace MDDReservationAPI.Models;
 
 public class SchoolClass
 {
+    public SchoolClass()
+    {
+        this.CreatedAt = DateTime.UtcNow;
+    }
+
     [Key]
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public int Id { get; set; }
@@ -18,9 +23,6 @@ public class SchoolClass
     
     [MaxLength(10)]
     public int ProgrammingLanguage { get; set; }
-
-    [MaxLength(2)]
-    public int? Gender { get; set; }
     
     [DataType(DataType.DateTime)]
     public DateTime CreatedAt { get; set; }

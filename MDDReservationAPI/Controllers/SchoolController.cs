@@ -24,6 +24,7 @@ public class SchoolController : ControllerBase
 
 
     [HttpPost]
+    [Route("create")]
     [Produces("application/json")]
     public async Task<ActionResult<School>> CreateSchoolAsync([FromBody] SchoolCreationDTO schoolDTO)
     {
@@ -32,24 +33,10 @@ public class SchoolController : ControllerBase
             return BadRequest();
         }
 
-        var createdSchool = new School()
-        {
-            Name = schoolDTO.Name,
-            CreatedAt = DateTime.UtcNow,
-            Gender = schoolDTO.Gender,
-            SchoolType = schoolDTO.SchoolType,
-        };
+        var createdSchool = _mapper.Map<School>(schoolDTO);
 
-        await _reservationRepository.AddSchoolAsync(createdSchool);
-        await _reservationRepository.SaveChangesAsync();
+        var result = await _reservationRepository.AddSchoolAsync(createdSchool);
 
-        
-        return CreatedAtRoute("", createdSchool);
-
-
-
-
-
-        return Ok() ;
+        return Ok(result);
     }
 }

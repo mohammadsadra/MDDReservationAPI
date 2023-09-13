@@ -27,7 +27,10 @@ public class User
     [MaxLength(200)]
     [DataType(DataType.PhoneNumber)]
     public string? Phone { get; set; }
-    
+
+    [MaxLength(30)]
+    public string? NationalId { get; set; }
+
     public bool? IsVerify { get; set; }
     
     [DataType(DataType.DateTime)]

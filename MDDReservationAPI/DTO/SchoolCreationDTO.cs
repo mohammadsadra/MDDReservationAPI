@@ -12,4 +12,8 @@ public class SchoolCreationDTO
     public int? SchoolType { get; set; }
 
     public int? Gender { get; set; }
+
+    public int ManagerId { get; set; }
+
+    public ICollection<SchoolClass>? SchoolClasses { get; set; }
 }

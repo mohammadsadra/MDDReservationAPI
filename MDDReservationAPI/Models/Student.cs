@@ -9,6 +9,7 @@ public class Student : User
     public Student()
     {
         this.Role = (int) RoleEnum.Student;;
+        this.CreatedAt = DateTime.UtcNow;
     }
     
     // Relation

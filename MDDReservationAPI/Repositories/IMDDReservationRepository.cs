@@ -4,7 +4,18 @@ namespace MDDReservationAPI.Repositories
 {
     public interface IMDDReservationRepository
     {
-        Task AddSchoolAsync(School school);
+        #region School
+
+        Task<School> AddSchoolAsync(School school);
+
+        #endregion
+
+        #region Manager
+
+        Task<Manager> AddManagerAsync(Manager manager);
+
+        #endregion
+
         Task<bool> SaveChangesAsync();
     }
 }

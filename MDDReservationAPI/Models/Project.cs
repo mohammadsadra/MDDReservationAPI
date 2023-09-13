@@ -5,6 +5,11 @@ namespace MDDReservationAPI.Models;
 
 public class Project
 {
+    public Project()
+    {
+        this.CreatedAt = DateTime.UtcNow;
+    }
+
     [Required]
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public int Id { get; set; }
