@@ -16,9 +16,6 @@ public class User
     [MaxLength(200)]
     public string Name { get; set; }
     
-    [MaxLength(200)]
-    [DataType(DataType.Password)]
-    public string? Password { get; set; }
 
     [MaxLength(200)]
     [DataType(DataType.EmailAddress)]

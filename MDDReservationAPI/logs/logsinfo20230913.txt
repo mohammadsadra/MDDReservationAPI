@@ -3236,3 +3236,73 @@ VALUES ('20230913094635_ChangedNationalIdToNullable', '7.0.10');
 2023-09-13 13:16:44.005 +03:30 [DBG] 'ApplicationDbContext' disposed.
 2023-09-13 13:16:44.005 +03:30 [DBG] Disposing connection to database 'main' on server 'App.db'.
 2023-09-13 13:16:44.005 +03:30 [DBG] Disposed connection to database 'main' on server 'App.db' (0ms).
+2023-09-13 14:53:36.902 +03:30 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-09-13 14:53:36.980 +03:30 [DBG] Hosting starting
+2023-09-13 14:53:37.465 +03:30 [DBG] Using development certificate: CN=localhost (Thumbprint: 175D8FE1405C2912E50F5B9B0938581AAF4B0E19)
+2023-09-13 14:53:37.503 +03:30 [INF] Now listening on: https://localhost:7010
+2023-09-13 14:53:37.504 +03:30 [INF] Now listening on: http://localhost:5143
+2023-09-13 14:53:37.504 +03:30 [DBG] Loaded hosting startup assembly MDDReservationAPI
+2023-09-13 14:53:37.505 +03:30 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2023-09-13 14:53:37.506 +03:30 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2023-09-13 14:53:37.507 +03:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-13 14:53:37.508 +03:30 [INF] Hosting environment: Development
+2023-09-13 14:53:37.509 +03:30 [INF] Content root path: C:\Users\moham\source\repos\MDDReservationAPI\MDDReservationAPI\
+2023-09-13 14:53:37.510 +03:30 [DBG] Hosting started
+2023-09-13 14:53:37.626 +03:30 [DBG] Connection id "0HMTK9FFVHUD0" accepted.
+2023-09-13 14:53:37.629 +03:30 [DBG] Connection id "0HMTK9FFVHUD0" started.
+2023-09-13 14:53:37.724 +03:30 [DBG] Connection id "0HMTK9FFVHUD1" accepted.
+2023-09-13 14:53:37.727 +03:30 [DBG] Connection id "0HMTK9FFVHUD1" started.
+2023-09-13 14:53:37.893 +03:30 [DBG] Connection id "0HMTK9FFVHUD2" accepted.
+2023-09-13 14:53:37.901 +03:30 [DBG] Connection id "0HMTK9FFVHUD2" started.
+2023-09-13 14:53:37.961 +03:30 [DBG] Connection 0HMTK9FFVHUD2 established using the following protocol: "Tls13"
+2023-09-13 14:53:38.018 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7010/swagger/index.html - -
+2023-09-13 14:53:38.051 +03:30 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2023-09-13 14:53:38.243 +03:30 [DBG] Response markup is scheduled to include browser refresh script injection.
+2023-09-13 14:53:38.585 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7010/_framework/aspnetcore-browser-refresh.js - -
+2023-09-13 14:53:38.589 +03:30 [DBG] Response markup was updated to include browser refresh script injection.
+2023-09-13 14:53:38.594 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7010/_framework/aspnetcore-browser-refresh.js - - - 200 12366 application/javascript;+charset=utf-8 8.2502ms
+2023-09-13 14:53:38.595 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7010/swagger/index.html - - - 200 - text/html;charset=utf-8 580.4282ms
+2023-09-13 14:53:38.631 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7010/_vs/browserLink - -
+2023-09-13 14:53:38.651 +03:30 [DBG] Connection id "0HMTK9FFVHUD3" accepted.
+2023-09-13 14:53:38.652 +03:30 [DBG] Connection id "0HMTK9FFVHUD3" started.
+2023-09-13 14:53:38.652 +03:30 [DBG] Connection id "0HMTK9FFVHUD4" accepted.
+2023-09-13 14:53:38.654 +03:30 [DBG] Connection id "0HMTK9FFVHUD4" started.
+2023-09-13 14:53:38.655 +03:30 [DBG] Connection id "0HMTK9FFVHUD5" accepted.
+2023-09-13 14:53:38.656 +03:30 [DBG] Connection id "0HMTK9FFVHUD5" started.
+2023-09-13 14:53:38.661 +03:30 [DBG] Connection 0HMTK9FFVHUD3 established using the following protocol: "Tls13"
+2023-09-13 14:53:38.662 +03:30 [DBG] Connection id "0HMTK9FFVHUD5" received FIN.
+2023-09-13 14:53:38.656 +03:30 [DBG] Connection id "0HMTK9FFVHUD4" received FIN.
+2023-09-13 14:53:38.669 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7010/swagger/swagger-ui-bundle.js - -
+2023-09-13 14:53:38.670 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7010/swagger/swagger-ui-standalone-preset.js - -
+2023-09-13 14:53:38.669 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7010/_framework/aspnetcore-browser-refresh.js - -
+2023-09-13 14:53:38.671 +03:30 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-09-13 14:53:38.671 +03:30 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.<FillHandshakeBufferAsync>g__InternalFillHandshakeBufferAsync|189_0[TIOAdapter](TIOAdapter adap, ValueTask`1 task, Int32 minSize)
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-09-13 14:53:38.711 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7010/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 79.9465ms
+2023-09-13 14:53:38.709 +03:30 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2023-09-13 14:53:38.848 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7010/swagger/v1/swagger.json - -
+2023-09-13 14:53:38.718 +03:30 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2023-09-13 14:53:38.672 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7010/_framework/aspnetcore-browser-refresh.js - - - 200 12366 application/javascript;+charset=utf-8 3.1372ms
+2023-09-13 14:53:38.730 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7010/_vs/browserLink - -
+2023-09-13 14:53:38.878 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7010/swagger/swagger-ui-standalone-preset.js - - - 200 312163 application/javascript 208.3219ms
+2023-09-13 14:53:38.881 +03:30 [DBG] Connection id "0HMTK9FFVHUD4" stopped.
+2023-09-13 14:53:38.879 +03:30 [DBG] Connection id "0HMTK9FFVHUD5" stopped.
+2023-09-13 14:53:38.881 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7010/swagger/swagger-ui-bundle.js - - - 200 1061536 application/javascript 212.1560ms
+2023-09-13 14:53:38.890 +03:30 [DBG] Connection id "0HMTK9FFVHUD5" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-09-13 14:53:38.890 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7010/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 159.7914ms
+2023-09-13 14:53:38.890 +03:30 [DBG] Connection id "0HMTK9FFVHUD4" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-09-13 14:53:39.014 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7010/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 165.5187ms
+2023-09-13 14:53:47.648 +03:30 [DBG] Authentication of the HTTPS connection timed out.
+2023-09-13 14:53:47.653 +03:30 [DBG] Connection id "0HMTK9FFVHUD0" stopped.
+2023-09-13 14:53:47.658 +03:30 [DBG] Connection id "0HMTK9FFVHUD0" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-09-13 14:53:47.741 +03:30 [DBG] Authentication of the HTTPS connection timed out.
+2023-09-13 14:53:47.746 +03:30 [DBG] Connection id "0HMTK9FFVHUD1" stopped.
+2023-09-13 14:53:47.747 +03:30 [DBG] Connection id "0HMTK9FFVHUD1" sending FIN because: "The Socket transport's send loop completed gracefully."

@@ -1,0 +1,202 @@
+2023-09-17 09:54:25.377 +03:30 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2023-09-17 09:54:25.961 +03:30 [DBG] The property 'SchoolClass.SchoolId' was created in shadow state because there are no eligible CLR members with a matching name.
+2023-09-17 09:54:25.962 +03:30 [DBG] The property 'Student.ProjectId' was created in shadow state because there are no eligible CLR members with a matching name.
+2023-09-17 09:54:25.962 +03:30 [DBG] The property 'User.Discriminator' was created in shadow state because there are no eligible CLR members with a matching name.
+2023-09-17 09:54:26.082 +03:30 [DBG] Entity Framework Core 7.0.10 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:7.0.10' with options: None
+2023-09-17 09:54:26.109 +03:30 [DBG] The property 'SchoolClass.SchoolId' was created in shadow state because there are no eligible CLR members with a matching name.
+2023-09-17 09:54:26.109 +03:30 [DBG] The property 'Student.ProjectId' was created in shadow state because there are no eligible CLR members with a matching name.
+2023-09-17 09:54:26.109 +03:30 [DBG] The property 'User.Discriminator' was created in shadow state because there are no eligible CLR members with a matching name.
+2023-09-17 09:54:26.271 +03:30 [DBG] 'ApplicationDbContext' disposed.
+2023-09-17 09:54:39.315 +03:30 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2023-09-17 09:54:39.765 +03:30 [DBG] The property 'SchoolClass.SchoolId' was created in shadow state because there are no eligible CLR members with a matching name.
+2023-09-17 09:54:39.766 +03:30 [DBG] The property 'Student.ProjectId' was created in shadow state because there are no eligible CLR members with a matching name.
+2023-09-17 09:54:39.766 +03:30 [DBG] The property 'User.Discriminator' was created in shadow state because there are no eligible CLR members with a matching name.
+2023-09-17 09:54:39.883 +03:30 [DBG] Entity Framework Core 7.0.10 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:7.0.10' with options: None
+2023-09-17 09:54:39.896 +03:30 [DBG] Creating DbConnection.
+2023-09-17 09:54:39.912 +03:30 [DBG] Created DbConnection. (14ms).
+2023-09-17 09:54:39.913 +03:30 [DBG] Migrating using database 'main' on server 'App.db'.
+2023-09-17 09:54:39.916 +03:30 [DBG] Creating DbConnection.
+2023-09-17 09:54:39.916 +03:30 [DBG] Created DbConnection. (0ms).
+2023-09-17 09:54:39.918 +03:30 [DBG] Opening connection to database 'main' on server 'App.db'.
+2023-09-17 09:54:39.934 +03:30 [DBG] Opened connection to database 'main' on server 'C:\Users\moham\source\repos\MDDReservationAPI\MDDReservationAPI\App.db'.
+2023-09-17 09:54:39.937 +03:30 [DBG] Disposing connection to database 'main' on server 'App.db'.
+2023-09-17 09:54:39.942 +03:30 [DBG] Disposed connection to database 'main' on server 'App.db' (0ms).
+2023-09-17 09:54:39.951 +03:30 [DBG] Creating DbCommand for 'ExecuteScalar'.
+2023-09-17 09:54:39.956 +03:30 [DBG] Created DbCommand for 'ExecuteScalar' (4ms).
+2023-09-17 09:54:39.957 +03:30 [DBG] Initialized DbCommand for 'ExecuteScalar' (8ms).
+2023-09-17 09:54:39.957 +03:30 [DBG] Opening connection to database 'main' on server 'App.db'.
+2023-09-17 09:54:39.960 +03:30 [DBG] Opened connection to database 'main' on server 'C:\Users\moham\source\repos\MDDReservationAPI\MDDReservationAPI\App.db'.
+2023-09-17 09:54:39.965 +03:30 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2023-09-17 09:54:39.983 +03:30 [INF] Executed DbCommand (19ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2023-09-17 09:54:39.984 +03:30 [DBG] Closing connection to database 'main' on server 'C:\Users\moham\source\repos\MDDReservationAPI\MDDReservationAPI\App.db'.
+2023-09-17 09:54:39.986 +03:30 [DBG] Closed connection to database 'main' on server 'App.db' (2ms).
+2023-09-17 09:54:39.988 +03:30 [DBG] Creating DbConnection.
+2023-09-17 09:54:39.988 +03:30 [DBG] Created DbConnection. (0ms).
+2023-09-17 09:54:39.988 +03:30 [DBG] Opening connection to database 'main' on server 'App.db'.
+2023-09-17 09:54:39.988 +03:30 [DBG] Opened connection to database 'main' on server 'C:\Users\moham\source\repos\MDDReservationAPI\MDDReservationAPI\App.db'.
+2023-09-17 09:54:39.988 +03:30 [DBG] Disposing connection to database 'main' on server 'App.db'.
+2023-09-17 09:54:39.988 +03:30 [DBG] Disposed connection to database 'main' on server 'App.db' (0ms).
+2023-09-17 09:54:39.988 +03:30 [DBG] Creating DbCommand for 'ExecuteScalar'.
+2023-09-17 09:54:39.988 +03:30 [DBG] Created DbCommand for 'ExecuteScalar' (0ms).
+2023-09-17 09:54:39.988 +03:30 [DBG] Initialized DbCommand for 'ExecuteScalar' (0ms).
+2023-09-17 09:54:39.988 +03:30 [DBG] Opening connection to database 'main' on server 'App.db'.
+2023-09-17 09:54:39.988 +03:30 [DBG] Opened connection to database 'main' on server 'C:\Users\moham\source\repos\MDDReservationAPI\MDDReservationAPI\App.db'.
+2023-09-17 09:54:39.988 +03:30 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2023-09-17 09:54:39.988 +03:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2023-09-17 09:54:39.988 +03:30 [DBG] Closing connection to database 'main' on server 'C:\Users\moham\source\repos\MDDReservationAPI\MDDReservationAPI\App.db'.
+2023-09-17 09:54:39.989 +03:30 [DBG] Closed connection to database 'main' on server 'App.db' (0ms).
+2023-09-17 09:54:40.001 +03:30 [DBG] Creating DbCommand for 'ExecuteReader'.
+2023-09-17 09:54:40.001 +03:30 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2023-09-17 09:54:40.001 +03:30 [DBG] Initialized DbCommand for 'ExecuteReader' (0ms).
+2023-09-17 09:54:40.001 +03:30 [DBG] Opening connection to database 'main' on server 'App.db'.
+2023-09-17 09:54:40.001 +03:30 [DBG] Opened connection to database 'main' on server 'C:\Users\moham\source\repos\MDDReservationAPI\MDDReservationAPI\App.db'.
+2023-09-17 09:54:40.001 +03:30 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2023-09-17 09:54:40.002 +03:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2023-09-17 09:54:40.003 +03:30 [DBG] Closing data reader to 'main' on server 'C:\Users\moham\source\repos\MDDReservationAPI\MDDReservationAPI\App.db'.
+2023-09-17 09:54:40.004 +03:30 [DBG] A data reader for 'main' on server 'C:\Users\moham\source\repos\MDDReservationAPI\MDDReservationAPI\App.db' is being disposed after spending 1ms reading results.
+2023-09-17 09:54:40.004 +03:30 [DBG] Closing connection to database 'main' on server 'C:\Users\moham\source\repos\MDDReservationAPI\MDDReservationAPI\App.db'.
+2023-09-17 09:54:40.004 +03:30 [DBG] Closed connection to database 'main' on server 'App.db' (0ms).
+2023-09-17 09:54:40.013 +03:30 [INF] Applying migration '20230917062426_removePasswordFromUserField'.
+2023-09-17 09:54:40.047 +03:30 [WRN] An operation of type 'UpdateDataOperation' will be attempted while a rebuild of table 'Users' is pending. The database may not be in an expected state. Review the SQL generated by this migration to help diagnose any failures. Consider moving these operations to a subsequent migration.
+2023-09-17 09:54:40.072 +03:30 [DBG] Opening connection to database 'main' on server 'App.db'.
+2023-09-17 09:54:40.072 +03:30 [DBG] Opened connection to database 'main' on server 'C:\Users\moham\source\repos\MDDReservationAPI\MDDReservationAPI\App.db'.
+2023-09-17 09:54:40.073 +03:30 [DBG] Beginning transaction with isolation level 'Unspecified'.
+2023-09-17 09:54:40.075 +03:30 [DBG] Began transaction with isolation level 'Serializable'.
+2023-09-17 09:54:40.076 +03:30 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-09-17 09:54:40.076 +03:30 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2023-09-17 09:54:40.077 +03:30 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2023-09-17 09:54:40.077 +03:30 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Users" SET "CreatedAt" = '2023-09-17 06:24:26.1029907'
+WHERE "Id" = 1
+RETURNING 1;
+2023-09-17 09:54:40.078 +03:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Users" SET "CreatedAt" = '2023-09-17 06:24:26.1029907'
+WHERE "Id" = 1
+RETURNING 1;
+2023-09-17 09:54:40.078 +03:30 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-09-17 09:54:40.078 +03:30 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2023-09-17 09:54:40.078 +03:30 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2023-09-17 09:54:40.078 +03:30 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "ef_temp_Users" (
+    "Id" INTEGER NOT NULL CONSTRAINT "PK_Users" PRIMARY KEY AUTOINCREMENT,
+    "CreatedAt" TEXT NOT NULL,
+    "Discriminator" TEXT NOT NULL,
+    "Email" TEXT NULL,
+    "IsVerify" INTEGER NULL,
+    "Name" TEXT NOT NULL,
+    "NationalId" TEXT NULL,
+    "Phone" TEXT NULL,
+    "Position" TEXT NULL,
+    "ProjectId" INTEGER NULL,
+    "Role" INTEGER NOT NULL,
+    "SchoolClassId" INTEGER NULL,
+    CONSTRAINT "FK_Users_Projects_ProjectId" FOREIGN KEY ("ProjectId") REFERENCES "Projects" ("Id"),
+    CONSTRAINT "FK_Users_SchoolsClasses_SchoolClassId" FOREIGN KEY ("SchoolClassId") REFERENCES "SchoolsClasses" ("Id") ON DELETE CASCADE
+);
+2023-09-17 09:54:40.078 +03:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "ef_temp_Users" (
+    "Id" INTEGER NOT NULL CONSTRAINT "PK_Users" PRIMARY KEY AUTOINCREMENT,
+    "CreatedAt" TEXT NOT NULL,
+    "Discriminator" TEXT NOT NULL,
+    "Email" TEXT NULL,
+    "IsVerify" INTEGER NULL,
+    "Name" TEXT NOT NULL,
+    "NationalId" TEXT NULL,
+    "Phone" TEXT NULL,
+    "Position" TEXT NULL,
+    "ProjectId" INTEGER NULL,
+    "Role" INTEGER NOT NULL,
+    "SchoolClassId" INTEGER NULL,
+    CONSTRAINT "FK_Users_Projects_ProjectId" FOREIGN KEY ("ProjectId") REFERENCES "Projects" ("Id"),
+    CONSTRAINT "FK_Users_SchoolsClasses_SchoolClassId" FOREIGN KEY ("SchoolClassId") REFERENCES "SchoolsClasses" ("Id") ON DELETE CASCADE
+);
+2023-09-17 09:54:40.078 +03:30 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-09-17 09:54:40.078 +03:30 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2023-09-17 09:54:40.078 +03:30 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2023-09-17 09:54:40.078 +03:30 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "ef_temp_Users" ("Id", "CreatedAt", "Discriminator", "Email", "IsVerify", "Name", "NationalId", "Phone", "Position", "ProjectId", "Role", "SchoolClassId")
+SELECT "Id", "CreatedAt", "Discriminator", "Email", "IsVerify", "Name", "NationalId", "Phone", "Position", "ProjectId", "Role", "SchoolClassId"
+FROM "Users";
+2023-09-17 09:54:40.078 +03:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "ef_temp_Users" ("Id", "CreatedAt", "Discriminator", "Email", "IsVerify", "Name", "NationalId", "Phone", "Position", "ProjectId", "Role", "SchoolClassId")
+SELECT "Id", "CreatedAt", "Discriminator", "Email", "IsVerify", "Name", "NationalId", "Phone", "Position", "ProjectId", "Role", "SchoolClassId"
+FROM "Users";
+2023-09-17 09:54:40.079 +03:30 [DBG] Committing transaction.
+2023-09-17 09:54:40.082 +03:30 [DBG] Committed transaction.
+2023-09-17 09:54:40.083 +03:30 [DBG] Disposing transaction.
+2023-09-17 09:54:40.083 +03:30 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-09-17 09:54:40.083 +03:30 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2023-09-17 09:54:40.083 +03:30 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2023-09-17 09:54:40.083 +03:30 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys = 0;
+2023-09-17 09:54:40.123 +03:30 [INF] Executed DbCommand (40ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys = 0;
+2023-09-17 09:54:40.123 +03:30 [DBG] Beginning transaction with isolation level 'Unspecified'.
+2023-09-17 09:54:40.123 +03:30 [DBG] Began transaction with isolation level 'Serializable'.
+2023-09-17 09:54:40.123 +03:30 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-09-17 09:54:40.123 +03:30 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2023-09-17 09:54:40.123 +03:30 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2023-09-17 09:54:40.124 +03:30 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DROP TABLE "Users";
+2023-09-17 09:54:40.124 +03:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DROP TABLE "Users";
+2023-09-17 09:54:40.124 +03:30 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-09-17 09:54:40.124 +03:30 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2023-09-17 09:54:40.124 +03:30 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2023-09-17 09:54:40.124 +03:30 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "ef_temp_Users" RENAME TO "Users";
+2023-09-17 09:54:40.125 +03:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "ef_temp_Users" RENAME TO "Users";
+2023-09-17 09:54:40.125 +03:30 [DBG] Committing transaction.
+2023-09-17 09:54:40.126 +03:30 [DBG] Committed transaction.
+2023-09-17 09:54:40.127 +03:30 [DBG] Disposing transaction.
+2023-09-17 09:54:40.127 +03:30 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-09-17 09:54:40.127 +03:30 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2023-09-17 09:54:40.127 +03:30 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2023-09-17 09:54:40.127 +03:30 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys = 1;
+2023-09-17 09:54:40.127 +03:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys = 1;
+2023-09-17 09:54:40.127 +03:30 [DBG] Beginning transaction with isolation level 'Unspecified'.
+2023-09-17 09:54:40.127 +03:30 [DBG] Began transaction with isolation level 'Serializable'.
+2023-09-17 09:54:40.127 +03:30 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-09-17 09:54:40.127 +03:30 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2023-09-17 09:54:40.127 +03:30 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2023-09-17 09:54:40.127 +03:30 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_Users_ProjectId" ON "Users" ("ProjectId");
+2023-09-17 09:54:40.127 +03:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_Users_ProjectId" ON "Users" ("ProjectId");
+2023-09-17 09:54:40.127 +03:30 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-09-17 09:54:40.127 +03:30 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2023-09-17 09:54:40.127 +03:30 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2023-09-17 09:54:40.127 +03:30 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_Users_SchoolClassId" ON "Users" ("SchoolClassId");
+2023-09-17 09:54:40.127 +03:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_Users_SchoolClassId" ON "Users" ("SchoolClassId");
+2023-09-17 09:54:40.127 +03:30 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-09-17 09:54:40.127 +03:30 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2023-09-17 09:54:40.127 +03:30 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2023-09-17 09:54:40.127 +03:30 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20230917062426_removePasswordFromUserField', '7.0.10');
+2023-09-17 09:54:40.127 +03:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20230917062426_removePasswordFromUserField', '7.0.10');
+2023-09-17 09:54:40.127 +03:30 [DBG] Committing transaction.
+2023-09-17 09:54:40.129 +03:30 [DBG] Committed transaction.
+2023-09-17 09:54:40.129 +03:30 [DBG] Disposing transaction.
+2023-09-17 09:54:40.129 +03:30 [DBG] Closing connection to database 'main' on server 'C:\Users\moham\source\repos\MDDReservationAPI\MDDReservationAPI\App.db'.
+2023-09-17 09:54:40.129 +03:30 [DBG] Closed connection to database 'main' on server 'App.db' (0ms).
+2023-09-17 09:54:40.130 +03:30 [DBG] 'ApplicationDbContext' disposed.
+2023-09-17 09:54:40.130 +03:30 [DBG] Disposing connection to database 'main' on server 'App.db'.
+2023-09-17 09:54:40.130 +03:30 [DBG] Disposed connection to database 'main' on server 'App.db' (0ms).
