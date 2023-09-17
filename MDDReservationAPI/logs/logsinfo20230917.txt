@@ -200,3 +200,1461 @@ VALUES ('20230917062426_removePasswordFromUserField', '7.0.10');
 2023-09-17 09:54:40.130 +03:30 [DBG] 'ApplicationDbContext' disposed.
 2023-09-17 09:54:40.130 +03:30 [DBG] Disposing connection to database 'main' on server 'App.db'.
 2023-09-17 09:54:40.130 +03:30 [DBG] Disposed connection to database 'main' on server 'App.db' (0ms).
+2023-09-17 10:06:32.600 +03:30 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2023-09-17 10:06:33.074 +03:30 [DBG] The property 'Student.ProjectId' was created in shadow state because there are no eligible CLR members with a matching name.
+2023-09-17 10:06:33.075 +03:30 [DBG] The property 'User.Discriminator' was created in shadow state because there are no eligible CLR members with a matching name.
+2023-09-17 10:06:33.204 +03:30 [DBG] Entity Framework Core 7.0.10 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:7.0.10' with options: None
+2023-09-17 10:06:33.230 +03:30 [DBG] The property 'Student.ProjectId' was created in shadow state because there are no eligible CLR members with a matching name.
+2023-09-17 10:06:33.230 +03:30 [DBG] The property 'User.Discriminator' was created in shadow state because there are no eligible CLR members with a matching name.
+2023-09-17 10:06:33.394 +03:30 [DBG] 'ApplicationDbContext' disposed.
+2023-09-17 10:06:38.187 +03:30 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2023-09-17 10:06:38.642 +03:30 [DBG] The property 'Student.ProjectId' was created in shadow state because there are no eligible CLR members with a matching name.
+2023-09-17 10:06:38.643 +03:30 [DBG] The property 'User.Discriminator' was created in shadow state because there are no eligible CLR members with a matching name.
+2023-09-17 10:06:38.771 +03:30 [DBG] Entity Framework Core 7.0.10 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:7.0.10' with options: None
+2023-09-17 10:06:38.781 +03:30 [DBG] Creating DbConnection.
+2023-09-17 10:06:38.801 +03:30 [DBG] Created DbConnection. (15ms).
+2023-09-17 10:06:38.802 +03:30 [DBG] Migrating using database 'main' on server 'App.db'.
+2023-09-17 10:06:38.805 +03:30 [DBG] Creating DbConnection.
+2023-09-17 10:06:38.805 +03:30 [DBG] Created DbConnection. (0ms).
+2023-09-17 10:06:38.807 +03:30 [DBG] Opening connection to database 'main' on server 'App.db'.
+2023-09-17 10:06:38.815 +03:30 [DBG] Opened connection to database 'main' on server 'C:\Users\moham\source\repos\MDDReservationAPI\MDDReservationAPI\App.db'.
+2023-09-17 10:06:38.818 +03:30 [DBG] Disposing connection to database 'main' on server 'App.db'.
+2023-09-17 10:06:38.822 +03:30 [DBG] Disposed connection to database 'main' on server 'App.db' (0ms).
+2023-09-17 10:06:38.832 +03:30 [DBG] Creating DbCommand for 'ExecuteScalar'.
+2023-09-17 10:06:38.838 +03:30 [DBG] Created DbCommand for 'ExecuteScalar' (5ms).
+2023-09-17 10:06:38.838 +03:30 [DBG] Initialized DbCommand for 'ExecuteScalar' (10ms).
+2023-09-17 10:06:38.838 +03:30 [DBG] Opening connection to database 'main' on server 'App.db'.
+2023-09-17 10:06:38.841 +03:30 [DBG] Opened connection to database 'main' on server 'C:\Users\moham\source\repos\MDDReservationAPI\MDDReservationAPI\App.db'.
+2023-09-17 10:06:38.847 +03:30 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2023-09-17 10:06:38.861 +03:30 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2023-09-17 10:06:38.863 +03:30 [DBG] Closing connection to database 'main' on server 'C:\Users\moham\source\repos\MDDReservationAPI\MDDReservationAPI\App.db'.
+2023-09-17 10:06:38.865 +03:30 [DBG] Closed connection to database 'main' on server 'App.db' (2ms).
+2023-09-17 10:06:38.866 +03:30 [DBG] Creating DbConnection.
+2023-09-17 10:06:38.866 +03:30 [DBG] Created DbConnection. (0ms).
+2023-09-17 10:06:38.866 +03:30 [DBG] Opening connection to database 'main' on server 'App.db'.
+2023-09-17 10:06:38.867 +03:30 [DBG] Opened connection to database 'main' on server 'C:\Users\moham\source\repos\MDDReservationAPI\MDDReservationAPI\App.db'.
+2023-09-17 10:06:38.867 +03:30 [DBG] Disposing connection to database 'main' on server 'App.db'.
+2023-09-17 10:06:38.867 +03:30 [DBG] Disposed connection to database 'main' on server 'App.db' (0ms).
+2023-09-17 10:06:38.867 +03:30 [DBG] Creating DbCommand for 'ExecuteScalar'.
+2023-09-17 10:06:38.867 +03:30 [DBG] Created DbCommand for 'ExecuteScalar' (0ms).
+2023-09-17 10:06:38.867 +03:30 [DBG] Initialized DbCommand for 'ExecuteScalar' (0ms).
+2023-09-17 10:06:38.867 +03:30 [DBG] Opening connection to database 'main' on server 'App.db'.
+2023-09-17 10:06:38.867 +03:30 [DBG] Opened connection to database 'main' on server 'C:\Users\moham\source\repos\MDDReservationAPI\MDDReservationAPI\App.db'.
+2023-09-17 10:06:38.867 +03:30 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2023-09-17 10:06:38.867 +03:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "name" = '__EFMigrationsHistory' AND "type" = 'table';
+2023-09-17 10:06:38.868 +03:30 [DBG] Closing connection to database 'main' on server 'C:\Users\moham\source\repos\MDDReservationAPI\MDDReservationAPI\App.db'.
+2023-09-17 10:06:38.868 +03:30 [DBG] Closed connection to database 'main' on server 'App.db' (0ms).
+2023-09-17 10:06:38.879 +03:30 [DBG] Creating DbCommand for 'ExecuteReader'.
+2023-09-17 10:06:38.879 +03:30 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2023-09-17 10:06:38.879 +03:30 [DBG] Initialized DbCommand for 'ExecuteReader' (0ms).
+2023-09-17 10:06:38.879 +03:30 [DBG] Opening connection to database 'main' on server 'App.db'.
+2023-09-17 10:06:38.879 +03:30 [DBG] Opened connection to database 'main' on server 'C:\Users\moham\source\repos\MDDReservationAPI\MDDReservationAPI\App.db'.
+2023-09-17 10:06:38.879 +03:30 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2023-09-17 10:06:38.879 +03:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2023-09-17 10:06:38.881 +03:30 [DBG] Closing data reader to 'main' on server 'C:\Users\moham\source\repos\MDDReservationAPI\MDDReservationAPI\App.db'.
+2023-09-17 10:06:38.882 +03:30 [DBG] A data reader for 'main' on server 'C:\Users\moham\source\repos\MDDReservationAPI\MDDReservationAPI\App.db' is being disposed after spending 1ms reading results.
+2023-09-17 10:06:38.882 +03:30 [DBG] Closing connection to database 'main' on server 'C:\Users\moham\source\repos\MDDReservationAPI\MDDReservationAPI\App.db'.
+2023-09-17 10:06:38.882 +03:30 [DBG] Closed connection to database 'main' on server 'App.db' (0ms).
+2023-09-17 10:06:38.890 +03:30 [INF] Applying migration '20230917063633_addClassIdToSchoolClass'.
+2023-09-17 10:06:38.959 +03:30 [DBG] Opening connection to database 'main' on server 'App.db'.
+2023-09-17 10:06:38.959 +03:30 [DBG] Opened connection to database 'main' on server 'C:\Users\moham\source\repos\MDDReservationAPI\MDDReservationAPI\App.db'.
+2023-09-17 10:06:38.960 +03:30 [DBG] Beginning transaction with isolation level 'Unspecified'.
+2023-09-17 10:06:38.962 +03:30 [DBG] Began transaction with isolation level 'Serializable'.
+2023-09-17 10:06:38.963 +03:30 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-09-17 10:06:38.964 +03:30 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2023-09-17 10:06:38.964 +03:30 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2023-09-17 10:06:38.964 +03:30 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Users" SET "CreatedAt" = '2023-09-17 06:36:33.2247677'
+WHERE "Id" = 1
+RETURNING 1;
+2023-09-17 10:06:38.965 +03:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Users" SET "CreatedAt" = '2023-09-17 06:36:33.2247677'
+WHERE "Id" = 1
+RETURNING 1;
+2023-09-17 10:06:38.965 +03:30 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-09-17 10:06:38.965 +03:30 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2023-09-17 10:06:38.965 +03:30 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2023-09-17 10:06:38.965 +03:30 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "ef_temp_SchoolsClasses" (
+    "Id" INTEGER NOT NULL CONSTRAINT "PK_SchoolsClasses" PRIMARY KEY AUTOINCREMENT,
+    "CreatedAt" TEXT NOT NULL,
+    "Grade" INTEGER NOT NULL,
+    "IsProgrammer" INTEGER NOT NULL,
+    "ProgrammingLanguage" INTEGER NOT NULL,
+    "SchoolId" INTEGER NOT NULL,
+    CONSTRAINT "FK_SchoolsClasses_Schools_SchoolId" FOREIGN KEY ("SchoolId") REFERENCES "Schools" ("Id") ON DELETE CASCADE
+);
+2023-09-17 10:06:38.965 +03:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "ef_temp_SchoolsClasses" (
+    "Id" INTEGER NOT NULL CONSTRAINT "PK_SchoolsClasses" PRIMARY KEY AUTOINCREMENT,
+    "CreatedAt" TEXT NOT NULL,
+    "Grade" INTEGER NOT NULL,
+    "IsProgrammer" INTEGER NOT NULL,
+    "ProgrammingLanguage" INTEGER NOT NULL,
+    "SchoolId" INTEGER NOT NULL,
+    CONSTRAINT "FK_SchoolsClasses_Schools_SchoolId" FOREIGN KEY ("SchoolId") REFERENCES "Schools" ("Id") ON DELETE CASCADE
+);
+2023-09-17 10:06:38.965 +03:30 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-09-17 10:06:38.965 +03:30 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2023-09-17 10:06:38.965 +03:30 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2023-09-17 10:06:38.965 +03:30 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "ef_temp_SchoolsClasses" ("Id", "CreatedAt", "Grade", "IsProgrammer", "ProgrammingLanguage", "SchoolId")
+SELECT "Id", "CreatedAt", "Grade", "IsProgrammer", "ProgrammingLanguage", IFNULL("SchoolId", 0)
+FROM "SchoolsClasses";
+2023-09-17 10:06:38.965 +03:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "ef_temp_SchoolsClasses" ("Id", "CreatedAt", "Grade", "IsProgrammer", "ProgrammingLanguage", "SchoolId")
+SELECT "Id", "CreatedAt", "Grade", "IsProgrammer", "ProgrammingLanguage", IFNULL("SchoolId", 0)
+FROM "SchoolsClasses";
+2023-09-17 10:06:39.023 +03:30 [DBG] Committing transaction.
+2023-09-17 10:06:39.028 +03:30 [DBG] Committed transaction.
+2023-09-17 10:06:39.028 +03:30 [DBG] Disposing transaction.
+2023-09-17 10:06:39.029 +03:30 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-09-17 10:06:39.029 +03:30 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2023-09-17 10:06:39.029 +03:30 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2023-09-17 10:06:39.029 +03:30 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys = 0;
+2023-09-17 10:06:39.029 +03:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys = 0;
+2023-09-17 10:06:39.029 +03:30 [DBG] Beginning transaction with isolation level 'Unspecified'.
+2023-09-17 10:06:39.029 +03:30 [DBG] Began transaction with isolation level 'Serializable'.
+2023-09-17 10:06:39.029 +03:30 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-09-17 10:06:39.029 +03:30 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2023-09-17 10:06:39.029 +03:30 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2023-09-17 10:06:39.029 +03:30 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DROP TABLE "SchoolsClasses";
+2023-09-17 10:06:39.029 +03:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DROP TABLE "SchoolsClasses";
+2023-09-17 10:06:39.029 +03:30 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-09-17 10:06:39.029 +03:30 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2023-09-17 10:06:39.029 +03:30 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2023-09-17 10:06:39.029 +03:30 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "ef_temp_SchoolsClasses" RENAME TO "SchoolsClasses";
+2023-09-17 10:06:39.030 +03:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "ef_temp_SchoolsClasses" RENAME TO "SchoolsClasses";
+2023-09-17 10:06:39.030 +03:30 [DBG] Committing transaction.
+2023-09-17 10:06:39.031 +03:30 [DBG] Committed transaction.
+2023-09-17 10:06:39.031 +03:30 [DBG] Disposing transaction.
+2023-09-17 10:06:39.031 +03:30 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-09-17 10:06:39.031 +03:30 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2023-09-17 10:06:39.031 +03:30 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2023-09-17 10:06:39.031 +03:30 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys = 1;
+2023-09-17 10:06:39.031 +03:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+PRAGMA foreign_keys = 1;
+2023-09-17 10:06:39.031 +03:30 [DBG] Beginning transaction with isolation level 'Unspecified'.
+2023-09-17 10:06:39.031 +03:30 [DBG] Began transaction with isolation level 'Serializable'.
+2023-09-17 10:06:39.031 +03:30 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-09-17 10:06:39.032 +03:30 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2023-09-17 10:06:39.032 +03:30 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2023-09-17 10:06:39.032 +03:30 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_SchoolsClasses_SchoolId" ON "SchoolsClasses" ("SchoolId");
+2023-09-17 10:06:39.032 +03:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_SchoolsClasses_SchoolId" ON "SchoolsClasses" ("SchoolId");
+2023-09-17 10:06:39.032 +03:30 [DBG] Creating DbCommand for 'ExecuteNonQuery'.
+2023-09-17 10:06:39.032 +03:30 [DBG] Created DbCommand for 'ExecuteNonQuery' (0ms).
+2023-09-17 10:06:39.032 +03:30 [DBG] Initialized DbCommand for 'ExecuteNonQuery' (0ms).
+2023-09-17 10:06:39.032 +03:30 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20230917063633_addClassIdToSchoolClass', '7.0.10');
+2023-09-17 10:06:39.032 +03:30 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20230917063633_addClassIdToSchoolClass', '7.0.10');
+2023-09-17 10:06:39.032 +03:30 [DBG] Committing transaction.
+2023-09-17 10:06:39.033 +03:30 [DBG] Committed transaction.
+2023-09-17 10:06:39.033 +03:30 [DBG] Disposing transaction.
+2023-09-17 10:06:39.033 +03:30 [DBG] Closing connection to database 'main' on server 'C:\Users\moham\source\repos\MDDReservationAPI\MDDReservationAPI\App.db'.
+2023-09-17 10:06:39.034 +03:30 [DBG] Closed connection to database 'main' on server 'App.db' (0ms).
+2023-09-17 10:06:39.300 +03:30 [DBG] 'ApplicationDbContext' disposed.
+2023-09-17 10:06:39.300 +03:30 [DBG] Disposing connection to database 'main' on server 'App.db'.
+2023-09-17 10:06:39.301 +03:30 [DBG] Disposed connection to database 'main' on server 'App.db' (0ms).
+2023-09-17 10:21:28.251 +03:30 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-09-17 10:21:28.415 +03:30 [DBG] Hosting starting
+2023-09-17 10:21:28.848 +03:30 [DBG] Using development certificate: CN=localhost (Thumbprint: 175D8FE1405C2912E50F5B9B0938581AAF4B0E19)
+2023-09-17 10:21:28.929 +03:30 [INF] Now listening on: https://localhost:7010
+2023-09-17 10:21:28.930 +03:30 [INF] Now listening on: http://localhost:5143
+2023-09-17 10:21:28.932 +03:30 [DBG] Loaded hosting startup assembly MDDReservationAPI
+2023-09-17 10:21:28.932 +03:30 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2023-09-17 10:21:28.933 +03:30 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2023-09-17 10:21:28.934 +03:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-17 10:21:28.937 +03:30 [INF] Hosting environment: Development
+2023-09-17 10:21:28.938 +03:30 [INF] Content root path: C:\Users\moham\source\repos\MDDReservationAPI\MDDReservationAPI\
+2023-09-17 10:21:28.939 +03:30 [DBG] Hosting started
+2023-09-17 10:21:28.957 +03:30 [DBG] Connection id "0HMTN9A2FKI0G" accepted.
+2023-09-17 10:21:28.957 +03:30 [DBG] Connection id "0HMTN9A2FKI0F" accepted.
+2023-09-17 10:21:28.961 +03:30 [DBG] Connection id "0HMTN9A2FKI0F" started.
+2023-09-17 10:21:28.961 +03:30 [DBG] Connection id "0HMTN9A2FKI0G" started.
+2023-09-17 10:21:29.502 +03:30 [DBG] Connection id "0HMTN9A2FKI0H" accepted.
+2023-09-17 10:21:29.505 +03:30 [DBG] Connection id "0HMTN9A2FKI0H" started.
+2023-09-17 10:21:29.574 +03:30 [DBG] Connection 0HMTN9A2FKI0H established using the following protocol: "Tls13"
+2023-09-17 10:21:29.674 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7010/swagger/index.html - -
+2023-09-17 10:21:29.722 +03:30 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2023-09-17 10:21:29.947 +03:30 [DBG] Response markup is scheduled to include browser refresh script injection.
+2023-09-17 10:21:30.168 +03:30 [DBG] Response markup was updated to include browser refresh script injection.
+2023-09-17 10:21:30.176 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7010/swagger/index.html - - - 200 - text/html;charset=utf-8 506.7259ms
+2023-09-17 10:21:30.177 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7010/_framework/aspnetcore-browser-refresh.js - -
+2023-09-17 10:21:30.182 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7010/_framework/aspnetcore-browser-refresh.js - - - 200 12366 application/javascript;+charset=utf-8 5.7809ms
+2023-09-17 10:21:30.224 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7010/_vs/browserLink - -
+2023-09-17 10:21:30.272 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7010/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 48.2182ms
+2023-09-17 10:21:30.461 +03:30 [DBG] Connection id "0HMTN9A2FKI0I" accepted.
+2023-09-17 10:21:30.463 +03:30 [DBG] Connection id "0HMTN9A2FKI0I" started.
+2023-09-17 10:21:30.467 +03:30 [DBG] Connection 0HMTN9A2FKI0I established using the following protocol: "Tls13"
+2023-09-17 10:21:30.469 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7010/_framework/aspnetcore-browser-refresh.js - -
+2023-09-17 10:21:30.469 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7010/_vs/browserLink - -
+2023-09-17 10:21:30.470 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7010/_framework/aspnetcore-browser-refresh.js - - - 200 12366 application/javascript;+charset=utf-8 1.1745ms
+2023-09-17 10:21:30.477 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7010/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 7.6908ms
+2023-09-17 10:21:30.496 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7010/swagger/v1/swagger.json - -
+2023-09-17 10:21:30.645 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7010/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 149.0927ms
+2023-09-17 10:21:38.979 +03:30 [DBG] Authentication of the HTTPS connection timed out.
+2023-09-17 10:21:38.979 +03:30 [DBG] Authentication of the HTTPS connection timed out.
+2023-09-17 10:21:38.983 +03:30 [DBG] Connection id "0HMTN9A2FKI0F" stopped.
+2023-09-17 10:21:38.983 +03:30 [DBG] Connection id "0HMTN9A2FKI0G" stopped.
+2023-09-17 10:21:38.985 +03:30 [DBG] Connection id "0HMTN9A2FKI0F" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-09-17 10:21:38.985 +03:30 [DBG] Connection id "0HMTN9A2FKI0G" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-09-17 10:23:12.305 +03:30 [INF] Request starting HTTP/2 POST https://localhost:7010/schoolClass/create application/json-patch+json 85
+2023-09-17 10:23:12.311 +03:30 [DBG] POST requests are not supported
+2023-09-17 10:23:12.335 +03:30 [DBG] 1 candidate(s) found for the request path '/schoolClass/create'
+2023-09-17 10:23:12.342 +03:30 [DBG] Endpoint 'MDDReservationAPI.Controllers.SchoolClassController.CreateSchoolClassAsync (MDDReservationAPI)' with route pattern 'schoolClass/create' is valid for the request path '/schoolClass/create'
+2023-09-17 10:23:12.345 +03:30 [DBG] Request matched endpoint 'MDDReservationAPI.Controllers.SchoolClassController.CreateSchoolClassAsync (MDDReservationAPI)'
+2023-09-17 10:23:12.347 +03:30 [INF] Executing endpoint 'MDDReservationAPI.Controllers.SchoolClassController.CreateSchoolClassAsync (MDDReservationAPI)'
+2023-09-17 10:23:12.383 +03:30 [INF] Route matched with {action = "CreateSchoolClass", controller = "SchoolClass"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[MDDReservationAPI.Models.SchoolClass]] CreateSchoolClassAsync(MDDReservationAPI.DTO.SchoolClassCreationDTO) on controller MDDReservationAPI.Controllers.SchoolClassController (MDDReservationAPI).
+2023-09-17 10:23:12.385 +03:30 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2023-09-17 10:23:12.386 +03:30 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2023-09-17 10:23:12.388 +03:30 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2023-09-17 10:23:12.389 +03:30 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2023-09-17 10:23:12.390 +03:30 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)","Microsoft.AspNetCore.Mvc.ProducesAttribute (Order: 0)"]
+2023-09-17 10:23:12.392 +03:30 [DBG] Executing controller factory for controller MDDReservationAPI.Controllers.SchoolClassController (MDDReservationAPI)
+2023-09-17 10:23:12.670 +03:30 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2023-09-17 10:23:12.695 +03:30 [DBG] Executed controller factory for controller MDDReservationAPI.Controllers.SchoolClassController (MDDReservationAPI)
+2023-09-17 10:23:12.700 +03:30 [DBG] Attempting to bind parameter 'schoolClassCreationDto' of type 'MDDReservationAPI.DTO.SchoolClassCreationDTO' ...
+2023-09-17 10:23:12.703 +03:30 [DBG] Attempting to bind parameter 'schoolClassCreationDto' of type 'MDDReservationAPI.DTO.SchoolClassCreationDTO' using the name '' in request data ...
+2023-09-17 10:23:12.705 +03:30 [DBG] Rejected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonPatchInputFormatter' for content type 'application/json-patch+json'.
+2023-09-17 10:23:12.707 +03:30 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonInputFormatter' for content type 'application/json-patch+json'.
+2023-09-17 10:23:12.716 +03:30 [DBG] Connection id "0HMTN9A2FKI0H", Request id "0HMTN9A2FKI0H:00000009": started reading request body.
+2023-09-17 10:23:12.717 +03:30 [DBG] Connection id "0HMTN9A2FKI0H", Request id "0HMTN9A2FKI0H:00000009": done reading request body.
+2023-09-17 10:23:13.062 +03:30 [DBG] Done attempting to bind parameter 'schoolClassCreationDto' of type 'MDDReservationAPI.DTO.SchoolClassCreationDTO'.
+2023-09-17 10:23:13.064 +03:30 [DBG] Done attempting to bind parameter 'schoolClassCreationDto' of type 'MDDReservationAPI.DTO.SchoolClassCreationDTO'.
+2023-09-17 10:23:13.065 +03:30 [DBG] Attempting to validate the bound parameter 'schoolClassCreationDto' of type 'MDDReservationAPI.DTO.SchoolClassCreationDTO' ...
+2023-09-17 10:23:13.075 +03:30 [DBG] Done attempting to validate the bound parameter 'schoolClassCreationDto' of type 'MDDReservationAPI.DTO.SchoolClassCreationDTO'.
+2023-09-17 10:23:13.951 +03:30 [DBG] The property 'Student.ProjectId' was created in shadow state because there are no eligible CLR members with a matching name.
+2023-09-17 10:23:13.953 +03:30 [DBG] The property 'User.Discriminator' was created in shadow state because there are no eligible CLR members with a matching name.
+2023-09-17 10:23:14.125 +03:30 [DBG] Entity Framework Core 7.0.10 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:7.0.10' with options: None
+2023-09-17 10:23:14.193 +03:30 [DBG] Compiling query expression: 
+'DbSet<School>()
+    .Where(s => s.Id == __schoolClass_SchoolId_0)
+    .FirstOrDefault()'
+2023-09-17 10:23:14.478 +03:30 [DBG] Generated query execution expression: 
+'queryContext => ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync<School>(
+    asyncEnumerable: new SingleQueryingEnumerable<School>(
+        (RelationalQueryContext)queryContext, 
+        RelationalCommandCache.QueryExpression(
+            Projection Mapping:
+                EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: School.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: School.CreatedAt (DateTime) Required, 1], [Property: School.Gender (int?) MaxLength(2), 2], [Property: School.ManagerId (int) Required FK Index, 3], [Property: School.Name (string) Required MaxLength(200), 4], [Property: School.SchoolType (int?) MaxLength(10), 5] }
+            SELECT TOP(1) s.Id, s.CreatedAt, s.Gender, s.ManagerId, s.Name, s.SchoolType
+            FROM Schools AS s
+            WHERE s.Id == @__schoolClass_SchoolId_0), 
+        null, 
+        Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, School>, 
+        MDDReservationAPI.Data.ApplicationDbContext, 
+        False, 
+        False, 
+        True
+    ), 
+    cancellationToken: queryContext.CancellationToken)'
+2023-09-17 10:23:14.529 +03:30 [DBG] Creating DbCommand for 'ExecuteReader'.
+2023-09-17 10:23:14.533 +03:30 [DBG] Creating DbConnection.
+2023-09-17 10:23:14.553 +03:30 [DBG] Created DbConnection. (15ms).
+2023-09-17 10:23:14.565 +03:30 [DBG] Created DbCommand for 'ExecuteReader' (32ms).
+2023-09-17 10:23:14.572 +03:30 [DBG] Initialized DbCommand for 'ExecuteReader' (44ms).
+2023-09-17 10:23:14.582 +03:30 [DBG] Opening connection to database 'main' on server 'App.db'.
+2023-09-17 10:23:14.598 +03:30 [DBG] Opened connection to database 'main' on server 'C:\Users\moham\source\repos\MDDReservationAPI\MDDReservationAPI\App.db'.
+2023-09-17 10:23:14.618 +03:30 [DBG] Executing DbCommand [Parameters=[@__schoolClass_SchoolId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "s"."Id", "s"."CreatedAt", "s"."Gender", "s"."ManagerId", "s"."Name", "s"."SchoolType"
+FROM "Schools" AS "s"
+WHERE "s"."Id" = @__schoolClass_SchoolId_0
+LIMIT 1
+2023-09-17 10:23:14.646 +03:30 [INF] Executed DbCommand (33ms) [Parameters=[@__schoolClass_SchoolId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "s"."Id", "s"."CreatedAt", "s"."Gender", "s"."ManagerId", "s"."Name", "s"."SchoolType"
+FROM "Schools" AS "s"
+WHERE "s"."Id" = @__schoolClass_SchoolId_0
+LIMIT 1
+2023-09-17 10:23:14.681 +03:30 [DBG] Context 'ApplicationDbContext' started tracking 'School' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-09-17 10:23:14.712 +03:30 [DBG] Closing data reader to 'main' on server 'C:\Users\moham\source\repos\MDDReservationAPI\MDDReservationAPI\App.db'.
+2023-09-17 10:23:14.721 +03:30 [DBG] A data reader for 'main' on server 'C:\Users\moham\source\repos\MDDReservationAPI\MDDReservationAPI\App.db' is being disposed after spending 65ms reading results.
+2023-09-17 10:23:14.730 +03:30 [DBG] Closing connection to database 'main' on server 'C:\Users\moham\source\repos\MDDReservationAPI\MDDReservationAPI\App.db'.
+2023-09-17 10:23:14.737 +03:30 [DBG] Closed connection to database 'main' on server 'App.db' (7ms).
+2023-09-17 10:24:44.617 +03:30 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-09-17 10:24:44.713 +03:30 [DBG] Hosting starting
+2023-09-17 10:24:44.859 +03:30 [DBG] Using development certificate: CN=localhost (Thumbprint: 175D8FE1405C2912E50F5B9B0938581AAF4B0E19)
+2023-09-17 10:24:44.888 +03:30 [INF] Now listening on: https://localhost:7010
+2023-09-17 10:24:44.889 +03:30 [INF] Now listening on: http://localhost:5143
+2023-09-17 10:24:44.889 +03:30 [DBG] Loaded hosting startup assembly MDDReservationAPI
+2023-09-17 10:24:44.890 +03:30 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2023-09-17 10:24:44.891 +03:30 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2023-09-17 10:24:44.892 +03:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-17 10:24:44.893 +03:30 [INF] Hosting environment: Development
+2023-09-17 10:24:44.894 +03:30 [INF] Content root path: C:\Users\moham\source\repos\MDDReservationAPI\MDDReservationAPI\
+2023-09-17 10:24:44.895 +03:30 [DBG] Hosting started
+2023-09-17 10:24:44.920 +03:30 [DBG] Connection id "0HMTN9BSSHBOP" received FIN.
+2023-09-17 10:24:44.920 +03:30 [DBG] Connection id "0HMTN9BSSHBOQ" received FIN.
+2023-09-17 10:24:44.925 +03:30 [DBG] Connection id "0HMTN9BSSHBOP" accepted.
+2023-09-17 10:24:44.925 +03:30 [DBG] Connection id "0HMTN9BSSHBOQ" accepted.
+2023-09-17 10:24:44.927 +03:30 [DBG] Connection id "0HMTN9BSSHBOP" started.
+2023-09-17 10:24:44.927 +03:30 [DBG] Connection id "0HMTN9BSSHBOQ" started.
+2023-09-17 10:24:44.952 +03:30 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-09-17 10:24:44.952 +03:30 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-09-17 10:24:45.002 +03:30 [DBG] Connection id "0HMTN9BSSHBOQ" stopped.
+2023-09-17 10:24:45.002 +03:30 [DBG] Connection id "0HMTN9BSSHBOP" stopped.
+2023-09-17 10:24:45.005 +03:30 [DBG] Connection id "0HMTN9BSSHBOP" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-09-17 10:24:45.005 +03:30 [DBG] Connection id "0HMTN9BSSHBOQ" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-09-17 10:24:45.110 +03:30 [DBG] Connection id "0HMTN9BSSHBOR" accepted.
+2023-09-17 10:24:45.115 +03:30 [DBG] Connection id "0HMTN9BSSHBOR" started.
+2023-09-17 10:24:45.156 +03:30 [DBG] Connection 0HMTN9BSSHBOR established using the following protocol: "Tls13"
+2023-09-17 10:24:45.208 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7010/swagger/index.html - -
+2023-09-17 10:24:45.243 +03:30 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2023-09-17 10:24:45.441 +03:30 [DBG] Response markup is scheduled to include browser refresh script injection.
+2023-09-17 10:24:45.592 +03:30 [DBG] Response markup was updated to include browser refresh script injection.
+2023-09-17 10:24:45.601 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7010/swagger/index.html - - - 200 - text/html;charset=utf-8 400.5617ms
+2023-09-17 10:24:45.615 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7010/_framework/aspnetcore-browser-refresh.js - -
+2023-09-17 10:24:45.620 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7010/_framework/aspnetcore-browser-refresh.js - - - 200 12366 application/javascript;+charset=utf-8 5.6836ms
+2023-09-17 10:24:45.648 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7010/_vs/browserLink - -
+2023-09-17 10:24:45.669 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7010/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 21.5710ms
+2023-09-17 10:24:45.734 +03:30 [DBG] Connection id "0HMTN9BSSHBOS" accepted.
+2023-09-17 10:24:45.735 +03:30 [DBG] Connection id "0HMTN9BSSHBOS" started.
+2023-09-17 10:24:45.744 +03:30 [DBG] Connection 0HMTN9BSSHBOS established using the following protocol: "Tls13"
+2023-09-17 10:24:45.746 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7010/_vs/browserLink - -
+2023-09-17 10:24:45.751 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7010/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 4.8148ms
+2023-09-17 10:24:45.936 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7010/swagger/v1/swagger.json - -
+2023-09-17 10:24:46.055 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7010/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 118.5111ms
+2023-09-17 10:26:02.044 +03:30 [INF] Request starting HTTP/2 POST https://localhost:7010/schoolClass/create application/json-patch+json 85
+2023-09-17 10:26:02.047 +03:30 [DBG] POST requests are not supported
+2023-09-17 10:26:02.072 +03:30 [DBG] 1 candidate(s) found for the request path '/schoolClass/create'
+2023-09-17 10:26:02.081 +03:30 [DBG] Endpoint 'MDDReservationAPI.Controllers.SchoolClassController.CreateSchoolClassAsync (MDDReservationAPI)' with route pattern 'schoolClass/create' is valid for the request path '/schoolClass/create'
+2023-09-17 10:26:02.083 +03:30 [DBG] Request matched endpoint 'MDDReservationAPI.Controllers.SchoolClassController.CreateSchoolClassAsync (MDDReservationAPI)'
+2023-09-17 10:26:02.085 +03:30 [INF] Executing endpoint 'MDDReservationAPI.Controllers.SchoolClassController.CreateSchoolClassAsync (MDDReservationAPI)'
+2023-09-17 10:26:02.116 +03:30 [INF] Route matched with {action = "CreateSchoolClass", controller = "SchoolClass"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[MDDReservationAPI.Models.SchoolClass]] CreateSchoolClassAsync(MDDReservationAPI.DTO.SchoolClassCreationDTO) on controller MDDReservationAPI.Controllers.SchoolClassController (MDDReservationAPI).
+2023-09-17 10:26:02.119 +03:30 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2023-09-17 10:26:02.120 +03:30 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2023-09-17 10:26:02.121 +03:30 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2023-09-17 10:26:02.122 +03:30 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2023-09-17 10:26:02.123 +03:30 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)","Microsoft.AspNetCore.Mvc.ProducesAttribute (Order: 0)"]
+2023-09-17 10:26:02.124 +03:30 [DBG] Executing controller factory for controller MDDReservationAPI.Controllers.SchoolClassController (MDDReservationAPI)
+2023-09-17 10:26:02.366 +03:30 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2023-09-17 10:26:02.390 +03:30 [DBG] Executed controller factory for controller MDDReservationAPI.Controllers.SchoolClassController (MDDReservationAPI)
+2023-09-17 10:26:02.397 +03:30 [DBG] Attempting to bind parameter 'schoolClassCreationDto' of type 'MDDReservationAPI.DTO.SchoolClassCreationDTO' ...
+2023-09-17 10:26:02.400 +03:30 [DBG] Attempting to bind parameter 'schoolClassCreationDto' of type 'MDDReservationAPI.DTO.SchoolClassCreationDTO' using the name '' in request data ...
+2023-09-17 10:26:02.402 +03:30 [DBG] Rejected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonPatchInputFormatter' for content type 'application/json-patch+json'.
+2023-09-17 10:26:02.403 +03:30 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonInputFormatter' for content type 'application/json-patch+json'.
+2023-09-17 10:26:02.410 +03:30 [DBG] Connection id "0HMTN9BSSHBOR", Request id "0HMTN9BSSHBOR:00000009": started reading request body.
+2023-09-17 10:26:02.411 +03:30 [DBG] Connection id "0HMTN9BSSHBOR", Request id "0HMTN9BSSHBOR:00000009": done reading request body.
+2023-09-17 10:26:02.541 +03:30 [DBG] Done attempting to bind parameter 'schoolClassCreationDto' of type 'MDDReservationAPI.DTO.SchoolClassCreationDTO'.
+2023-09-17 10:26:02.545 +03:30 [DBG] Done attempting to bind parameter 'schoolClassCreationDto' of type 'MDDReservationAPI.DTO.SchoolClassCreationDTO'.
+2023-09-17 10:26:02.546 +03:30 [DBG] Attempting to validate the bound parameter 'schoolClassCreationDto' of type 'MDDReservationAPI.DTO.SchoolClassCreationDTO' ...
+2023-09-17 10:26:02.555 +03:30 [DBG] Done attempting to validate the bound parameter 'schoolClassCreationDto' of type 'MDDReservationAPI.DTO.SchoolClassCreationDTO'.
+2023-09-17 10:26:03.267 +03:30 [DBG] The property 'Student.ProjectId' was created in shadow state because there are no eligible CLR members with a matching name.
+2023-09-17 10:26:03.271 +03:30 [DBG] The property 'User.Discriminator' was created in shadow state because there are no eligible CLR members with a matching name.
+2023-09-17 10:26:03.451 +03:30 [DBG] Entity Framework Core 7.0.10 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:7.0.10' with options: None
+2023-09-17 10:26:03.512 +03:30 [DBG] Compiling query expression: 
+'DbSet<School>()
+    .Where(s => s.Id == __schoolClass_SchoolId_0)
+    .FirstOrDefault()'
+2023-09-17 10:26:03.791 +03:30 [DBG] Generated query execution expression: 
+'queryContext => ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync<School>(
+    asyncEnumerable: new SingleQueryingEnumerable<School>(
+        (RelationalQueryContext)queryContext, 
+        RelationalCommandCache.QueryExpression(
+            Projection Mapping:
+                EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: School.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: School.CreatedAt (DateTime) Required, 1], [Property: School.Gender (int?) MaxLength(2), 2], [Property: School.ManagerId (int) Required FK Index, 3], [Property: School.Name (string) Required MaxLength(200), 4], [Property: School.SchoolType (int?) MaxLength(10), 5] }
+            SELECT TOP(1) s.Id, s.CreatedAt, s.Gender, s.ManagerId, s.Name, s.SchoolType
+            FROM Schools AS s
+            WHERE s.Id == @__schoolClass_SchoolId_0), 
+        null, 
+        Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, School>, 
+        MDDReservationAPI.Data.ApplicationDbContext, 
+        False, 
+        False, 
+        True
+    ), 
+    cancellationToken: queryContext.CancellationToken)'
+2023-09-17 10:26:03.843 +03:30 [DBG] Creating DbCommand for 'ExecuteReader'.
+2023-09-17 10:26:03.849 +03:30 [DBG] Creating DbConnection.
+2023-09-17 10:26:03.869 +03:30 [DBG] Created DbConnection. (16ms).
+2023-09-17 10:26:03.880 +03:30 [DBG] Created DbCommand for 'ExecuteReader' (33ms).
+2023-09-17 10:26:03.888 +03:30 [DBG] Initialized DbCommand for 'ExecuteReader' (46ms).
+2023-09-17 10:26:03.901 +03:30 [DBG] Opening connection to database 'main' on server 'App.db'.
+2023-09-17 10:26:03.918 +03:30 [DBG] Opened connection to database 'main' on server 'C:\Users\moham\source\repos\MDDReservationAPI\MDDReservationAPI\App.db'.
+2023-09-17 10:26:03.937 +03:30 [DBG] Executing DbCommand [Parameters=[@__schoolClass_SchoolId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "s"."Id", "s"."CreatedAt", "s"."Gender", "s"."ManagerId", "s"."Name", "s"."SchoolType"
+FROM "Schools" AS "s"
+WHERE "s"."Id" = @__schoolClass_SchoolId_0
+LIMIT 1
+2023-09-17 10:26:03.960 +03:30 [INF] Executed DbCommand (29ms) [Parameters=[@__schoolClass_SchoolId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "s"."Id", "s"."CreatedAt", "s"."Gender", "s"."ManagerId", "s"."Name", "s"."SchoolType"
+FROM "Schools" AS "s"
+WHERE "s"."Id" = @__schoolClass_SchoolId_0
+LIMIT 1
+2023-09-17 10:26:04.000 +03:30 [DBG] Context 'ApplicationDbContext' started tracking 'School' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-09-17 10:26:04.033 +03:30 [DBG] Closing data reader to 'main' on server 'C:\Users\moham\source\repos\MDDReservationAPI\MDDReservationAPI\App.db'.
+2023-09-17 10:26:04.043 +03:30 [DBG] A data reader for 'main' on server 'C:\Users\moham\source\repos\MDDReservationAPI\MDDReservationAPI\App.db' is being disposed after spending 71ms reading results.
+2023-09-17 10:26:04.054 +03:30 [DBG] Closing connection to database 'main' on server 'C:\Users\moham\source\repos\MDDReservationAPI\MDDReservationAPI\App.db'.
+2023-09-17 10:26:04.059 +03:30 [DBG] Closed connection to database 'main' on server 'App.db' (5ms).
+2023-09-17 10:27:33.302 +03:30 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-09-17 10:27:33.381 +03:30 [DBG] Hosting starting
+2023-09-17 10:27:33.525 +03:30 [DBG] Using development certificate: CN=localhost (Thumbprint: 175D8FE1405C2912E50F5B9B0938581AAF4B0E19)
+2023-09-17 10:27:33.566 +03:30 [INF] Now listening on: https://localhost:7010
+2023-09-17 10:27:33.568 +03:30 [INF] Now listening on: http://localhost:5143
+2023-09-17 10:27:33.568 +03:30 [DBG] Loaded hosting startup assembly MDDReservationAPI
+2023-09-17 10:27:33.569 +03:30 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2023-09-17 10:27:33.569 +03:30 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2023-09-17 10:27:33.570 +03:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-17 10:27:33.571 +03:30 [INF] Hosting environment: Development
+2023-09-17 10:27:33.572 +03:30 [INF] Content root path: C:\Users\moham\source\repos\MDDReservationAPI\MDDReservationAPI\
+2023-09-17 10:27:33.572 +03:30 [DBG] Hosting started
+2023-09-17 10:27:33.751 +03:30 [DBG] Connection id "0HMTN9DF6KL0O" received FIN.
+2023-09-17 10:27:33.760 +03:30 [DBG] Connection id "0HMTN9DF6KL0O" accepted.
+2023-09-17 10:27:33.762 +03:30 [DBG] Connection id "0HMTN9DF6KL0O" started.
+2023-09-17 10:27:33.775 +03:30 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-09-17 10:27:33.804 +03:30 [DBG] Connection id "0HMTN9DF6KL0O" stopped.
+2023-09-17 10:27:33.809 +03:30 [DBG] Connection id "0HMTN9DF6KL0O" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-09-17 10:27:33.987 +03:30 [DBG] Connection id "0HMTN9DF6KL0P" accepted.
+2023-09-17 10:27:33.990 +03:30 [DBG] Connection id "0HMTN9DF6KL0P" started.
+2023-09-17 10:27:34.037 +03:30 [DBG] Connection 0HMTN9DF6KL0P established using the following protocol: "Tls13"
+2023-09-17 10:27:34.077 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7010/swagger/index.html - -
+2023-09-17 10:27:34.108 +03:30 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2023-09-17 10:27:34.302 +03:30 [DBG] Response markup is scheduled to include browser refresh script injection.
+2023-09-17 10:27:34.438 +03:30 [DBG] Response markup was updated to include browser refresh script injection.
+2023-09-17 10:27:34.445 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7010/swagger/index.html - - - 200 - text/html;charset=utf-8 371.3442ms
+2023-09-17 10:27:34.446 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7010/_framework/aspnetcore-browser-refresh.js - -
+2023-09-17 10:27:34.454 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7010/_framework/aspnetcore-browser-refresh.js - - - 200 12366 application/javascript;+charset=utf-8 7.4737ms
+2023-09-17 10:27:34.496 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7010/_vs/browserLink - -
+2023-09-17 10:27:34.514 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7010/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 18.5505ms
+2023-09-17 10:27:34.675 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7010/swagger/v1/swagger.json - -
+2023-09-17 10:27:34.797 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7010/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 121.6770ms
+2023-09-17 10:28:41.400 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7010/swagger/index.html - -
+2023-09-17 10:28:41.409 +03:30 [DBG] Response markup is scheduled to include browser refresh script injection.
+2023-09-17 10:28:41.417 +03:30 [DBG] Response markup was updated to include browser refresh script injection.
+2023-09-17 10:28:41.418 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7010/swagger/index.html - - - 200 - text/html;charset=utf-8 17.6517ms
+2023-09-17 10:28:41.447 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7010/_framework/aspnetcore-browser-refresh.js - -
+2023-09-17 10:28:41.448 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7010/_framework/aspnetcore-browser-refresh.js - - - 200 12366 application/javascript;+charset=utf-8 1.1022ms
+2023-09-17 10:28:41.495 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7010/_vs/browserLink - -
+2023-09-17 10:28:41.499 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7010/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 3.6372ms
+2023-09-17 10:28:41.695 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7010/swagger/v1/swagger.json - -
+2023-09-17 10:28:41.702 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7010/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 6.5517ms
+2023-09-17 10:28:54.970 +03:30 [INF] Request starting HTTP/2 POST https://localhost:7010/schoolClass/create application/json-patch+json 85
+2023-09-17 10:28:55.012 +03:30 [DBG] POST requests are not supported
+2023-09-17 10:28:55.032 +03:30 [DBG] 1 candidate(s) found for the request path '/schoolClass/create'
+2023-09-17 10:28:55.040 +03:30 [DBG] Endpoint 'MDDReservationAPI.Controllers.SchoolClassController.CreateSchoolClassAsync (MDDReservationAPI)' with route pattern 'schoolClass/create' is valid for the request path '/schoolClass/create'
+2023-09-17 10:28:55.043 +03:30 [DBG] Request matched endpoint 'MDDReservationAPI.Controllers.SchoolClassController.CreateSchoolClassAsync (MDDReservationAPI)'
+2023-09-17 10:28:55.045 +03:30 [INF] Executing endpoint 'MDDReservationAPI.Controllers.SchoolClassController.CreateSchoolClassAsync (MDDReservationAPI)'
+2023-09-17 10:28:55.075 +03:30 [INF] Route matched with {action = "CreateSchoolClass", controller = "SchoolClass"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[MDDReservationAPI.Models.SchoolClass]] CreateSchoolClassAsync(MDDReservationAPI.DTO.SchoolClassCreationDTO) on controller MDDReservationAPI.Controllers.SchoolClassController (MDDReservationAPI).
+2023-09-17 10:28:55.078 +03:30 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2023-09-17 10:28:55.079 +03:30 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2023-09-17 10:28:55.080 +03:30 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2023-09-17 10:28:55.081 +03:30 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2023-09-17 10:28:55.082 +03:30 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)","Microsoft.AspNetCore.Mvc.ProducesAttribute (Order: 0)"]
+2023-09-17 10:28:55.083 +03:30 [DBG] Executing controller factory for controller MDDReservationAPI.Controllers.SchoolClassController (MDDReservationAPI)
+2023-09-17 10:28:55.294 +03:30 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2023-09-17 10:28:55.318 +03:30 [DBG] Executed controller factory for controller MDDReservationAPI.Controllers.SchoolClassController (MDDReservationAPI)
+2023-09-17 10:28:55.324 +03:30 [DBG] Attempting to bind parameter 'schoolClassCreationDto' of type 'MDDReservationAPI.DTO.SchoolClassCreationDTO' ...
+2023-09-17 10:28:55.327 +03:30 [DBG] Attempting to bind parameter 'schoolClassCreationDto' of type 'MDDReservationAPI.DTO.SchoolClassCreationDTO' using the name '' in request data ...
+2023-09-17 10:28:55.329 +03:30 [DBG] Rejected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonPatchInputFormatter' for content type 'application/json-patch+json'.
+2023-09-17 10:28:55.330 +03:30 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonInputFormatter' for content type 'application/json-patch+json'.
+2023-09-17 10:28:55.336 +03:30 [DBG] Connection id "0HMTN9DF6KL0P", Request id "0HMTN9DF6KL0P:00000011": started reading request body.
+2023-09-17 10:28:55.337 +03:30 [DBG] Connection id "0HMTN9DF6KL0P", Request id "0HMTN9DF6KL0P:00000011": done reading request body.
+2023-09-17 10:28:55.439 +03:30 [DBG] Done attempting to bind parameter 'schoolClassCreationDto' of type 'MDDReservationAPI.DTO.SchoolClassCreationDTO'.
+2023-09-17 10:28:55.441 +03:30 [DBG] Done attempting to bind parameter 'schoolClassCreationDto' of type 'MDDReservationAPI.DTO.SchoolClassCreationDTO'.
+2023-09-17 10:28:55.442 +03:30 [DBG] Attempting to validate the bound parameter 'schoolClassCreationDto' of type 'MDDReservationAPI.DTO.SchoolClassCreationDTO' ...
+2023-09-17 10:28:55.450 +03:30 [DBG] Done attempting to validate the bound parameter 'schoolClassCreationDto' of type 'MDDReservationAPI.DTO.SchoolClassCreationDTO'.
+2023-09-17 10:28:56.150 +03:30 [DBG] The property 'Student.ProjectId' was created in shadow state because there are no eligible CLR members with a matching name.
+2023-09-17 10:28:56.153 +03:30 [DBG] The property 'User.Discriminator' was created in shadow state because there are no eligible CLR members with a matching name.
+2023-09-17 10:28:56.338 +03:30 [DBG] Entity Framework Core 7.0.10 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:7.0.10' with options: None
+2023-09-17 10:28:56.402 +03:30 [DBG] Compiling query expression: 
+'DbSet<School>()
+    .Where(s => s.Id == __schoolClass_SchoolId_0)
+    .FirstOrDefault()'
+2023-09-17 10:28:56.687 +03:30 [DBG] Generated query execution expression: 
+'queryContext => ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync<School>(
+    asyncEnumerable: new SingleQueryingEnumerable<School>(
+        (RelationalQueryContext)queryContext, 
+        RelationalCommandCache.QueryExpression(
+            Projection Mapping:
+                EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: School.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: School.CreatedAt (DateTime) Required, 1], [Property: School.Gender (int?) MaxLength(2), 2], [Property: School.ManagerId (int) Required FK Index, 3], [Property: School.Name (string) Required MaxLength(200), 4], [Property: School.SchoolType (int?) MaxLength(10), 5] }
+            SELECT TOP(1) s.Id, s.CreatedAt, s.Gender, s.ManagerId, s.Name, s.SchoolType
+            FROM Schools AS s
+            WHERE s.Id == @__schoolClass_SchoolId_0), 
+        null, 
+        Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, School>, 
+        MDDReservationAPI.Data.ApplicationDbContext, 
+        False, 
+        False, 
+        True
+    ), 
+    cancellationToken: queryContext.CancellationToken)'
+2023-09-17 10:28:56.736 +03:30 [DBG] Creating DbCommand for 'ExecuteReader'.
+2023-09-17 10:28:56.742 +03:30 [DBG] Creating DbConnection.
+2023-09-17 10:28:56.762 +03:30 [DBG] Created DbConnection. (17ms).
+2023-09-17 10:28:56.773 +03:30 [DBG] Created DbCommand for 'ExecuteReader' (31ms).
+2023-09-17 10:28:56.782 +03:30 [DBG] Initialized DbCommand for 'ExecuteReader' (46ms).
+2023-09-17 10:28:56.792 +03:30 [DBG] Opening connection to database 'main' on server 'App.db'.
+2023-09-17 10:28:56.808 +03:30 [DBG] Opened connection to database 'main' on server 'C:\Users\moham\source\repos\MDDReservationAPI\MDDReservationAPI\App.db'.
+2023-09-17 10:28:56.828 +03:30 [DBG] Executing DbCommand [Parameters=[@__schoolClass_SchoolId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "s"."Id", "s"."CreatedAt", "s"."Gender", "s"."ManagerId", "s"."Name", "s"."SchoolType"
+FROM "Schools" AS "s"
+WHERE "s"."Id" = @__schoolClass_SchoolId_0
+LIMIT 1
+2023-09-17 10:28:56.852 +03:30 [INF] Executed DbCommand (30ms) [Parameters=[@__schoolClass_SchoolId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "s"."Id", "s"."CreatedAt", "s"."Gender", "s"."ManagerId", "s"."Name", "s"."SchoolType"
+FROM "Schools" AS "s"
+WHERE "s"."Id" = @__schoolClass_SchoolId_0
+LIMIT 1
+2023-09-17 10:28:56.883 +03:30 [DBG] Context 'ApplicationDbContext' started tracking 'School' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-09-17 10:28:56.915 +03:30 [DBG] Closing data reader to 'main' on server 'C:\Users\moham\source\repos\MDDReservationAPI\MDDReservationAPI\App.db'.
+2023-09-17 10:28:56.926 +03:30 [DBG] A data reader for 'main' on server 'C:\Users\moham\source\repos\MDDReservationAPI\MDDReservationAPI\App.db' is being disposed after spending 62ms reading results.
+2023-09-17 10:28:56.934 +03:30 [DBG] Closing connection to database 'main' on server 'C:\Users\moham\source\repos\MDDReservationAPI\MDDReservationAPI\App.db'.
+2023-09-17 10:28:56.941 +03:30 [DBG] Closed connection to database 'main' on server 'App.db' (5ms).
+2023-09-17 10:28:56.943 +03:30 [ERR] 1
+2023-09-17 10:28:56.945 +03:30 [ERR] 1
+2023-09-17 10:28:56.945 +03:30 [ERR] ________________________
+2023-09-17 10:29:26.197 +03:30 [INF] Executed action MDDReservationAPI.Controllers.SchoolClassController.CreateSchoolClassAsync (MDDReservationAPI) in 31108.9842ms
+2023-09-17 10:29:26.202 +03:30 [INF] Executed endpoint 'MDDReservationAPI.Controllers.SchoolClassController.CreateSchoolClassAsync (MDDReservationAPI)'
+2023-09-17 10:29:26.204 +03:30 [ERR] An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at MDDReservationAPI.Repositories.MDDReservationRepository.AddSchoolClassAsync(SchoolClass schoolClass)
+   at MDDReservationAPI.Controllers.SchoolClassController.CreateSchoolClassAsync(SchoolClassCreationDTO schoolClassCreationDto)
+   at lambda_method5(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-09-17 10:29:26.223 +03:30 [DBG] 'ApplicationDbContext' disposed.
+2023-09-17 10:29:26.234 +03:30 [DBG] Disposing connection to database 'main' on server 'App.db'.
+2023-09-17 10:29:26.238 +03:30 [DBG] Disposed connection to database 'main' on server 'App.db' (3ms).
+2023-09-17 10:29:26.240 +03:30 [INF] Request finished HTTP/2 POST https://localhost:7010/schoolClass/create application/json-patch+json 85 - 500 - text/plain;+charset=utf-8 31269.8825ms
+2023-09-17 10:34:28.472 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7010/swagger/index.html - -
+2023-09-17 10:34:28.479 +03:30 [DBG] Response markup is scheduled to include browser refresh script injection.
+2023-09-17 10:34:28.488 +03:30 [DBG] Response markup was updated to include browser refresh script injection.
+2023-09-17 10:34:28.489 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7010/swagger/index.html - - - 200 - text/html;charset=utf-8 16.5271ms
+2023-09-17 10:34:28.551 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7010/_framework/aspnetcore-browser-refresh.js - -
+2023-09-17 10:34:28.552 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7010/_framework/aspnetcore-browser-refresh.js - - - 200 12366 application/javascript;+charset=utf-8 0.9376ms
+2023-09-17 10:34:28.558 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7010/_vs/browserLink - -
+2023-09-17 10:34:28.565 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7010/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 7.3022ms
+2023-09-17 10:34:28.727 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7010/swagger/v1/swagger.json - -
+2023-09-17 10:34:28.734 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7010/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 7.3062ms
+2023-09-17 10:34:29.240 +03:30 [DBG] Connection id "0HMTN9DF6KL0Q" accepted.
+2023-09-17 10:34:29.241 +03:30 [DBG] Connection id "0HMTN9DF6KL0Q" started.
+2023-09-17 10:34:29.252 +03:30 [DBG] Connection 0HMTN9DF6KL0Q established using the following protocol: "Tls13"
+2023-09-17 10:34:29.254 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7010/_framework/aspnetcore-browser-refresh.js - -
+2023-09-17 10:34:29.254 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7010/_vs/browserLink - -
+2023-09-17 10:34:29.258 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7010/_framework/aspnetcore-browser-refresh.js - - - 200 12366 application/javascript;+charset=utf-8 4.0640ms
+2023-09-17 10:34:29.265 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7010/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 11.1405ms
+2023-09-17 10:34:43.984 +03:30 [INF] Request starting HTTP/2 POST https://localhost:7010/schoolClass/create application/json-patch+json 85
+2023-09-17 10:34:43.986 +03:30 [DBG] POST requests are not supported
+2023-09-17 10:34:43.987 +03:30 [DBG] 1 candidate(s) found for the request path '/schoolClass/create'
+2023-09-17 10:34:43.989 +03:30 [DBG] Endpoint 'MDDReservationAPI.Controllers.SchoolClassController.CreateSchoolClassAsync (MDDReservationAPI)' with route pattern 'schoolClass/create' is valid for the request path '/schoolClass/create'
+2023-09-17 10:34:43.989 +03:30 [DBG] Request matched endpoint 'MDDReservationAPI.Controllers.SchoolClassController.CreateSchoolClassAsync (MDDReservationAPI)'
+2023-09-17 10:34:43.990 +03:30 [INF] Executing endpoint 'MDDReservationAPI.Controllers.SchoolClassController.CreateSchoolClassAsync (MDDReservationAPI)'
+2023-09-17 10:34:43.996 +03:30 [INF] Route matched with {action = "CreateSchoolClass", controller = "SchoolClass"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[MDDReservationAPI.Models.SchoolClass]] CreateSchoolClassAsync(MDDReservationAPI.DTO.SchoolClassCreationDTO) on controller MDDReservationAPI.Controllers.SchoolClassController (MDDReservationAPI).
+2023-09-17 10:34:43.997 +03:30 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2023-09-17 10:34:43.998 +03:30 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2023-09-17 10:34:43.998 +03:30 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2023-09-17 10:34:43.999 +03:30 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2023-09-17 10:34:44.000 +03:30 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)","Microsoft.AspNetCore.Mvc.ProducesAttribute (Order: 0)"]
+2023-09-17 10:34:44.001 +03:30 [DBG] Executing controller factory for controller MDDReservationAPI.Controllers.SchoolClassController (MDDReservationAPI)
+2023-09-17 10:34:44.002 +03:30 [DBG] Executed controller factory for controller MDDReservationAPI.Controllers.SchoolClassController (MDDReservationAPI)
+2023-09-17 10:34:44.003 +03:30 [DBG] Attempting to bind parameter 'schoolClassCreationDto' of type 'MDDReservationAPI.DTO.SchoolClassCreationDTO' ...
+2023-09-17 10:34:44.004 +03:30 [DBG] Attempting to bind parameter 'schoolClassCreationDto' of type 'MDDReservationAPI.DTO.SchoolClassCreationDTO' using the name '' in request data ...
+2023-09-17 10:34:44.005 +03:30 [DBG] Rejected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonPatchInputFormatter' for content type 'application/json-patch+json'.
+2023-09-17 10:34:44.006 +03:30 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonInputFormatter' for content type 'application/json-patch+json'.
+2023-09-17 10:34:44.006 +03:30 [DBG] Connection id "0HMTN9DF6KL0P", Request id "0HMTN9DF6KL0P:0000001B": started reading request body.
+2023-09-17 10:34:44.007 +03:30 [DBG] Connection id "0HMTN9DF6KL0P", Request id "0HMTN9DF6KL0P:0000001B": done reading request body.
+2023-09-17 10:34:44.008 +03:30 [DBG] Done attempting to bind parameter 'schoolClassCreationDto' of type 'MDDReservationAPI.DTO.SchoolClassCreationDTO'.
+2023-09-17 10:34:44.009 +03:30 [DBG] Done attempting to bind parameter 'schoolClassCreationDto' of type 'MDDReservationAPI.DTO.SchoolClassCreationDTO'.
+2023-09-17 10:34:44.011 +03:30 [DBG] Attempting to validate the bound parameter 'schoolClassCreationDto' of type 'MDDReservationAPI.DTO.SchoolClassCreationDTO' ...
+2023-09-17 10:34:44.013 +03:30 [DBG] Done attempting to validate the bound parameter 'schoolClassCreationDto' of type 'MDDReservationAPI.DTO.SchoolClassCreationDTO'.
+2023-09-17 10:34:44.015 +03:30 [ERR] 1
+2023-09-17 10:34:44.016 +03:30 [ERR] ________________________
+2023-09-17 10:34:44.039 +03:30 [DBG] Entity Framework Core 7.0.10 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:7.0.10' with options: None
+2023-09-17 10:34:44.040 +03:30 [DBG] Compiling query expression: 
+'DbSet<School>()
+    .Where(s => s.Id == __schoolClass_SchoolId_0)
+    .FirstOrDefault()'
+2023-09-17 10:34:44.045 +03:30 [DBG] Generated query execution expression: 
+'queryContext => ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync<School>(
+    asyncEnumerable: new SingleQueryingEnumerable<School>(
+        (RelationalQueryContext)queryContext, 
+        RelationalCommandCache.QueryExpression(
+            Projection Mapping:
+                EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: School.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: School.CreatedAt (DateTime) Required, 1], [Property: School.Gender (int?) MaxLength(2), 2], [Property: School.ManagerId (int) Required FK Index, 3], [Property: School.Name (string) Required MaxLength(200), 4], [Property: School.SchoolType (int?) MaxLength(10), 5] }
+            SELECT TOP(1) s.Id, s.CreatedAt, s.Gender, s.ManagerId, s.Name, s.SchoolType
+            FROM Schools AS s
+            WHERE s.Id == @__schoolClass_SchoolId_0), 
+        null, 
+        Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, School>, 
+        MDDReservationAPI.Data.ApplicationDbContext, 
+        False, 
+        False, 
+        True
+    ), 
+    cancellationToken: queryContext.CancellationToken)'
+2023-09-17 10:34:44.046 +03:30 [DBG] Creating DbCommand for 'ExecuteReader'.
+2023-09-17 10:34:44.047 +03:30 [DBG] Creating DbConnection.
+2023-09-17 10:34:44.047 +03:30 [DBG] Created DbConnection. (0ms).
+2023-09-17 10:34:44.048 +03:30 [DBG] Created DbCommand for 'ExecuteReader' (1ms).
+2023-09-17 10:34:44.049 +03:30 [DBG] Initialized DbCommand for 'ExecuteReader' (2ms).
+2023-09-17 10:34:44.049 +03:30 [DBG] Opening connection to database 'main' on server 'App.db'.
+2023-09-17 10:34:44.050 +03:30 [DBG] Opened connection to database 'main' on server 'C:\Users\moham\source\repos\MDDReservationAPI\MDDReservationAPI\App.db'.
+2023-09-17 10:34:44.051 +03:30 [DBG] Executing DbCommand [Parameters=[@__schoolClass_SchoolId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "s"."Id", "s"."CreatedAt", "s"."Gender", "s"."ManagerId", "s"."Name", "s"."SchoolType"
+FROM "Schools" AS "s"
+WHERE "s"."Id" = @__schoolClass_SchoolId_0
+LIMIT 1
+2023-09-17 10:34:44.053 +03:30 [INF] Executed DbCommand (2ms) [Parameters=[@__schoolClass_SchoolId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "s"."Id", "s"."CreatedAt", "s"."Gender", "s"."ManagerId", "s"."Name", "s"."SchoolType"
+FROM "Schools" AS "s"
+WHERE "s"."Id" = @__schoolClass_SchoolId_0
+LIMIT 1
+2023-09-17 10:34:44.055 +03:30 [DBG] Context 'ApplicationDbContext' started tracking 'School' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-09-17 10:34:44.056 +03:30 [DBG] Closing data reader to 'main' on server 'C:\Users\moham\source\repos\MDDReservationAPI\MDDReservationAPI\App.db'.
+2023-09-17 10:34:44.056 +03:30 [DBG] A data reader for 'main' on server 'C:\Users\moham\source\repos\MDDReservationAPI\MDDReservationAPI\App.db' is being disposed after spending 1ms reading results.
+2023-09-17 10:34:44.057 +03:30 [DBG] Closing connection to database 'main' on server 'C:\Users\moham\source\repos\MDDReservationAPI\MDDReservationAPI\App.db'.
+2023-09-17 10:34:44.058 +03:30 [DBG] Closed connection to database 'main' on server 'App.db' (1ms).
+2023-09-17 10:34:44.060 +03:30 [ERR] 1
+2023-09-17 10:34:44.060 +03:30 [ERR] ________________________
+2023-09-17 10:34:57.316 +03:30 [INF] Executed action MDDReservationAPI.Controllers.SchoolClassController.CreateSchoolClassAsync (MDDReservationAPI) in 13314.5266ms
+2023-09-17 10:34:57.319 +03:30 [INF] Executed endpoint 'MDDReservationAPI.Controllers.SchoolClassController.CreateSchoolClassAsync (MDDReservationAPI)'
+2023-09-17 10:34:57.320 +03:30 [ERR] An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at MDDReservationAPI.Repositories.MDDReservationRepository.AddSchoolClassAsync(SchoolClass schoolClass)
+   at MDDReservationAPI.Controllers.SchoolClassController.CreateSchoolClassAsync(SchoolClassCreationDTO schoolClassCreationDto)
+   at lambda_method94(Closure , Object )
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-09-17 10:34:57.324 +03:30 [DBG] 'ApplicationDbContext' disposed.
+2023-09-17 10:34:57.325 +03:30 [DBG] Disposing connection to database 'main' on server 'App.db'.
+2023-09-17 10:34:57.326 +03:30 [DBG] Disposed connection to database 'main' on server 'App.db' (1ms).
+2023-09-17 10:34:57.327 +03:30 [INF] Request finished HTTP/2 POST https://localhost:7010/schoolClass/create application/json-patch+json 85 - 500 - text/plain;+charset=utf-8 13343.1889ms
+2023-09-17 10:43:20.195 +03:30 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-09-17 10:43:20.285 +03:30 [DBG] Hosting starting
+2023-09-17 10:43:20.426 +03:30 [DBG] Using development certificate: CN=localhost (Thumbprint: 175D8FE1405C2912E50F5B9B0938581AAF4B0E19)
+2023-09-17 10:43:20.460 +03:30 [INF] Now listening on: https://localhost:7010
+2023-09-17 10:43:20.461 +03:30 [INF] Now listening on: http://localhost:5143
+2023-09-17 10:43:20.462 +03:30 [DBG] Loaded hosting startup assembly MDDReservationAPI
+2023-09-17 10:43:20.462 +03:30 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2023-09-17 10:43:20.463 +03:30 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2023-09-17 10:43:20.464 +03:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-17 10:43:20.465 +03:30 [INF] Hosting environment: Development
+2023-09-17 10:43:20.467 +03:30 [INF] Content root path: C:\Users\moham\source\repos\MDDReservationAPI\MDDReservationAPI\
+2023-09-17 10:43:20.467 +03:30 [DBG] Hosting started
+2023-09-17 10:43:20.780 +03:30 [DBG] Connection id "0HMTN9M9E642D" accepted.
+2023-09-17 10:43:20.780 +03:30 [DBG] Connection id "0HMTN9M9E642E" accepted.
+2023-09-17 10:43:20.792 +03:30 [DBG] Connection id "0HMTN9M9E642E" started.
+2023-09-17 10:43:20.792 +03:30 [DBG] Connection id "0HMTN9M9E642D" started.
+2023-09-17 10:43:20.794 +03:30 [DBG] Connection id "0HMTN9M9E642E" received FIN.
+2023-09-17 10:43:20.794 +03:30 [DBG] Connection id "0HMTN9M9E642D" received FIN.
+2023-09-17 10:43:20.835 +03:30 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-09-17 10:43:20.835 +03:30 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-09-17 10:43:20.872 +03:30 [DBG] Connection id "0HMTN9M9E642E" stopped.
+2023-09-17 10:43:20.872 +03:30 [DBG] Connection id "0HMTN9M9E642D" stopped.
+2023-09-17 10:43:20.877 +03:30 [DBG] Connection id "0HMTN9M9E642D" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-09-17 10:43:20.877 +03:30 [DBG] Connection id "0HMTN9M9E642E" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-09-17 10:43:20.993 +03:30 [DBG] Connection id "0HMTN9M9E642F" accepted.
+2023-09-17 10:43:20.995 +03:30 [DBG] Connection id "0HMTN9M9E642F" started.
+2023-09-17 10:43:21.037 +03:30 [DBG] Connection 0HMTN9M9E642F established using the following protocol: "Tls13"
+2023-09-17 10:43:21.074 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7010/swagger/index.html - -
+2023-09-17 10:43:21.112 +03:30 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2023-09-17 10:43:21.314 +03:30 [DBG] Response markup is scheduled to include browser refresh script injection.
+2023-09-17 10:43:21.434 +03:30 [DBG] Response markup was updated to include browser refresh script injection.
+2023-09-17 10:43:21.443 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7010/swagger/index.html - - - 200 - text/html;charset=utf-8 371.9277ms
+2023-09-17 10:43:21.445 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7010/_framework/aspnetcore-browser-refresh.js - -
+2023-09-17 10:43:21.452 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7010/_framework/aspnetcore-browser-refresh.js - - - 200 12366 application/javascript;+charset=utf-8 6.5476ms
+2023-09-17 10:43:21.495 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7010/_vs/browserLink - -
+2023-09-17 10:43:21.516 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7010/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 20.8480ms
+2023-09-17 10:43:21.682 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7010/swagger/v1/swagger.json - -
+2023-09-17 10:43:21.809 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7010/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 126.7268ms
+2023-09-17 10:43:22.205 +03:30 [DBG] Connection id "0HMTN9M9E642G" accepted.
+2023-09-17 10:43:22.206 +03:30 [DBG] Connection id "0HMTN9M9E642G" started.
+2023-09-17 10:43:22.218 +03:30 [DBG] Connection 0HMTN9M9E642G established using the following protocol: "Tls13"
+2023-09-17 10:43:22.220 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7010/_framework/aspnetcore-browser-refresh.js - -
+2023-09-17 10:43:22.221 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7010/_vs/browserLink - -
+2023-09-17 10:43:22.222 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7010/_framework/aspnetcore-browser-refresh.js - - - 200 12366 application/javascript;+charset=utf-8 1.6140ms
+2023-09-17 10:43:22.226 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7010/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 5.2833ms
+2023-09-17 11:01:48.735 +03:30 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-09-17 11:01:48.815 +03:30 [DBG] Hosting starting
+2023-09-17 11:01:48.949 +03:30 [DBG] Using development certificate: CN=localhost (Thumbprint: 175D8FE1405C2912E50F5B9B0938581AAF4B0E19)
+2023-09-17 11:01:48.980 +03:30 [INF] Now listening on: https://localhost:7010
+2023-09-17 11:01:48.981 +03:30 [INF] Now listening on: http://localhost:5143
+2023-09-17 11:01:48.982 +03:30 [DBG] Loaded hosting startup assembly MDDReservationAPI
+2023-09-17 11:01:48.982 +03:30 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2023-09-17 11:01:48.983 +03:30 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2023-09-17 11:01:48.984 +03:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-17 11:01:48.985 +03:30 [INF] Hosting environment: Development
+2023-09-17 11:01:48.986 +03:30 [INF] Content root path: C:\Users\moham\source\repos\MDDReservationAPI\MDDReservationAPI\
+2023-09-17 11:01:48.986 +03:30 [DBG] Hosting started
+2023-09-17 11:01:49.076 +03:30 [DBG] Connection id "0HMTNA0JNO0V2" received FIN.
+2023-09-17 11:01:49.087 +03:30 [DBG] Connection id "0HMTNA0JNO0V2" accepted.
+2023-09-17 11:01:49.089 +03:30 [DBG] Connection id "0HMTNA0JNO0V2" started.
+2023-09-17 11:01:49.106 +03:30 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-09-17 11:01:49.136 +03:30 [DBG] Connection id "0HMTNA0JNO0V2" stopped.
+2023-09-17 11:01:49.140 +03:30 [DBG] Connection id "0HMTNA0JNO0V2" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-09-17 11:01:49.472 +03:30 [DBG] Connection id "0HMTNA0JNO0V3" accepted.
+2023-09-17 11:01:49.473 +03:30 [DBG] Connection id "0HMTNA0JNO0V3" started.
+2023-09-17 11:01:49.515 +03:30 [DBG] Connection 0HMTNA0JNO0V3 established using the following protocol: "Tls13"
+2023-09-17 11:01:49.579 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7010/swagger/index.html - -
+2023-09-17 11:01:49.611 +03:30 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2023-09-17 11:01:49.808 +03:30 [DBG] Response markup is scheduled to include browser refresh script injection.
+2023-09-17 11:01:49.942 +03:30 [DBG] Response markup was updated to include browser refresh script injection.
+2023-09-17 11:01:49.949 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7010/swagger/index.html - - - 200 - text/html;charset=utf-8 376.5345ms
+2023-09-17 11:01:49.953 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7010/_framework/aspnetcore-browser-refresh.js - -
+2023-09-17 11:01:49.960 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7010/_framework/aspnetcore-browser-refresh.js - - - 200 12366 application/javascript;+charset=utf-8 6.6441ms
+2023-09-17 11:01:50.007 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7010/_vs/browserLink - -
+2023-09-17 11:01:50.033 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7010/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 26.4613ms
+2023-09-17 11:01:50.222 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7010/swagger/v1/swagger.json - -
+2023-09-17 11:01:50.344 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7010/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 122.5250ms
+2023-09-17 11:01:50.724 +03:30 [DBG] Connection id "0HMTNA0JNO0V4" accepted.
+2023-09-17 11:01:50.725 +03:30 [DBG] Connection id "0HMTNA0JNO0V4" started.
+2023-09-17 11:01:50.736 +03:30 [DBG] Connection 0HMTNA0JNO0V4 established using the following protocol: "Tls13"
+2023-09-17 11:01:50.739 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7010/_framework/aspnetcore-browser-refresh.js - -
+2023-09-17 11:01:50.739 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7010/_vs/browserLink - -
+2023-09-17 11:01:50.740 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7010/_framework/aspnetcore-browser-refresh.js - - - 200 12366 application/javascript;+charset=utf-8 1.5452ms
+2023-09-17 11:01:50.747 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7010/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 8.1230ms
+2023-09-17 11:02:09.171 +03:30 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-09-17 11:02:09.254 +03:30 [DBG] Hosting starting
+2023-09-17 11:02:09.391 +03:30 [DBG] Using development certificate: CN=localhost (Thumbprint: 175D8FE1405C2912E50F5B9B0938581AAF4B0E19)
+2023-09-17 11:02:09.423 +03:30 [INF] Now listening on: https://localhost:7010
+2023-09-17 11:02:09.424 +03:30 [INF] Now listening on: http://localhost:5143
+2023-09-17 11:02:09.424 +03:30 [DBG] Loaded hosting startup assembly MDDReservationAPI
+2023-09-17 11:02:09.425 +03:30 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2023-09-17 11:02:09.425 +03:30 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2023-09-17 11:02:09.426 +03:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-17 11:02:09.428 +03:30 [INF] Hosting environment: Development
+2023-09-17 11:02:09.428 +03:30 [INF] Content root path: C:\Users\moham\source\repos\MDDReservationAPI\MDDReservationAPI\
+2023-09-17 11:02:09.429 +03:30 [DBG] Hosting started
+2023-09-17 11:02:09.568 +03:30 [DBG] Connection id "0HMTNA0PR52ED" accepted.
+2023-09-17 11:02:09.568 +03:30 [DBG] Connection id "0HMTNA0PR52EE" accepted.
+2023-09-17 11:02:09.578 +03:30 [DBG] Connection id "0HMTNA0PR52ED" started.
+2023-09-17 11:02:09.578 +03:30 [DBG] Connection id "0HMTNA0PR52EE" started.
+2023-09-17 11:02:09.578 +03:30 [DBG] Connection id "0HMTNA0PR52ED" received FIN.
+2023-09-17 11:02:09.578 +03:30 [DBG] Connection id "0HMTNA0PR52EE" received FIN.
+2023-09-17 11:02:09.596 +03:30 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-09-17 11:02:09.596 +03:30 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-09-17 11:02:09.629 +03:30 [DBG] Connection id "0HMTNA0PR52ED" stopped.
+2023-09-17 11:02:09.629 +03:30 [DBG] Connection id "0HMTNA0PR52EE" stopped.
+2023-09-17 11:02:09.632 +03:30 [DBG] Connection id "0HMTNA0PR52EE" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-09-17 11:02:09.632 +03:30 [DBG] Connection id "0HMTNA0PR52ED" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-09-17 11:02:09.802 +03:30 [DBG] Connection id "0HMTNA0PR52EF" accepted.
+2023-09-17 11:02:09.805 +03:30 [DBG] Connection id "0HMTNA0PR52EF" started.
+2023-09-17 11:02:09.844 +03:30 [DBG] Connection 0HMTNA0PR52EF established using the following protocol: "Tls13"
+2023-09-17 11:02:09.882 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7010/swagger/index.html - -
+2023-09-17 11:02:09.912 +03:30 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2023-09-17 11:02:10.114 +03:30 [DBG] Response markup is scheduled to include browser refresh script injection.
+2023-09-17 11:02:10.251 +03:30 [DBG] Response markup was updated to include browser refresh script injection.
+2023-09-17 11:02:10.264 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7010/swagger/index.html - - - 200 - text/html;charset=utf-8 384.3363ms
+2023-09-17 11:02:10.264 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7010/_framework/aspnetcore-browser-refresh.js - -
+2023-09-17 11:02:10.272 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7010/_framework/aspnetcore-browser-refresh.js - - - 200 12366 application/javascript;+charset=utf-8 8.4105ms
+2023-09-17 11:02:10.315 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7010/_vs/browserLink - -
+2023-09-17 11:02:10.340 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7010/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 24.6288ms
+2023-09-17 11:02:10.620 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7010/swagger/v1/swagger.json - -
+2023-09-17 11:02:10.825 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7010/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 204.5648ms
+2023-09-17 11:02:11.323 +03:30 [DBG] Connection id "0HMTNA0PR52EG" accepted.
+2023-09-17 11:02:11.325 +03:30 [DBG] Connection id "0HMTNA0PR52EG" started.
+2023-09-17 11:02:11.335 +03:30 [DBG] Connection 0HMTNA0PR52EG established using the following protocol: "Tls13"
+2023-09-17 11:02:11.339 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7010/_framework/aspnetcore-browser-refresh.js - -
+2023-09-17 11:02:11.339 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7010/_vs/browserLink - -
+2023-09-17 11:02:11.342 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7010/_framework/aspnetcore-browser-refresh.js - - - 200 12366 application/javascript;+charset=utf-8 3.0747ms
+2023-09-17 11:02:11.345 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7010/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 5.9361ms
+2023-09-17 11:02:35.318 +03:30 [INF] Request starting HTTP/2 POST https://localhost:7010/schoolClass/create application/json-patch+json 85
+2023-09-17 11:02:35.322 +03:30 [DBG] POST requests are not supported
+2023-09-17 11:02:35.345 +03:30 [DBG] 1 candidate(s) found for the request path '/schoolClass/create'
+2023-09-17 11:02:35.353 +03:30 [DBG] Endpoint 'MDDReservationAPI.Controllers.SchoolClassController.CreateSchoolClassAsync (MDDReservationAPI)' with route pattern 'schoolClass/create' is valid for the request path '/schoolClass/create'
+2023-09-17 11:02:35.357 +03:30 [DBG] Request matched endpoint 'MDDReservationAPI.Controllers.SchoolClassController.CreateSchoolClassAsync (MDDReservationAPI)'
+2023-09-17 11:02:35.360 +03:30 [INF] Executing endpoint 'MDDReservationAPI.Controllers.SchoolClassController.CreateSchoolClassAsync (MDDReservationAPI)'
+2023-09-17 11:02:35.393 +03:30 [INF] Route matched with {action = "CreateSchoolClass", controller = "SchoolClass"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[MDDReservationAPI.Models.SchoolClass]] CreateSchoolClassAsync(MDDReservationAPI.DTO.SchoolClassCreationDTO) on controller MDDReservationAPI.Controllers.SchoolClassController (MDDReservationAPI).
+2023-09-17 11:02:35.396 +03:30 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2023-09-17 11:02:35.397 +03:30 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2023-09-17 11:02:35.398 +03:30 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2023-09-17 11:02:35.399 +03:30 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2023-09-17 11:02:35.400 +03:30 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)","Microsoft.AspNetCore.Mvc.ProducesAttribute (Order: 0)"]
+2023-09-17 11:02:35.401 +03:30 [DBG] Executing controller factory for controller MDDReservationAPI.Controllers.SchoolClassController (MDDReservationAPI)
+2023-09-17 11:02:35.642 +03:30 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2023-09-17 11:02:35.664 +03:30 [DBG] Executed controller factory for controller MDDReservationAPI.Controllers.SchoolClassController (MDDReservationAPI)
+2023-09-17 11:02:35.670 +03:30 [DBG] Attempting to bind parameter 'schoolClassCreationDto' of type 'MDDReservationAPI.DTO.SchoolClassCreationDTO' ...
+2023-09-17 11:02:35.672 +03:30 [DBG] Attempting to bind parameter 'schoolClassCreationDto' of type 'MDDReservationAPI.DTO.SchoolClassCreationDTO' using the name '' in request data ...
+2023-09-17 11:02:35.674 +03:30 [DBG] Rejected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonPatchInputFormatter' for content type 'application/json-patch+json'.
+2023-09-17 11:02:35.675 +03:30 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonInputFormatter' for content type 'application/json-patch+json'.
+2023-09-17 11:02:35.682 +03:30 [DBG] Connection id "0HMTNA0PR52EF", Request id "0HMTNA0PR52EF:00000009": started reading request body.
+2023-09-17 11:02:35.683 +03:30 [DBG] Connection id "0HMTNA0PR52EF", Request id "0HMTNA0PR52EF:00000009": done reading request body.
+2023-09-17 11:02:35.801 +03:30 [DBG] Done attempting to bind parameter 'schoolClassCreationDto' of type 'MDDReservationAPI.DTO.SchoolClassCreationDTO'.
+2023-09-17 11:02:35.803 +03:30 [DBG] Done attempting to bind parameter 'schoolClassCreationDto' of type 'MDDReservationAPI.DTO.SchoolClassCreationDTO'.
+2023-09-17 11:02:35.804 +03:30 [DBG] Attempting to validate the bound parameter 'schoolClassCreationDto' of type 'MDDReservationAPI.DTO.SchoolClassCreationDTO' ...
+2023-09-17 11:02:35.815 +03:30 [DBG] Done attempting to validate the bound parameter 'schoolClassCreationDto' of type 'MDDReservationAPI.DTO.SchoolClassCreationDTO'.
+2023-09-17 11:02:36.654 +03:30 [DBG] The property 'Student.ProjectId' was created in shadow state because there are no eligible CLR members with a matching name.
+2023-09-17 11:02:36.657 +03:30 [DBG] The property 'User.Discriminator' was created in shadow state because there are no eligible CLR members with a matching name.
+2023-09-17 11:02:36.842 +03:30 [DBG] Entity Framework Core 7.0.10 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:7.0.10' with options: None
+2023-09-17 11:02:36.887 +03:30 [DBG] Compiling query expression: 
+'DbSet<School>()
+    .Any(s => s.Id == __schoolId_0)'
+2023-09-17 11:02:37.124 +03:30 [DBG] Generated query execution expression: 
+'queryContext => ShapedQueryCompilingExpressionVisitor.SingleAsync<bool>(
+    asyncEnumerable: new SingleQueryingEnumerable<bool>(
+        (RelationalQueryContext)queryContext, 
+        RelationalCommandCache.QueryExpression(
+            Projection Mapping:
+                EmptyProjectionMember -> 0
+            SELECT EXISTS (
+                SELECT 1
+                FROM Schools AS s
+                WHERE s.Id == @__schoolId_0)), 
+        null, 
+        Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, bool>, 
+        MDDReservationAPI.Data.ApplicationDbContext, 
+        False, 
+        False, 
+        True
+    ), 
+    cancellationToken: queryContext.CancellationToken)'
+2023-09-17 11:02:37.173 +03:30 [DBG] Creating DbCommand for 'ExecuteReader'.
+2023-09-17 11:02:37.179 +03:30 [DBG] Creating DbConnection.
+2023-09-17 11:02:37.198 +03:30 [DBG] Created DbConnection. (17ms).
+2023-09-17 11:02:37.208 +03:30 [DBG] Created DbCommand for 'ExecuteReader' (30ms).
+2023-09-17 11:02:37.215 +03:30 [DBG] Initialized DbCommand for 'ExecuteReader' (42ms).
+2023-09-17 11:02:37.223 +03:30 [DBG] Opening connection to database 'main' on server 'App.db'.
+2023-09-17 11:02:37.238 +03:30 [DBG] Opened connection to database 'main' on server 'C:\Users\moham\source\repos\MDDReservationAPI\MDDReservationAPI\App.db'.
+2023-09-17 11:02:37.256 +03:30 [DBG] Executing DbCommand [Parameters=[@__schoolId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Schools" AS "s"
+    WHERE "s"."Id" = @__schoolId_0)
+2023-09-17 11:02:37.283 +03:30 [INF] Executed DbCommand (32ms) [Parameters=[@__schoolId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Schools" AS "s"
+    WHERE "s"."Id" = @__schoolId_0)
+2023-09-17 11:02:37.300 +03:30 [DBG] Closing data reader to 'main' on server 'C:\Users\moham\source\repos\MDDReservationAPI\MDDReservationAPI\App.db'.
+2023-09-17 11:02:37.311 +03:30 [DBG] A data reader for 'main' on server 'C:\Users\moham\source\repos\MDDReservationAPI\MDDReservationAPI\App.db' is being disposed after spending 15ms reading results.
+2023-09-17 11:02:37.319 +03:30 [DBG] Closing connection to database 'main' on server 'C:\Users\moham\source\repos\MDDReservationAPI\MDDReservationAPI\App.db'.
+2023-09-17 11:02:37.326 +03:30 [DBG] Closed connection to database 'main' on server 'App.db' (6ms).
+2023-09-17 11:02:37.366 +03:30 [DBG] 'ApplicationDbContext' generated a temporary value for the property 'Id.SchoolClass'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-09-17 11:02:37.410 +03:30 [DBG] Context 'ApplicationDbContext' started tracking 'SchoolClass' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-09-17 11:02:37.420 +03:30 [DBG] SaveChanges starting for 'ApplicationDbContext'.
+2023-09-17 11:02:37.425 +03:30 [DBG] DetectChanges starting for 'ApplicationDbContext'.
+2023-09-17 11:02:37.439 +03:30 [DBG] DetectChanges completed for 'ApplicationDbContext'.
+2023-09-17 11:02:37.509 +03:30 [DBG] Opening connection to database 'main' on server 'App.db'.
+2023-09-17 11:02:37.512 +03:30 [DBG] Opened connection to database 'main' on server 'C:\Users\moham\source\repos\MDDReservationAPI\MDDReservationAPI\App.db'.
+2023-09-17 11:02:37.516 +03:30 [DBG] Creating DbCommand for 'ExecuteReader'.
+2023-09-17 11:02:37.517 +03:30 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2023-09-17 11:02:37.517 +03:30 [DBG] Initialized DbCommand for 'ExecuteReader' (1ms).
+2023-09-17 11:02:37.518 +03:30 [DBG] Executing DbCommand [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (DbType = Int32), @p2='?' (DbType = Boolean), @p3='?' (DbType = Int32), @p4='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "SchoolsClasses" ("CreatedAt", "Grade", "IsProgrammer", "ProgrammingLanguage", "SchoolId")
+VALUES (@p0, @p1, @p2, @p3, @p4)
+RETURNING "Id";
+2023-09-17 11:02:37.521 +03:30 [INF] Executed DbCommand (3ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (DbType = Int32), @p2='?' (DbType = Boolean), @p3='?' (DbType = Int32), @p4='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "SchoolsClasses" ("CreatedAt", "Grade", "IsProgrammer", "ProgrammingLanguage", "SchoolId")
+VALUES (@p0, @p1, @p2, @p3, @p4)
+RETURNING "Id";
+2023-09-17 11:02:37.538 +03:30 [DBG] The foreign key property 'SchoolClass.Id' was detected as changed. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see property values.
+2023-09-17 11:02:37.551 +03:30 [DBG] Closing data reader to 'main' on server 'C:\Users\moham\source\repos\MDDReservationAPI\MDDReservationAPI\App.db'.
+2023-09-17 11:02:37.553 +03:30 [DBG] A data reader for 'main' on server 'C:\Users\moham\source\repos\MDDReservationAPI\MDDReservationAPI\App.db' is being disposed after spending 31ms reading results.
+2023-09-17 11:02:37.555 +03:30 [DBG] Closing connection to database 'main' on server 'C:\Users\moham\source\repos\MDDReservationAPI\MDDReservationAPI\App.db'.
+2023-09-17 11:02:37.555 +03:30 [DBG] Closed connection to database 'main' on server 'App.db' (0ms).
+2023-09-17 11:02:37.568 +03:30 [DBG] An entity of type 'SchoolClass' tracked by 'ApplicationDbContext' changed state from '"Added"' to '"Unchanged"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-09-17 11:02:37.571 +03:30 [DBG] SaveChanges completed for 'ApplicationDbContext' with 1 entities written to the database.
+2023-09-17 11:02:37.575 +03:30 [DBG] Compiling query expression: 
+'DbSet<School>()
+    .Where(s => s.Id == __schoolClass_Id_0)
+    .FirstOrDefault()'
+2023-09-17 11:02:37.606 +03:30 [DBG] Generated query execution expression: 
+'queryContext => ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync<School>(
+    asyncEnumerable: new SingleQueryingEnumerable<School>(
+        (RelationalQueryContext)queryContext, 
+        RelationalCommandCache.QueryExpression(
+            Projection Mapping:
+                EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: School.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: School.CreatedAt (DateTime) Required, 1], [Property: School.Gender (int?) MaxLength(2), 2], [Property: School.ManagerId (int) Required FK Index, 3], [Property: School.Name (string) Required MaxLength(200), 4], [Property: School.SchoolType (int?) MaxLength(10), 5] }
+            SELECT TOP(1) s.Id, s.CreatedAt, s.Gender, s.ManagerId, s.Name, s.SchoolType
+            FROM Schools AS s
+            WHERE s.Id == @__schoolClass_Id_0), 
+        null, 
+        Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, School>, 
+        MDDReservationAPI.Data.ApplicationDbContext, 
+        False, 
+        False, 
+        True
+    ), 
+    cancellationToken: queryContext.CancellationToken)'
+2023-09-17 11:02:37.618 +03:30 [DBG] Creating DbCommand for 'ExecuteReader'.
+2023-09-17 11:02:37.621 +03:30 [DBG] Created DbCommand for 'ExecuteReader' (2ms).
+2023-09-17 11:02:37.622 +03:30 [DBG] Initialized DbCommand for 'ExecuteReader' (3ms).
+2023-09-17 11:02:37.622 +03:30 [DBG] Opening connection to database 'main' on server 'App.db'.
+2023-09-17 11:02:37.623 +03:30 [DBG] Opened connection to database 'main' on server 'C:\Users\moham\source\repos\MDDReservationAPI\MDDReservationAPI\App.db'.
+2023-09-17 11:02:37.624 +03:30 [DBG] Executing DbCommand [Parameters=[@__schoolClass_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "s"."Id", "s"."CreatedAt", "s"."Gender", "s"."ManagerId", "s"."Name", "s"."SchoolType"
+FROM "Schools" AS "s"
+WHERE "s"."Id" = @__schoolClass_Id_0
+LIMIT 1
+2023-09-17 11:02:37.626 +03:30 [INF] Executed DbCommand (2ms) [Parameters=[@__schoolClass_Id_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT "s"."Id", "s"."CreatedAt", "s"."Gender", "s"."ManagerId", "s"."Name", "s"."SchoolType"
+FROM "Schools" AS "s"
+WHERE "s"."Id" = @__schoolClass_Id_0
+LIMIT 1
+2023-09-17 11:02:37.640 +03:30 [DBG] The navigation 'SchoolClass.School' was detected as changed. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-09-17 11:02:37.654 +03:30 [DBG] Context 'ApplicationDbContext' started tracking 'School' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-09-17 11:02:37.669 +03:30 [DBG] Closing data reader to 'main' on server 'C:\Users\moham\source\repos\MDDReservationAPI\MDDReservationAPI\App.db'.
+2023-09-17 11:02:37.672 +03:30 [DBG] A data reader for 'main' on server 'C:\Users\moham\source\repos\MDDReservationAPI\MDDReservationAPI\App.db' is being disposed after spending 44ms reading results.
+2023-09-17 11:02:37.673 +03:30 [DBG] Closing connection to database 'main' on server 'C:\Users\moham\source\repos\MDDReservationAPI\MDDReservationAPI\App.db'.
+2023-09-17 11:02:37.673 +03:30 [DBG] Closed connection to database 'main' on server 'App.db' (0ms).
+2023-09-17 11:02:37.675 +03:30 [DBG] SaveChanges starting for 'ApplicationDbContext'.
+2023-09-17 11:02:37.676 +03:30 [DBG] DetectChanges starting for 'ApplicationDbContext'.
+2023-09-17 11:02:37.683 +03:30 [DBG] DetectChanges completed for 'ApplicationDbContext'.
+2023-09-17 11:02:37.684 +03:30 [DBG] SaveChanges completed for 'ApplicationDbContext' with 0 entities written to the database.
+2023-09-17 11:02:37.686 +03:30 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter"]
+2023-09-17 11:02:37.691 +03:30 [DBG] Attempting to select an output formatter based on Accept header '["application/json"]' and explicitly specified content types '["application/json"]'. The content types in the accept header must be a subset of the explicitly set content types.
+2023-09-17 11:02:37.694 +03:30 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter' and content type 'application/json' to write the response.
+2023-09-17 11:02:37.695 +03:30 [INF] Executing OkObjectResult, writing value of type 'MDDReservationAPI.Models.SchoolClass'.
+2023-09-17 11:02:37.756 +03:30 [INF] Executed action MDDReservationAPI.Controllers.SchoolClassController.CreateSchoolClassAsync (MDDReservationAPI) in 2351.0962ms
+2023-09-17 11:02:37.761 +03:30 [INF] Executed endpoint 'MDDReservationAPI.Controllers.SchoolClassController.CreateSchoolClassAsync (MDDReservationAPI)'
+2023-09-17 11:02:37.762 +03:30 [ERR] An unhandled exception has occurred while executing the request.
+Newtonsoft.Json.JsonSerializationException: Self referencing loop detected with type 'MDDReservationAPI.Models.SchoolClass'. Path 'school.schoolClasses'.
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalWriter.CheckForCircularReference(JsonWriter writer, Object value, JsonProperty property, JsonContract contract, JsonContainerContract containerContract, JsonProperty containerProperty)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalWriter.SerializeList(JsonWriter writer, IEnumerable values, JsonArrayContract contract, JsonProperty member, JsonContainerContract collectionContract, JsonProperty containerProperty)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalWriter.SerializeObject(JsonWriter writer, Object value, JsonObjectContract contract, JsonProperty member, JsonContainerContract collectionContract, JsonProperty containerProperty)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalWriter.SerializeObject(JsonWriter writer, Object value, JsonObjectContract contract, JsonProperty member, JsonContainerContract collectionContract, JsonProperty containerProperty)
+   at Newtonsoft.Json.Serialization.JsonSerializerInternalWriter.Serialize(JsonWriter jsonWriter, Object value, Type objectType)
+   at Newtonsoft.Json.JsonSerializer.SerializeInternal(JsonWriter jsonWriter, Object value, Type objectType)
+   at Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter.WriteResponseBodyAsync(OutputFormatterWriteContext context, Encoding selectedEncoding)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResultFilterAsync>g__Awaited|30_0[TFilter,TFilterAsync](ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-09-17 11:02:37.776 +03:30 [DBG] 'ApplicationDbContext' disposed.
+2023-09-17 11:02:37.784 +03:30 [DBG] Disposing connection to database 'main' on server 'App.db'.
+2023-09-17 11:02:37.788 +03:30 [DBG] Disposed connection to database 'main' on server 'App.db' (3ms).
+2023-09-17 11:02:37.789 +03:30 [INF] Request finished HTTP/2 POST https://localhost:7010/schoolClass/create application/json-patch+json 85 - 500 - text/plain;+charset=utf-8 2470.8666ms
+2023-09-17 11:04:33.269 +03:30 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-09-17 11:04:33.322 +03:30 [DBG] Hosting starting
+2023-09-17 11:04:33.371 +03:30 [DBG] Using development certificate: CN=localhost (Thumbprint: 175D8FE1405C2912E50F5B9B0938581AAF4B0E19)
+2023-09-17 11:04:33.391 +03:30 [INF] Now listening on: https://localhost:7010
+2023-09-17 11:04:33.392 +03:30 [INF] Now listening on: http://localhost:5143
+2023-09-17 11:04:33.393 +03:30 [DBG] Loaded hosting startup assembly MDDReservationAPI
+2023-09-17 11:04:33.394 +03:30 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2023-09-17 11:04:33.394 +03:30 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2023-09-17 11:04:33.395 +03:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-17 11:04:33.396 +03:30 [INF] Hosting environment: Development
+2023-09-17 11:04:33.396 +03:30 [INF] Content root path: C:\Users\moham\source\repos\MDDReservationAPI\MDDReservationAPI\
+2023-09-17 11:04:33.397 +03:30 [DBG] Hosting started
+2023-09-17 11:04:33.703 +03:30 [DBG] Connection id "0HMTNA24PO0CV" accepted.
+2023-09-17 11:04:33.703 +03:30 [DBG] Connection id "0HMTNA24PO0D0" accepted.
+2023-09-17 11:04:33.706 +03:30 [DBG] Connection id "0HMTNA24PO0CV" started.
+2023-09-17 11:04:33.707 +03:30 [DBG] Connection id "0HMTNA24PO0D0" started.
+2023-09-17 11:04:33.715 +03:30 [DBG] Connection id "0HMTNA24PO0CV" received FIN.
+2023-09-17 11:04:33.715 +03:30 [DBG] Connection id "0HMTNA24PO0D0" received FIN.
+2023-09-17 11:04:33.726 +03:30 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.<FillHandshakeBufferAsync>g__InternalFillHandshakeBufferAsync|189_0[TIOAdapter](TIOAdapter adap, ValueTask`1 task, Int32 minSize)
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-09-17 11:04:33.726 +03:30 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.<FillHandshakeBufferAsync>g__InternalFillHandshakeBufferAsync|189_0[TIOAdapter](TIOAdapter adap, ValueTask`1 task, Int32 minSize)
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-09-17 11:04:33.741 +03:30 [DBG] Connection id "0HMTNA24PO0CV" stopped.
+2023-09-17 11:04:33.741 +03:30 [DBG] Connection id "0HMTNA24PO0D0" stopped.
+2023-09-17 11:04:33.742 +03:30 [DBG] Connection id "0HMTNA24PO0CV" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-09-17 11:04:33.742 +03:30 [DBG] Connection id "0HMTNA24PO0D0" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-09-17 11:04:50.954 +03:30 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-09-17 11:04:51.025 +03:30 [DBG] Hosting starting
+2023-09-17 11:04:51.147 +03:30 [DBG] Using development certificate: CN=localhost (Thumbprint: 175D8FE1405C2912E50F5B9B0938581AAF4B0E19)
+2023-09-17 11:04:51.176 +03:30 [INF] Now listening on: https://localhost:7010
+2023-09-17 11:04:51.177 +03:30 [INF] Now listening on: http://localhost:5143
+2023-09-17 11:04:51.178 +03:30 [DBG] Loaded hosting startup assembly MDDReservationAPI
+2023-09-17 11:04:51.179 +03:30 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2023-09-17 11:04:51.180 +03:30 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2023-09-17 11:04:51.181 +03:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-17 11:04:51.183 +03:30 [INF] Hosting environment: Development
+2023-09-17 11:04:51.184 +03:30 [INF] Content root path: C:\Users\moham\source\repos\MDDReservationAPI\MDDReservationAPI\
+2023-09-17 11:04:51.185 +03:30 [DBG] Hosting started
+2023-09-17 11:04:51.256 +03:30 [DBG] Connection id "0HMTNA2A14A5U" accepted.
+2023-09-17 11:04:51.256 +03:30 [DBG] Connection id "0HMTNA2A14A5V" accepted.
+2023-09-17 11:04:51.261 +03:30 [DBG] Connection id "0HMTNA2A14A5V" started.
+2023-09-17 11:04:51.261 +03:30 [DBG] Connection id "0HMTNA2A14A5U" started.
+2023-09-17 11:04:51.273 +03:30 [DBG] Connection id "0HMTNA2A14A5U" received FIN.
+2023-09-17 11:04:51.273 +03:30 [DBG] Connection id "0HMTNA2A14A5V" received FIN.
+2023-09-17 11:04:51.290 +03:30 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-09-17 11:04:51.290 +03:30 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-09-17 11:04:51.322 +03:30 [DBG] Connection id "0HMTNA2A14A5V" stopped.
+2023-09-17 11:04:51.322 +03:30 [DBG] Connection id "0HMTNA2A14A5U" stopped.
+2023-09-17 11:04:51.325 +03:30 [DBG] Connection id "0HMTNA2A14A5U" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-09-17 11:04:51.325 +03:30 [DBG] Connection id "0HMTNA2A14A5V" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-09-17 11:04:51.531 +03:30 [DBG] Connection id "0HMTNA2A14A60" accepted.
+2023-09-17 11:04:51.533 +03:30 [DBG] Connection id "0HMTNA2A14A60" started.
+2023-09-17 11:04:51.567 +03:30 [DBG] Connection 0HMTNA2A14A60 established using the following protocol: "Tls13"
+2023-09-17 11:04:51.609 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7010/swagger/index.html - -
+2023-09-17 11:04:51.637 +03:30 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2023-09-17 11:04:51.824 +03:30 [DBG] Response markup is scheduled to include browser refresh script injection.
+2023-09-17 11:04:51.948 +03:30 [DBG] Response markup was updated to include browser refresh script injection.
+2023-09-17 11:04:51.952 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7010/_framework/aspnetcore-browser-refresh.js - -
+2023-09-17 11:04:51.955 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7010/swagger/index.html - - - 200 - text/html;charset=utf-8 349.4997ms
+2023-09-17 11:04:51.959 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7010/_framework/aspnetcore-browser-refresh.js - - - 200 12366 application/javascript;+charset=utf-8 6.5818ms
+2023-09-17 11:04:52.012 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7010/_vs/browserLink - -
+2023-09-17 11:04:52.035 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7010/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 22.9281ms
+2023-09-17 11:04:52.222 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7010/swagger/v1/swagger.json - -
+2023-09-17 11:04:52.373 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7010/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 150.8910ms
+2023-09-17 11:04:52.752 +03:30 [DBG] Connection id "0HMTNA2A14A61" accepted.
+2023-09-17 11:04:52.753 +03:30 [DBG] Connection id "0HMTNA2A14A61" started.
+2023-09-17 11:04:52.764 +03:30 [DBG] Connection 0HMTNA2A14A61 established using the following protocol: "Tls13"
+2023-09-17 11:04:52.766 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7010/_framework/aspnetcore-browser-refresh.js - -
+2023-09-17 11:04:52.766 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7010/_vs/browserLink - -
+2023-09-17 11:04:52.767 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7010/_framework/aspnetcore-browser-refresh.js - - - 200 12366 application/javascript;+charset=utf-8 1.2506ms
+2023-09-17 11:04:52.775 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7010/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 8.7830ms
+2023-09-17 11:05:26.861 +03:30 [INF] Request starting HTTP/2 POST https://localhost:7010/schoolClass/create application/json-patch+json 85
+2023-09-17 11:05:26.865 +03:30 [DBG] POST requests are not supported
+2023-09-17 11:05:26.888 +03:30 [DBG] 1 candidate(s) found for the request path '/schoolClass/create'
+2023-09-17 11:05:26.895 +03:30 [DBG] Endpoint 'MDDReservationAPI.Controllers.SchoolClassController.CreateSchoolClassAsync (MDDReservationAPI)' with route pattern 'schoolClass/create' is valid for the request path '/schoolClass/create'
+2023-09-17 11:05:26.898 +03:30 [DBG] Request matched endpoint 'MDDReservationAPI.Controllers.SchoolClassController.CreateSchoolClassAsync (MDDReservationAPI)'
+2023-09-17 11:05:26.902 +03:30 [INF] Executing endpoint 'MDDReservationAPI.Controllers.SchoolClassController.CreateSchoolClassAsync (MDDReservationAPI)'
+2023-09-17 11:05:26.931 +03:30 [INF] Route matched with {action = "CreateSchoolClass", controller = "SchoolClass"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[MDDReservationAPI.Models.SchoolClass]] CreateSchoolClassAsync(MDDReservationAPI.DTO.SchoolClassCreationDTO) on controller MDDReservationAPI.Controllers.SchoolClassController (MDDReservationAPI).
+2023-09-17 11:05:26.934 +03:30 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2023-09-17 11:05:26.938 +03:30 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2023-09-17 11:05:26.939 +03:30 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2023-09-17 11:05:26.940 +03:30 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2023-09-17 11:05:26.942 +03:30 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)","Microsoft.AspNetCore.Mvc.ProducesAttribute (Order: 0)"]
+2023-09-17 11:05:26.943 +03:30 [DBG] Executing controller factory for controller MDDReservationAPI.Controllers.SchoolClassController (MDDReservationAPI)
+2023-09-17 11:05:27.174 +03:30 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2023-09-17 11:05:27.195 +03:30 [DBG] Executed controller factory for controller MDDReservationAPI.Controllers.SchoolClassController (MDDReservationAPI)
+2023-09-17 11:05:27.205 +03:30 [DBG] Attempting to bind parameter 'schoolClassCreationDto' of type 'MDDReservationAPI.DTO.SchoolClassCreationDTO' ...
+2023-09-17 11:05:27.208 +03:30 [DBG] Attempting to bind parameter 'schoolClassCreationDto' of type 'MDDReservationAPI.DTO.SchoolClassCreationDTO' using the name '' in request data ...
+2023-09-17 11:05:27.210 +03:30 [DBG] Rejected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonPatchInputFormatter' for content type 'application/json-patch+json'.
+2023-09-17 11:05:27.211 +03:30 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonInputFormatter' for content type 'application/json-patch+json'.
+2023-09-17 11:05:27.218 +03:30 [DBG] Connection id "0HMTNA2A14A60", Request id "0HMTNA2A14A60:00000009": started reading request body.
+2023-09-17 11:05:27.220 +03:30 [DBG] Connection id "0HMTNA2A14A60", Request id "0HMTNA2A14A60:00000009": done reading request body.
+2023-09-17 11:05:27.338 +03:30 [DBG] Done attempting to bind parameter 'schoolClassCreationDto' of type 'MDDReservationAPI.DTO.SchoolClassCreationDTO'.
+2023-09-17 11:05:27.340 +03:30 [DBG] Done attempting to bind parameter 'schoolClassCreationDto' of type 'MDDReservationAPI.DTO.SchoolClassCreationDTO'.
+2023-09-17 11:05:27.340 +03:30 [DBG] Attempting to validate the bound parameter 'schoolClassCreationDto' of type 'MDDReservationAPI.DTO.SchoolClassCreationDTO' ...
+2023-09-17 11:05:27.349 +03:30 [DBG] Done attempting to validate the bound parameter 'schoolClassCreationDto' of type 'MDDReservationAPI.DTO.SchoolClassCreationDTO'.
+2023-09-17 11:05:28.048 +03:30 [DBG] The property 'Student.ProjectId' was created in shadow state because there are no eligible CLR members with a matching name.
+2023-09-17 11:05:28.051 +03:30 [DBG] The property 'User.Discriminator' was created in shadow state because there are no eligible CLR members with a matching name.
+2023-09-17 11:05:28.222 +03:30 [DBG] Entity Framework Core 7.0.10 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:7.0.10' with options: None
+2023-09-17 11:05:28.267 +03:30 [DBG] Compiling query expression: 
+'DbSet<School>()
+    .Any(s => s.Id == __schoolId_0)'
+2023-09-17 11:05:28.514 +03:30 [DBG] Generated query execution expression: 
+'queryContext => ShapedQueryCompilingExpressionVisitor.SingleAsync<bool>(
+    asyncEnumerable: new SingleQueryingEnumerable<bool>(
+        (RelationalQueryContext)queryContext, 
+        RelationalCommandCache.QueryExpression(
+            Projection Mapping:
+                EmptyProjectionMember -> 0
+            SELECT EXISTS (
+                SELECT 1
+                FROM Schools AS s
+                WHERE s.Id == @__schoolId_0)), 
+        null, 
+        Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, bool>, 
+        MDDReservationAPI.Data.ApplicationDbContext, 
+        False, 
+        False, 
+        True
+    ), 
+    cancellationToken: queryContext.CancellationToken)'
+2023-09-17 11:05:28.566 +03:30 [DBG] Creating DbCommand for 'ExecuteReader'.
+2023-09-17 11:05:28.572 +03:30 [DBG] Creating DbConnection.
+2023-09-17 11:05:28.593 +03:30 [DBG] Created DbConnection. (17ms).
+2023-09-17 11:05:28.604 +03:30 [DBG] Created DbCommand for 'ExecuteReader' (33ms).
+2023-09-17 11:05:28.611 +03:30 [DBG] Initialized DbCommand for 'ExecuteReader' (45ms).
+2023-09-17 11:05:28.620 +03:30 [DBG] Opening connection to database 'main' on server 'App.db'.
+2023-09-17 11:05:28.634 +03:30 [DBG] Opened connection to database 'main' on server 'C:\Users\moham\source\repos\MDDReservationAPI\MDDReservationAPI\App.db'.
+2023-09-17 11:05:28.651 +03:30 [DBG] Executing DbCommand [Parameters=[@__schoolId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Schools" AS "s"
+    WHERE "s"."Id" = @__schoolId_0)
+2023-09-17 11:05:28.685 +03:30 [INF] Executed DbCommand (39ms) [Parameters=[@__schoolId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Schools" AS "s"
+    WHERE "s"."Id" = @__schoolId_0)
+2023-09-17 11:05:28.700 +03:30 [DBG] Closing data reader to 'main' on server 'C:\Users\moham\source\repos\MDDReservationAPI\MDDReservationAPI\App.db'.
+2023-09-17 11:05:28.709 +03:30 [DBG] A data reader for 'main' on server 'C:\Users\moham\source\repos\MDDReservationAPI\MDDReservationAPI\App.db' is being disposed after spending 14ms reading results.
+2023-09-17 11:05:28.719 +03:30 [DBG] Closing connection to database 'main' on server 'C:\Users\moham\source\repos\MDDReservationAPI\MDDReservationAPI\App.db'.
+2023-09-17 11:05:28.726 +03:30 [DBG] Closed connection to database 'main' on server 'App.db' (7ms).
+2023-09-17 11:05:28.729 +03:30 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter"]
+2023-09-17 11:05:28.735 +03:30 [DBG] Attempting to select an output formatter based on Accept header '["application/json"]' and explicitly specified content types '["application/json"]'. The content types in the accept header must be a subset of the explicitly set content types.
+2023-09-17 11:05:28.738 +03:30 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter' and content type 'application/json' to write the response.
+2023-09-17 11:05:28.739 +03:30 [INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+2023-09-17 11:05:28.775 +03:30 [INF] Executed action MDDReservationAPI.Controllers.SchoolClassController.CreateSchoolClassAsync (MDDReservationAPI) in 1822.4649ms
+2023-09-17 11:05:28.778 +03:30 [INF] Executed endpoint 'MDDReservationAPI.Controllers.SchoolClassController.CreateSchoolClassAsync (MDDReservationAPI)'
+2023-09-17 11:05:28.782 +03:30 [DBG] 'ApplicationDbContext' disposed.
+2023-09-17 11:05:28.794 +03:30 [DBG] Disposing connection to database 'main' on server 'App.db'.
+2023-09-17 11:05:28.798 +03:30 [DBG] Disposed connection to database 'main' on server 'App.db' (4ms).
+2023-09-17 11:05:28.801 +03:30 [INF] Request finished HTTP/2 POST https://localhost:7010/schoolClass/create application/json-patch+json 85 - 404 21 application/json;+charset=utf-8 1939.9150ms
+2023-09-17 11:10:16.276 +03:30 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-09-17 11:10:16.332 +03:30 [DBG] Hosting starting
+2023-09-17 11:10:16.385 +03:30 [DBG] Using development certificate: CN=localhost (Thumbprint: 175D8FE1405C2912E50F5B9B0938581AAF4B0E19)
+2023-09-17 11:10:16.406 +03:30 [INF] Now listening on: https://localhost:7010
+2023-09-17 11:10:16.407 +03:30 [INF] Now listening on: http://localhost:5143
+2023-09-17 11:10:16.409 +03:30 [DBG] Loaded hosting startup assembly MDDReservationAPI
+2023-09-17 11:10:16.409 +03:30 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2023-09-17 11:10:16.410 +03:30 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2023-09-17 11:10:16.411 +03:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-17 11:10:16.412 +03:30 [INF] Hosting environment: Development
+2023-09-17 11:10:16.412 +03:30 [INF] Content root path: C:\Users\moham\source\repos\MDDReservationAPI\MDDReservationAPI\
+2023-09-17 11:10:16.413 +03:30 [DBG] Hosting started
+2023-09-17 11:10:19.194 +03:30 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2023-09-17 11:10:19.285 +03:30 [DBG] Hosting starting
+2023-09-17 11:10:19.419 +03:30 [DBG] Using development certificate: CN=localhost (Thumbprint: 175D8FE1405C2912E50F5B9B0938581AAF4B0E19)
+2023-09-17 11:10:19.452 +03:30 [INF] Now listening on: https://localhost:7010
+2023-09-17 11:10:19.453 +03:30 [INF] Now listening on: http://localhost:5143
+2023-09-17 11:10:19.457 +03:30 [DBG] Loaded hosting startup assembly MDDReservationAPI
+2023-09-17 11:10:19.457 +03:30 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2023-09-17 11:10:19.458 +03:30 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2023-09-17 11:10:19.462 +03:30 [INF] Application started. Press Ctrl+C to shut down.
+2023-09-17 11:10:19.463 +03:30 [INF] Hosting environment: Development
+2023-09-17 11:10:19.464 +03:30 [INF] Content root path: C:\Users\moham\source\repos\MDDReservationAPI\MDDReservationAPI\
+2023-09-17 11:10:19.465 +03:30 [DBG] Hosting started
+2023-09-17 11:10:19.916 +03:30 [DBG] Connection id "0HMTNA5BVFVJ6" received FIN.
+2023-09-17 11:10:19.916 +03:30 [DBG] Connection id "0HMTNA5BVFVJ7" received FIN.
+2023-09-17 11:10:19.926 +03:30 [DBG] Connection id "0HMTNA5BVFVJ7" accepted.
+2023-09-17 11:10:19.926 +03:30 [DBG] Connection id "0HMTNA5BVFVJ6" accepted.
+2023-09-17 11:10:19.928 +03:30 [DBG] Connection id "0HMTNA5BVFVJ6" started.
+2023-09-17 11:10:19.928 +03:30 [DBG] Connection id "0HMTNA5BVFVJ7" started.
+2023-09-17 11:10:19.947 +03:30 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-09-17 11:10:19.947 +03:30 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException:  Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveBlobAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](TIOAdapter adapter, Boolean receiveFirst, Byte[] reAuthenticationData, Boolean isApm)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2023-09-17 11:10:19.978 +03:30 [DBG] Connection id "0HMTNA5BVFVJ6" stopped.
+2023-09-17 11:10:19.978 +03:30 [DBG] Connection id "0HMTNA5BVFVJ7" stopped.
+2023-09-17 11:10:19.989 +03:30 [DBG] Connection id "0HMTNA5BVFVJ6" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-09-17 11:10:19.989 +03:30 [DBG] Connection id "0HMTNA5BVFVJ7" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-09-17 11:10:20.123 +03:30 [DBG] Connection id "0HMTNA5BVFVJ8" accepted.
+2023-09-17 11:10:20.124 +03:30 [DBG] Connection id "0HMTNA5BVFVJ8" started.
+2023-09-17 11:10:20.163 +03:30 [DBG] Connection 0HMTNA5BVFVJ8 established using the following protocol: "Tls13"
+2023-09-17 11:10:20.203 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7010/swagger/index.html - -
+2023-09-17 11:10:20.232 +03:30 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2023-09-17 11:10:20.436 +03:30 [DBG] Response markup is scheduled to include browser refresh script injection.
+2023-09-17 11:10:20.590 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7010/_framework/aspnetcore-browser-refresh.js - -
+2023-09-17 11:10:20.594 +03:30 [DBG] Response markup was updated to include browser refresh script injection.
+2023-09-17 11:10:20.598 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7010/_framework/aspnetcore-browser-refresh.js - - - 200 12366 application/javascript;+charset=utf-8 7.6425ms
+2023-09-17 11:10:20.599 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7010/swagger/index.html - - - 200 - text/html;charset=utf-8 400.5199ms
+2023-09-17 11:10:20.639 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7010/_vs/browserLink - -
+2023-09-17 11:10:20.660 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7010/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 20.7286ms
+2023-09-17 11:10:20.819 +03:30 [INF] Request starting HTTP/2 GET https://localhost:7010/swagger/v1/swagger.json - -
+2023-09-17 11:10:21.100 +03:30 [INF] Request finished HTTP/2 GET https://localhost:7010/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 280.2563ms
+2023-09-17 11:11:35.099 +03:30 [INF] Request starting HTTP/2 POST https://localhost:7010/school/create application/json-patch+json 73
+2023-09-17 11:11:35.110 +03:30 [DBG] POST requests are not supported
+2023-09-17 11:11:35.131 +03:30 [DBG] 1 candidate(s) found for the request path '/school/create'
+2023-09-17 11:11:35.141 +03:30 [DBG] Endpoint 'MDDReservationAPI.Models.SchoolController.CreateSchoolAsync (MDDReservationAPI)' with route pattern 'school/create' is valid for the request path '/school/create'
+2023-09-17 11:11:35.144 +03:30 [DBG] Request matched endpoint 'MDDReservationAPI.Models.SchoolController.CreateSchoolAsync (MDDReservationAPI)'
+2023-09-17 11:11:35.146 +03:30 [INF] Executing endpoint 'MDDReservationAPI.Models.SchoolController.CreateSchoolAsync (MDDReservationAPI)'
+2023-09-17 11:11:35.176 +03:30 [INF] Route matched with {action = "CreateSchool", controller = "School"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[MDDReservationAPI.Models.School]] CreateSchoolAsync(MDDReservationAPI.DTO.SchoolCreationDTO) on controller MDDReservationAPI.Models.SchoolController (MDDReservationAPI).
+2023-09-17 11:11:35.179 +03:30 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2023-09-17 11:11:35.181 +03:30 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2023-09-17 11:11:35.182 +03:30 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2023-09-17 11:11:35.183 +03:30 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2023-09-17 11:11:35.184 +03:30 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)","Microsoft.AspNetCore.Mvc.ProducesAttribute (Order: 0)"]
+2023-09-17 11:11:35.186 +03:30 [DBG] Executing controller factory for controller MDDReservationAPI.Models.SchoolController (MDDReservationAPI)
+2023-09-17 11:11:35.418 +03:30 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2023-09-17 11:11:35.442 +03:30 [DBG] Executed controller factory for controller MDDReservationAPI.Models.SchoolController (MDDReservationAPI)
+2023-09-17 11:11:35.446 +03:30 [DBG] Attempting to bind parameter 'schoolDTO' of type 'MDDReservationAPI.DTO.SchoolCreationDTO' ...
+2023-09-17 11:11:35.448 +03:30 [DBG] Attempting to bind parameter 'schoolDTO' of type 'MDDReservationAPI.DTO.SchoolCreationDTO' using the name '' in request data ...
+2023-09-17 11:11:35.450 +03:30 [DBG] Rejected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonPatchInputFormatter' for content type 'application/json-patch+json'.
+2023-09-17 11:11:35.451 +03:30 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonInputFormatter' for content type 'application/json-patch+json'.
+2023-09-17 11:11:35.458 +03:30 [DBG] Connection id "0HMTNA5BVFVJ8", Request id "0HMTNA5BVFVJ8:00000009": started reading request body.
+2023-09-17 11:11:35.459 +03:30 [DBG] Connection id "0HMTNA5BVFVJ8", Request id "0HMTNA5BVFVJ8:00000009": done reading request body.
+2023-09-17 11:11:35.584 +03:30 [DBG] Done attempting to bind parameter 'schoolDTO' of type 'MDDReservationAPI.DTO.SchoolCreationDTO'.
+2023-09-17 11:11:35.588 +03:30 [DBG] Done attempting to bind parameter 'schoolDTO' of type 'MDDReservationAPI.DTO.SchoolCreationDTO'.
+2023-09-17 11:11:35.589 +03:30 [DBG] Attempting to validate the bound parameter 'schoolDTO' of type 'MDDReservationAPI.DTO.SchoolCreationDTO' ...
+2023-09-17 11:11:35.596 +03:30 [DBG] Done attempting to validate the bound parameter 'schoolDTO' of type 'MDDReservationAPI.DTO.SchoolCreationDTO'.
+2023-09-17 11:11:36.311 +03:30 [DBG] The property 'Student.ProjectId' was created in shadow state because there are no eligible CLR members with a matching name.
+2023-09-17 11:11:36.314 +03:30 [DBG] The property 'User.Discriminator' was created in shadow state because there are no eligible CLR members with a matching name.
+2023-09-17 11:11:36.490 +03:30 [DBG] Entity Framework Core 7.0.10 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:7.0.10' with options: None
+2023-09-17 11:11:36.523 +03:30 [DBG] 'ApplicationDbContext' generated a temporary value for the property 'Id.School'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-09-17 11:11:36.576 +03:30 [DBG] Context 'ApplicationDbContext' started tracking 'School' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-09-17 11:11:36.587 +03:30 [DBG] SaveChanges starting for 'ApplicationDbContext'.
+2023-09-17 11:11:36.593 +03:30 [DBG] DetectChanges starting for 'ApplicationDbContext'.
+2023-09-17 11:11:36.609 +03:30 [DBG] DetectChanges completed for 'ApplicationDbContext'.
+2023-09-17 11:11:36.686 +03:30 [DBG] Creating DbConnection.
+2023-09-17 11:11:36.708 +03:30 [DBG] Created DbConnection. (17ms).
+2023-09-17 11:11:36.715 +03:30 [DBG] Opening connection to database 'main' on server 'App.db'.
+2023-09-17 11:11:36.731 +03:30 [DBG] Opened connection to database 'main' on server 'C:\Users\moham\source\repos\MDDReservationAPI\MDDReservationAPI\App.db'.
+2023-09-17 11:11:36.749 +03:30 [DBG] Creating DbCommand for 'ExecuteReader'.
+2023-09-17 11:11:36.759 +03:30 [DBG] Created DbCommand for 'ExecuteReader' (5ms).
+2023-09-17 11:11:36.765 +03:30 [DBG] Initialized DbCommand for 'ExecuteReader' (16ms).
+2023-09-17 11:11:36.778 +03:30 [DBG] Executing DbCommand [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (Size = 5), @p4='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Schools" ("CreatedAt", "Gender", "ManagerId", "Name", "SchoolType")
+VALUES (@p0, @p1, @p2, @p3, @p4)
+RETURNING "Id";
+2023-09-17 11:11:36.809 +03:30 [INF] Executed DbCommand (35ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (DbType = Int32), @p2='?' (DbType = Int32), @p3='?' (Size = 5), @p4='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "Schools" ("CreatedAt", "Gender", "ManagerId", "Name", "SchoolType")
+VALUES (@p0, @p1, @p2, @p3, @p4)
+RETURNING "Id";
+2023-09-17 11:11:36.832 +03:30 [DBG] The foreign key property 'School.Id' was detected as changed. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see property values.
+2023-09-17 11:11:36.850 +03:30 [DBG] Closing data reader to 'main' on server 'C:\Users\moham\source\repos\MDDReservationAPI\MDDReservationAPI\App.db'.
+2023-09-17 11:11:36.864 +03:30 [DBG] A data reader for 'main' on server 'C:\Users\moham\source\repos\MDDReservationAPI\MDDReservationAPI\App.db' is being disposed after spending 44ms reading results.
+2023-09-17 11:11:36.875 +03:30 [DBG] Closing connection to database 'main' on server 'C:\Users\moham\source\repos\MDDReservationAPI\MDDReservationAPI\App.db'.
+2023-09-17 11:11:36.880 +03:30 [DBG] Closed connection to database 'main' on server 'App.db' (5ms).
+2023-09-17 11:11:36.895 +03:30 [DBG] An entity of type 'School' tracked by 'ApplicationDbContext' changed state from '"Added"' to '"Unchanged"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-09-17 11:11:36.898 +03:30 [DBG] SaveChanges completed for 'ApplicationDbContext' with 1 entities written to the database.
+2023-09-17 11:11:36.900 +03:30 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter"]
+2023-09-17 11:11:36.905 +03:30 [DBG] Attempting to select an output formatter based on Accept header '["application/json"]' and explicitly specified content types '["application/json"]'. The content types in the accept header must be a subset of the explicitly set content types.
+2023-09-17 11:11:36.907 +03:30 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter' and content type 'application/json' to write the response.
+2023-09-17 11:11:36.908 +03:30 [INF] Executing OkObjectResult, writing value of type 'MDDReservationAPI.Models.School'.
+2023-09-17 11:11:36.961 +03:30 [INF] Executed action MDDReservationAPI.Models.SchoolController.CreateSchoolAsync (MDDReservationAPI) in 1770.4334ms
+2023-09-17 11:11:36.964 +03:30 [INF] Executed endpoint 'MDDReservationAPI.Models.SchoolController.CreateSchoolAsync (MDDReservationAPI)'
+2023-09-17 11:11:36.969 +03:30 [DBG] 'ApplicationDbContext' disposed.
+2023-09-17 11:11:36.978 +03:30 [DBG] Disposing connection to database 'main' on server 'App.db'.
+2023-09-17 11:11:36.983 +03:30 [DBG] Disposed connection to database 'main' on server 'App.db' (4ms).
+2023-09-17 11:11:36.985 +03:30 [INF] Request finished HTTP/2 POST https://localhost:7010/school/create application/json-patch+json 73 - 200 142 application/json;+charset=utf-8 1885.8964ms
+2023-09-17 11:13:17.393 +03:30 [INF] Request starting HTTP/2 POST https://localhost:7010/schoolClass/create application/json-patch+json 85
+2023-09-17 11:13:17.400 +03:30 [DBG] POST requests are not supported
+2023-09-17 11:13:17.402 +03:30 [DBG] 1 candidate(s) found for the request path '/schoolClass/create'
+2023-09-17 11:13:17.402 +03:30 [DBG] Endpoint 'MDDReservationAPI.Controllers.SchoolClassController.CreateSchoolClassAsync (MDDReservationAPI)' with route pattern 'schoolClass/create' is valid for the request path '/schoolClass/create'
+2023-09-17 11:13:17.404 +03:30 [DBG] Request matched endpoint 'MDDReservationAPI.Controllers.SchoolClassController.CreateSchoolClassAsync (MDDReservationAPI)'
+2023-09-17 11:13:17.405 +03:30 [INF] Executing endpoint 'MDDReservationAPI.Controllers.SchoolClassController.CreateSchoolClassAsync (MDDReservationAPI)'
+2023-09-17 11:13:17.409 +03:30 [INF] Route matched with {action = "CreateSchoolClass", controller = "SchoolClass"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[MDDReservationAPI.Models.SchoolClass]] CreateSchoolClassAsync(MDDReservationAPI.DTO.SchoolClassCreationDTO) on controller MDDReservationAPI.Controllers.SchoolClassController (MDDReservationAPI).
+2023-09-17 11:13:17.410 +03:30 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2023-09-17 11:13:17.411 +03:30 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2023-09-17 11:13:17.412 +03:30 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2023-09-17 11:13:17.413 +03:30 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2023-09-17 11:13:17.414 +03:30 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)","Microsoft.AspNetCore.Mvc.ProducesAttribute (Order: 0)"]
+2023-09-17 11:13:17.415 +03:30 [DBG] Executing controller factory for controller MDDReservationAPI.Controllers.SchoolClassController (MDDReservationAPI)
+2023-09-17 11:13:17.416 +03:30 [DBG] Executed controller factory for controller MDDReservationAPI.Controllers.SchoolClassController (MDDReservationAPI)
+2023-09-17 11:13:17.417 +03:30 [DBG] Attempting to bind parameter 'schoolClassCreationDto' of type 'MDDReservationAPI.DTO.SchoolClassCreationDTO' ...
+2023-09-17 11:13:17.418 +03:30 [DBG] Attempting to bind parameter 'schoolClassCreationDto' of type 'MDDReservationAPI.DTO.SchoolClassCreationDTO' using the name '' in request data ...
+2023-09-17 11:13:17.419 +03:30 [DBG] Rejected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonPatchInputFormatter' for content type 'application/json-patch+json'.
+2023-09-17 11:13:17.420 +03:30 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonInputFormatter' for content type 'application/json-patch+json'.
+2023-09-17 11:13:17.421 +03:30 [DBG] Connection id "0HMTNA5BVFVJ8", Request id "0HMTNA5BVFVJ8:0000000B": started reading request body.
+2023-09-17 11:13:17.422 +03:30 [DBG] Connection id "0HMTNA5BVFVJ8", Request id "0HMTNA5BVFVJ8:0000000B": done reading request body.
+2023-09-17 11:13:17.428 +03:30 [DBG] Done attempting to bind parameter 'schoolClassCreationDto' of type 'MDDReservationAPI.DTO.SchoolClassCreationDTO'.
+2023-09-17 11:13:17.429 +03:30 [DBG] Done attempting to bind parameter 'schoolClassCreationDto' of type 'MDDReservationAPI.DTO.SchoolClassCreationDTO'.
+2023-09-17 11:13:17.429 +03:30 [DBG] Attempting to validate the bound parameter 'schoolClassCreationDto' of type 'MDDReservationAPI.DTO.SchoolClassCreationDTO' ...
+2023-09-17 11:13:17.431 +03:30 [DBG] Done attempting to validate the bound parameter 'schoolClassCreationDto' of type 'MDDReservationAPI.DTO.SchoolClassCreationDTO'.
+2023-09-17 11:13:17.493 +03:30 [DBG] Entity Framework Core 7.0.10 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:7.0.10' with options: None
+2023-09-17 11:13:17.536 +03:30 [DBG] Compiling query expression: 
+'DbSet<School>()
+    .Any(s => s.Id == __schoolId_0)'
+2023-09-17 11:13:17.780 +03:30 [DBG] Generated query execution expression: 
+'queryContext => ShapedQueryCompilingExpressionVisitor.SingleAsync<bool>(
+    asyncEnumerable: new SingleQueryingEnumerable<bool>(
+        (RelationalQueryContext)queryContext, 
+        RelationalCommandCache.QueryExpression(
+            Projection Mapping:
+                EmptyProjectionMember -> 0
+            SELECT EXISTS (
+                SELECT 1
+                FROM Schools AS s
+                WHERE s.Id == @__schoolId_0)), 
+        null, 
+        Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, bool>, 
+        MDDReservationAPI.Data.ApplicationDbContext, 
+        False, 
+        False, 
+        True
+    ), 
+    cancellationToken: queryContext.CancellationToken)'
+2023-09-17 11:13:17.821 +03:30 [DBG] Creating DbCommand for 'ExecuteReader'.
+2023-09-17 11:13:17.824 +03:30 [DBG] Creating DbConnection.
+2023-09-17 11:13:17.825 +03:30 [DBG] Created DbConnection. (1ms).
+2023-09-17 11:13:17.826 +03:30 [DBG] Created DbCommand for 'ExecuteReader' (4ms).
+2023-09-17 11:13:17.826 +03:30 [DBG] Initialized DbCommand for 'ExecuteReader' (5ms).
+2023-09-17 11:13:17.827 +03:30 [DBG] Opening connection to database 'main' on server 'App.db'.
+2023-09-17 11:13:17.828 +03:30 [DBG] Opened connection to database 'main' on server 'C:\Users\moham\source\repos\MDDReservationAPI\MDDReservationAPI\App.db'.
+2023-09-17 11:13:17.829 +03:30 [DBG] Executing DbCommand [Parameters=[@__schoolId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Schools" AS "s"
+    WHERE "s"."Id" = @__schoolId_0)
+2023-09-17 11:13:17.830 +03:30 [INF] Executed DbCommand (1ms) [Parameters=[@__schoolId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Schools" AS "s"
+    WHERE "s"."Id" = @__schoolId_0)
+2023-09-17 11:13:17.834 +03:30 [DBG] Closing data reader to 'main' on server 'C:\Users\moham\source\repos\MDDReservationAPI\MDDReservationAPI\App.db'.
+2023-09-17 11:13:17.835 +03:30 [DBG] A data reader for 'main' on server 'C:\Users\moham\source\repos\MDDReservationAPI\MDDReservationAPI\App.db' is being disposed after spending 2ms reading results.
+2023-09-17 11:13:17.836 +03:30 [DBG] Closing connection to database 'main' on server 'C:\Users\moham\source\repos\MDDReservationAPI\MDDReservationAPI\App.db'.
+2023-09-17 11:13:17.837 +03:30 [DBG] Closed connection to database 'main' on server 'App.db' (0ms).
+2023-09-17 11:13:17.839 +03:30 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter"]
+2023-09-17 11:13:17.840 +03:30 [DBG] Attempting to select an output formatter based on Accept header '["application/json"]' and explicitly specified content types '["application/json"]'. The content types in the accept header must be a subset of the explicitly set content types.
+2023-09-17 11:13:17.842 +03:30 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter' and content type 'application/json' to write the response.
+2023-09-17 11:13:17.842 +03:30 [INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+2023-09-17 11:13:17.843 +03:30 [INF] Executed action MDDReservationAPI.Controllers.SchoolClassController.CreateSchoolClassAsync (MDDReservationAPI) in 428.4508ms
+2023-09-17 11:13:17.844 +03:30 [INF] Executed endpoint 'MDDReservationAPI.Controllers.SchoolClassController.CreateSchoolClassAsync (MDDReservationAPI)'
+2023-09-17 11:13:17.848 +03:30 [DBG] 'ApplicationDbContext' disposed.
+2023-09-17 11:13:17.849 +03:30 [DBG] Disposing connection to database 'main' on server 'App.db'.
+2023-09-17 11:13:17.850 +03:30 [DBG] Disposed connection to database 'main' on server 'App.db' (0ms).
+2023-09-17 11:13:17.851 +03:30 [INF] Request finished HTTP/2 POST https://localhost:7010/schoolClass/create application/json-patch+json 85 - 404 21 application/json;+charset=utf-8 458.1135ms
+2023-09-17 11:13:31.376 +03:30 [INF] Request starting HTTP/2 POST https://localhost:7010/schoolClass/create application/json-patch+json 85
+2023-09-17 11:13:31.378 +03:30 [DBG] POST requests are not supported
+2023-09-17 11:13:31.379 +03:30 [DBG] 1 candidate(s) found for the request path '/schoolClass/create'
+2023-09-17 11:13:31.381 +03:30 [DBG] Endpoint 'MDDReservationAPI.Controllers.SchoolClassController.CreateSchoolClassAsync (MDDReservationAPI)' with route pattern 'schoolClass/create' is valid for the request path '/schoolClass/create'
+2023-09-17 11:13:31.382 +03:30 [DBG] Request matched endpoint 'MDDReservationAPI.Controllers.SchoolClassController.CreateSchoolClassAsync (MDDReservationAPI)'
+2023-09-17 11:13:31.382 +03:30 [INF] Executing endpoint 'MDDReservationAPI.Controllers.SchoolClassController.CreateSchoolClassAsync (MDDReservationAPI)'
+2023-09-17 11:13:31.383 +03:30 [INF] Route matched with {action = "CreateSchoolClass", controller = "SchoolClass"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[MDDReservationAPI.Models.SchoolClass]] CreateSchoolClassAsync(MDDReservationAPI.DTO.SchoolClassCreationDTO) on controller MDDReservationAPI.Controllers.SchoolClassController (MDDReservationAPI).
+2023-09-17 11:13:31.384 +03:30 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2023-09-17 11:13:31.385 +03:30 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2023-09-17 11:13:31.386 +03:30 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)","Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000)"]
+2023-09-17 11:13:31.388 +03:30 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2023-09-17 11:13:31.389 +03:30 [DBG] Execution plan of result filters (in the following order): ["Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000)","Microsoft.AspNetCore.Mvc.ProducesAttribute (Order: 0)"]
+2023-09-17 11:13:31.390 +03:30 [DBG] Executing controller factory for controller MDDReservationAPI.Controllers.SchoolClassController (MDDReservationAPI)
+2023-09-17 11:13:31.392 +03:30 [DBG] Executed controller factory for controller MDDReservationAPI.Controllers.SchoolClassController (MDDReservationAPI)
+2023-09-17 11:13:31.393 +03:30 [DBG] Attempting to bind parameter 'schoolClassCreationDto' of type 'MDDReservationAPI.DTO.SchoolClassCreationDTO' ...
+2023-09-17 11:13:31.394 +03:30 [DBG] Attempting to bind parameter 'schoolClassCreationDto' of type 'MDDReservationAPI.DTO.SchoolClassCreationDTO' using the name '' in request data ...
+2023-09-17 11:13:31.394 +03:30 [DBG] Rejected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonPatchInputFormatter' for content type 'application/json-patch+json'.
+2023-09-17 11:13:31.395 +03:30 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonInputFormatter' for content type 'application/json-patch+json'.
+2023-09-17 11:13:31.396 +03:30 [DBG] Connection id "0HMTNA5BVFVJ8", Request id "0HMTNA5BVFVJ8:0000000D": started reading request body.
+2023-09-17 11:13:31.397 +03:30 [DBG] Connection id "0HMTNA5BVFVJ8", Request id "0HMTNA5BVFVJ8:0000000D": done reading request body.
+2023-09-17 11:13:31.398 +03:30 [DBG] Done attempting to bind parameter 'schoolClassCreationDto' of type 'MDDReservationAPI.DTO.SchoolClassCreationDTO'.
+2023-09-17 11:13:31.399 +03:30 [DBG] Done attempting to bind parameter 'schoolClassCreationDto' of type 'MDDReservationAPI.DTO.SchoolClassCreationDTO'.
+2023-09-17 11:13:31.400 +03:30 [DBG] Attempting to validate the bound parameter 'schoolClassCreationDto' of type 'MDDReservationAPI.DTO.SchoolClassCreationDTO' ...
+2023-09-17 11:13:31.401 +03:30 [DBG] Done attempting to validate the bound parameter 'schoolClassCreationDto' of type 'MDDReservationAPI.DTO.SchoolClassCreationDTO'.
+2023-09-17 11:13:31.409 +03:30 [DBG] Entity Framework Core 7.0.10 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite:7.0.10' with options: None
+2023-09-17 11:13:31.413 +03:30 [DBG] Creating DbCommand for 'ExecuteReader'.
+2023-09-17 11:13:31.414 +03:30 [DBG] Creating DbConnection.
+2023-09-17 11:13:31.415 +03:30 [DBG] Created DbConnection. (0ms).
+2023-09-17 11:13:31.415 +03:30 [DBG] Created DbCommand for 'ExecuteReader' (2ms).
+2023-09-17 11:13:31.416 +03:30 [DBG] Initialized DbCommand for 'ExecuteReader' (3ms).
+2023-09-17 11:13:31.417 +03:30 [DBG] Opening connection to database 'main' on server 'App.db'.
+2023-09-17 11:13:31.418 +03:30 [DBG] Opened connection to database 'main' on server 'C:\Users\moham\source\repos\MDDReservationAPI\MDDReservationAPI\App.db'.
+2023-09-17 11:13:31.419 +03:30 [DBG] Executing DbCommand [Parameters=[@__schoolId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Schools" AS "s"
+    WHERE "s"."Id" = @__schoolId_0)
+2023-09-17 11:13:31.420 +03:30 [INF] Executed DbCommand (1ms) [Parameters=[@__schoolId_0='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "Schools" AS "s"
+    WHERE "s"."Id" = @__schoolId_0)
+2023-09-17 11:13:31.421 +03:30 [DBG] Closing data reader to 'main' on server 'C:\Users\moham\source\repos\MDDReservationAPI\MDDReservationAPI\App.db'.
+2023-09-17 11:13:31.422 +03:30 [DBG] A data reader for 'main' on server 'C:\Users\moham\source\repos\MDDReservationAPI\MDDReservationAPI\App.db' is being disposed after spending 0ms reading results.
+2023-09-17 11:13:31.423 +03:30 [DBG] Closing connection to database 'main' on server 'C:\Users\moham\source\repos\MDDReservationAPI\MDDReservationAPI\App.db'.
+2023-09-17 11:13:31.424 +03:30 [DBG] Closed connection to database 'main' on server 'App.db' (0ms).
+2023-09-17 11:13:31.426 +03:30 [DBG] 'ApplicationDbContext' generated a temporary value for the property 'Id.SchoolClass'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-09-17 11:13:31.440 +03:30 [DBG] Context 'ApplicationDbContext' started tracking 'SchoolClass' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-09-17 11:13:31.441 +03:30 [DBG] SaveChanges starting for 'ApplicationDbContext'.
+2023-09-17 11:13:31.442 +03:30 [DBG] DetectChanges starting for 'ApplicationDbContext'.
+2023-09-17 11:13:31.446 +03:30 [DBG] DetectChanges completed for 'ApplicationDbContext'.
+2023-09-17 11:13:31.447 +03:30 [DBG] Opening connection to database 'main' on server 'App.db'.
+2023-09-17 11:13:31.448 +03:30 [DBG] Opened connection to database 'main' on server 'C:\Users\moham\source\repos\MDDReservationAPI\MDDReservationAPI\App.db'.
+2023-09-17 11:13:31.449 +03:30 [DBG] Creating DbCommand for 'ExecuteReader'.
+2023-09-17 11:13:31.450 +03:30 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2023-09-17 11:13:31.451 +03:30 [DBG] Initialized DbCommand for 'ExecuteReader' (1ms).
+2023-09-17 11:13:31.452 +03:30 [DBG] Executing DbCommand [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (DbType = Int32), @p2='?' (DbType = Boolean), @p3='?' (DbType = Int32), @p4='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "SchoolsClasses" ("CreatedAt", "Grade", "IsProgrammer", "ProgrammingLanguage", "SchoolId")
+VALUES (@p0, @p1, @p2, @p3, @p4)
+RETURNING "Id";
+2023-09-17 11:13:31.453 +03:30 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (DbType = DateTime), @p1='?' (DbType = Int32), @p2='?' (DbType = Boolean), @p3='?' (DbType = Int32), @p4='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "SchoolsClasses" ("CreatedAt", "Grade", "IsProgrammer", "ProgrammingLanguage", "SchoolId")
+VALUES (@p0, @p1, @p2, @p3, @p4)
+RETURNING "Id";
+2023-09-17 11:13:31.455 +03:30 [DBG] The foreign key property 'SchoolClass.Id' was detected as changed. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see property values.
+2023-09-17 11:13:31.457 +03:30 [DBG] Closing data reader to 'main' on server 'C:\Users\moham\source\repos\MDDReservationAPI\MDDReservationAPI\App.db'.
+2023-09-17 11:13:31.459 +03:30 [DBG] A data reader for 'main' on server 'C:\Users\moham\source\repos\MDDReservationAPI\MDDReservationAPI\App.db' is being disposed after spending 4ms reading results.
+2023-09-17 11:13:31.460 +03:30 [DBG] Closing connection to database 'main' on server 'C:\Users\moham\source\repos\MDDReservationAPI\MDDReservationAPI\App.db'.
+2023-09-17 11:13:31.461 +03:30 [DBG] Closed connection to database 'main' on server 'App.db' (1ms).
+2023-09-17 11:13:31.463 +03:30 [DBG] An entity of type 'SchoolClass' tracked by 'ApplicationDbContext' changed state from '"Added"' to '"Unchanged"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2023-09-17 11:13:31.465 +03:30 [DBG] SaveChanges completed for 'ApplicationDbContext' with 1 entities written to the database.
+2023-09-17 11:13:31.466 +03:30 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter"]
+2023-09-17 11:13:31.467 +03:30 [DBG] Attempting to select an output formatter based on Accept header '["application/json"]' and explicitly specified content types '["application/json"]'. The content types in the accept header must be a subset of the explicitly set content types.
+2023-09-17 11:13:31.468 +03:30 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.NewtonsoftJsonOutputFormatter' and content type 'application/json' to write the response.
+2023-09-17 11:13:31.469 +03:30 [INF] Executing OkObjectResult, writing value of type 'MDDReservationAPI.Models.SchoolClass'.
+2023-09-17 11:13:31.473 +03:30 [INF] Executed action MDDReservationAPI.Controllers.SchoolClassController.CreateSchoolClassAsync (MDDReservationAPI) in 82.961ms
+2023-09-17 11:13:31.474 +03:30 [INF] Executed endpoint 'MDDReservationAPI.Controllers.SchoolClassController.CreateSchoolClassAsync (MDDReservationAPI)'
+2023-09-17 11:13:31.475 +03:30 [DBG] 'ApplicationDbContext' disposed.
+2023-09-17 11:13:31.476 +03:30 [DBG] Disposing connection to database 'main' on server 'App.db'.
+2023-09-17 11:13:31.477 +03:30 [DBG] Disposed connection to database 'main' on server 'App.db' (0ms).
+2023-09-17 11:13:31.477 +03:30 [INF] Request finished HTTP/2 POST https://localhost:7010/schoolClass/create application/json-patch+json 85 - 200 148 application/json;+charset=utf-8 101.7408ms
+2023-09-17 11:44:15.730 +03:30 [DBG] Connection id "0HMTNA5BVFVJ8" received FIN.
+2023-09-17 11:44:15.777 +03:30 [DBG] Connection id "0HMTNA5BVFVJ8" is closed. The last processed stream ID was 13.
+2023-09-17 11:44:15.792 +03:30 [DBG] Connection id "0HMTNA5BVFVJ8" sending FIN because: "The Socket transport's send loop completed gracefully."
+2023-09-17 11:44:15.795 +03:30 [DBG] Connection id "0HMTNA5BVFVJ8" stopped.

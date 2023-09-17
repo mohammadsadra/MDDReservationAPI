@@ -31,13 +31,24 @@ namespace MDDReservationAPI.Controllers
             {
                 return BadRequest();
             }
-
             var createdSchoolClass = _mapper.Map<SchoolClass>(schoolClassCreationDto);
 
+            if (!await _reservationRepository.SchoolExistsAsync(createdSchoolClass.SchoolId))
+            {
+                return NotFound("School Id is wrong.");
+            }
+
+           
             var result = await _reservationRepository.AddSchoolClassAsync(createdSchoolClass);
+
 
             return Ok(result);
         }
+        #endregion
+
+        #region PUT
+
+        
         #endregion
     }
 }

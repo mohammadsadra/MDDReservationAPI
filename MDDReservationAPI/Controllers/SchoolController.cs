@@ -43,4 +43,10 @@ public class SchoolController : ControllerBase
     }
 
     #endregion
+
+    #region PUT
+
+    
+
+    #endregion
 }

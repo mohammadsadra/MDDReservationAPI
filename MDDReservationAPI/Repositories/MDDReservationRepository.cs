@@ -2,6 +2,7 @@
 using MDDReservationAPI.Data;
 using MDDReservationAPI.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace MDDReservationAPI.Repositories
 {
@@ -26,6 +27,10 @@ namespace MDDReservationAPI.Repositories
             return school;
         }
 
+        public async Task<bool> SchoolExistsAsync(int schoolId)
+        {
+            return await _context.Schools.AnyAsync(s => s.Id == schoolId);
+        }
         #endregion
 
         #region Manager
@@ -82,7 +87,6 @@ namespace MDDReservationAPI.Repositories
         {
             _context.SchoolsClasses.Add(schoolClass);
             await SaveChangesAsync();
-
             return schoolClass;
         }
 

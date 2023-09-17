@@ -11,6 +11,6 @@ namespace MDDReservationAPI.DTO
 
         public int ProgrammingLanguage { get; set; }
 
-        public ICollection<Student>? Students { get; set; }
+        public int SchoolId { get; set; }
     }
 }

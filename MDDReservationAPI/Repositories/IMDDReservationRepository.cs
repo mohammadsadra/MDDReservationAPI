@@ -7,6 +7,7 @@ namespace MDDReservationAPI.Repositories
         #region School
 
         Task<School> AddSchoolAsync(School school);
+        Task<bool> SchoolExistsAsync(int schoolId);
 
         #endregion
 
