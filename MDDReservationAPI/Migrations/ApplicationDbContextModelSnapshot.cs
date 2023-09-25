@@ -17,6 +17,38 @@ namespace MDDReservationAPI.Migrations
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "7.0.10");
 
+            modelBuilder.Entity("MDDReservationAPI.Models.EventDays", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<bool>("Friday")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<bool>("Monday")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<bool>("Saturday")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<bool>("Sunday")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<bool>("Thursday")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<bool>("Tuesday")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<bool>("Wednesday")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("EventDays");
+                });
+
             modelBuilder.Entity("MDDReservationAPI.Models.Project", b =>
                 {
                     b.Property<int>("Id")
@@ -36,6 +68,9 @@ namespace MDDReservationAPI.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("TEXT");
 
+                    b.Property<int>("SchoolId")
+                        .HasColumnType("INTEGER");
+
                     b.HasKey("Id");
 
                     b.ToTable("Projects");
@@ -49,6 +84,9 @@ namespace MDDReservationAPI.Migrations
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("TEXT");
+
+                    b.Property<int>("EventDays")
+                        .HasColumnType("INTEGER");
 
                     b.Property<int>("ManagerId")
                         .HasColumnType("INTEGER");
@@ -193,7 +231,7 @@ namespace MDDReservationAPI.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2023, 9, 17, 6, 36, 33, 224, DateTimeKind.Utc).AddTicks(7677),
+                            CreatedAt = new DateTime(2023, 9, 25, 13, 24, 1, 817, DateTimeKind.Utc).AddTicks(8680),
                             Email = "mohammadsadrahaeri@gmail.com",
                             IsVerify = true,
                             Name = "MohammadSadra Haeri",

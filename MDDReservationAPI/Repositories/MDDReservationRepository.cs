@@ -112,5 +112,17 @@ namespace MDDReservationAPI.Repositories
         }
 
         #endregion
+
+        #region EventDyas
+
+        public async Task<EventDays> AddEventDaysAsync(EventDays eventDays)
+        {
+            _context.EventDays.Add(eventDays);
+            await SaveChangesAsync();
+            return eventDays;
+        }
+
+        #endregion
+        
     }
 }

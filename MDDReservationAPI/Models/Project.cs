@@ -22,6 +22,10 @@ public class Project
     [MaxLength(200)]
     public string Description { get; set; }
     
+    // Relation
+    [ForeignKey("SchoolId")]
+    public int SchoolId { get; set; }
+    
     
     [DataType(DataType.DateTime)]
     public DateTime CreatedAt { get; set; }

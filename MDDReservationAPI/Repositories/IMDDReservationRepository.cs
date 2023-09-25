@@ -52,5 +52,11 @@ namespace MDDReservationAPI.Repositories
         Task<bool> SaveChangesAsync();
 
         #endregion
+
+        #region EventDays
+
+        Task<EventDays> AddEventDaysAsync(EventDays eventDays);
+
+        #endregion
     }
 }

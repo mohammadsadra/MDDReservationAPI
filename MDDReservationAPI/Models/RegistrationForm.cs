@@ -33,6 +33,10 @@ public class RegistrationForm
     [ForeignKey("ProjectId")]
     public Project? Project { get; set; }
     public int? ProjectId { get; set; }
+    
+    // Relation
+    [ForeignKey("EventDays")]
+    public int EventDays { get; set; }
 
     [Required]
     [DataType(DataType.DateTime)]
