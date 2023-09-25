@@ -13,7 +13,7 @@ namespace MDDReservationAPI.DTO
 
         public bool? IsVerify { get; set; }
 
-        public string NationalId { get; set; }
+        public string? NationalId { get; set; }
 
         public string Position { get; set; }
     }
