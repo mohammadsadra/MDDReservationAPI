@@ -1,4 +1,6 @@
-﻿using MDDReservationAPI.Models;
+﻿using MDDReservationAPI.DTO;
+using MDDReservationAPI.Enums;
+using MDDReservationAPI.Models;
 
 namespace MDDReservationAPI.Repositories
 {
@@ -56,6 +58,16 @@ namespace MDDReservationAPI.Repositories
         #region EventDays
 
         Task<EventDays> AddEventDaysAsync(EventDays eventDays);
+
+        #endregion
+       
+        #region File
+        public Task PostFileAsync(IFormFile fileData, FilePathType filePathType);
+        
+
+        public Task PostMultiFileAsync(List<FileUploadDTO> fileData);
+
+        public Task DownloadFileById(int fileName);
 
         #endregion
     }

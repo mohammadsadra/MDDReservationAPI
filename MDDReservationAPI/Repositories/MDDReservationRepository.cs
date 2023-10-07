@@ -1,5 +1,7 @@
 ﻿using MDDReservationAPI.Controllers;
 using MDDReservationAPI.Data;
+using MDDReservationAPI.DTO;
+using MDDReservationAPI.Enums;
 using MDDReservationAPI.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -123,6 +125,88 @@ namespace MDDReservationAPI.Repositories
         }
 
         #endregion
-        
+
+        #region File
+
+        public async Task PostFileAsync(IFormFile fileData, FilePathType filePathType)
+        {
+            try
+            {
+                var fileDetails = new FileDetails()
+                {
+                    FileName = fileData.FileName,
+                    FilePathType = filePathType,
+                };
+
+                using (var stream = new MemoryStream())
+                {
+                    fileData.CopyTo(stream);
+                    fileDetails.FileData = stream.ToArray();
+                }
+
+                var result = _context.FileDetails.Add(fileDetails);
+                await _context.SaveChangesAsync();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public async Task PostMultiFileAsync(List<FileUploadDTO> fileData)
+        {
+            try
+            {
+                foreach(FileUploadDTO file in fileData)
+                {
+                    var fileDetails = new FileDetails()
+                    {
+                        FileName = file.FileDetails.FileName,
+                        FilePathType = file.FilePathType,
+                    };
+
+                    using (var stream = new MemoryStream())
+                    {
+                        file.FileDetails.CopyTo(stream);
+                        fileDetails.FileData = stream.ToArray();
+                    }
+
+                    var result = _context.FileDetails.Add(fileDetails);
+                }
+                await _context.SaveChangesAsync();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public async Task DownloadFileById(int Id)
+        {
+            try
+            {
+                var file =  _context.FileDetails.Where(x => x.ID == Id).FirstOrDefaultAsync();
+
+                var content = new System.IO.MemoryStream(file.Result.FileData);
+                var path = Path.Combine(
+                   Directory.GetCurrentDirectory(), "FileDownloaded",
+                   file.Result.FileName);
+
+                await CopyStream(content, path);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        private async Task CopyStream(Stream stream, string downloadPath)
+        {
+            using (var fileStream = new FileStream(downloadPath, FileMode.Create, FileAccess.Write))
+            {
+               await stream.CopyToAsync(fileStream);
+            }
+        }
+        #endregion
     }
 }

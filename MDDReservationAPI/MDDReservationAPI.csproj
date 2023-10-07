@@ -27,6 +27,7 @@
     <None Remove="Controllers\" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="FileDownloaded\" />
     <Folder Include="Services\" />
   </ItemGroup>
 </Project>

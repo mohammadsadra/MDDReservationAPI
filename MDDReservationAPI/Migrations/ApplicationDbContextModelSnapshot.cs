@@ -49,6 +49,31 @@ namespace MDDReservationAPI.Migrations
                     b.ToTable("EventDays");
                 });
 
+            modelBuilder.Entity("MDDReservationAPI.Models.FileDetails", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<byte[]>("FileData")
+                        .IsRequired()
+                        .HasColumnType("BLOB");
+
+                    b.Property<string>("FileName")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("FilePathKind")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("FilePathType")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("FileDetails");
+                });
+
             modelBuilder.Entity("MDDReservationAPI.Models.Project", b =>
                 {
                     b.Property<int>("Id")
@@ -231,7 +256,7 @@ namespace MDDReservationAPI.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2023, 9, 25, 13, 24, 1, 817, DateTimeKind.Utc).AddTicks(8680),
+                            CreatedAt = new DateTime(2023, 10, 7, 7, 51, 41, 733, DateTimeKind.Utc).AddTicks(8860),
                             Email = "mohammadsadrahaeri@gmail.com",
                             IsVerify = true,
                             Name = "MohammadSadra Haeri",
