@@ -31,8 +31,8 @@ namespace MDDReservationAPI.Controllers;
 
             try
             {
-                await _reservationRepository.PostFileAsync(fileDetails);
-                return Ok();
+                var id = await _reservationRepository.PostFileAsync(fileDetails);
+                return Ok(id);
             }
             catch (Exception)
             {

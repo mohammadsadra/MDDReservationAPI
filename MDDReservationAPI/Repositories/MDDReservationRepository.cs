@@ -128,7 +128,7 @@ namespace MDDReservationAPI.Repositories
 
         #region File
 
-        public async Task PostFileAsync(FileUploadDTO fileDetails)
+        public async Task<int> PostFileAsync(FileUploadDTO fileDetails)
         {
             try
             {
@@ -147,6 +147,7 @@ namespace MDDReservationAPI.Repositories
 
                 var result = _context.FileDetails.Add(file);
                 await _context.SaveChangesAsync();
+                return file.Id;
             }
             catch (Exception)
             {
