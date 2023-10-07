@@ -31,7 +31,7 @@ namespace MDDReservationAPI.Controllers;
 
             try
             {
-                await _reservationRepository.PostFileAsync(fileDetails.FileDetails, fileDetails.FilePathType);
+                await _reservationRepository.PostFileAsync(fileDetails);
                 return Ok();
             }
             catch (Exception)
@@ -70,16 +70,11 @@ namespace MDDReservationAPI.Controllers;
         /// <param name="file"></param>
         /// <returns></returns>
         [HttpGet("DownloadFile")]
-        public async Task<ActionResult> DownloadFile(int id)
+        public async Task<ActionResult> DownloadFile(Guid guid)
         {
-            if (id < 1)
-            {
-                return BadRequest("Invalid input");
-            }
-
             try
             {
-                await _reservationRepository.DownloadFileById(id);
+                await _reservationRepository.DownloadFileById(guid);
                 return Ok();
             }
             catch (Exception)

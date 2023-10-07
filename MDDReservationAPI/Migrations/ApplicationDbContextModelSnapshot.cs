@@ -51,25 +51,34 @@ namespace MDDReservationAPI.Migrations
 
             modelBuilder.Entity("MDDReservationAPI.Models.FileDetails", b =>
                 {
-                    b.Property<int>("ID")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("TEXT");
 
                     b.Property<byte[]>("FileData")
                         .IsRequired()
                         .HasColumnType("BLOB");
 
+                    b.Property<int>("FileKind")
+                        .HasColumnType("INTEGER");
+
                     b.Property<string>("FileName")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("FilePathKind")
-                        .HasColumnType("INTEGER");
-
                     b.Property<int>("FilePathType")
                         .HasColumnType("INTEGER");
 
-                    b.HasKey("ID");
+                    b.Property<Guid>("Guid")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int?>("RegistrationFormId")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("Id");
 
                     b.ToTable("FileDetails");
                 });
@@ -256,7 +265,7 @@ namespace MDDReservationAPI.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2023, 10, 7, 7, 51, 41, 733, DateTimeKind.Utc).AddTicks(8860),
+                            CreatedAt = new DateTime(2023, 10, 7, 10, 30, 5, 776, DateTimeKind.Utc).AddTicks(7330),
                             Email = "mohammadsadrahaeri@gmail.com",
                             IsVerify = true,
                             Name = "MohammadSadra Haeri",

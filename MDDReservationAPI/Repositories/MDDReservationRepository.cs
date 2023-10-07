@@ -128,23 +128,24 @@ namespace MDDReservationAPI.Repositories
 
         #region File
 
-        public async Task PostFileAsync(IFormFile fileData, FilePathType filePathType)
+        public async Task PostFileAsync(FileUploadDTO fileDetails)
         {
             try
             {
-                var fileDetails = new FileDetails()
+                var file = new FileDetails()
                 {
-                    FileName = fileData.FileName,
-                    FilePathType = filePathType,
+                    FileName = fileDetails.FileDetails.FileName,
+                    FilePathType = fileDetails.FilePathType,
+                    FileKind = fileDetails.FileKind
                 };
 
                 using (var stream = new MemoryStream())
                 {
-                    fileData.CopyTo(stream);
-                    fileDetails.FileData = stream.ToArray();
+                    fileDetails.FileDetails.CopyTo(stream);
+                    file.FileData = stream.ToArray();
                 }
 
-                var result = _context.FileDetails.Add(fileDetails);
+                var result = _context.FileDetails.Add(file);
                 await _context.SaveChangesAsync();
             }
             catch (Exception)
@@ -181,13 +182,13 @@ namespace MDDReservationAPI.Repositories
             }
         }
 
-        public async Task DownloadFileById(int Id)
+        public async Task DownloadFileById(Guid guid)
         {
             try
             {
-                var file =  _context.FileDetails.Where(x => x.ID == Id).FirstOrDefaultAsync();
+                var file =  _context.FileDetails.Where(x => x.Guid == guid).FirstOrDefaultAsync();
 
-                var content = new System.IO.MemoryStream(file.Result.FileData);
+                var content = new System.IO.MemoryStream(file.Result!.FileData);
                 var path = Path.Combine(
                    Directory.GetCurrentDirectory(), "FileDownloaded",
                    file.Result.FileName);
@@ -200,6 +201,18 @@ namespace MDDReservationAPI.Repositories
             }
         }
 
+        public async Task<bool> ChangeRegisterFormId(int fileId, int registerFormId)
+        {
+            var file = await _context.FileDetails.Where(x => x.Id == fileId).FirstOrDefaultAsync();
+            if (file != null) file.RegistrationFormId = registerFormId;
+            else
+            {
+                return false;
+            }
+            await _context.SaveChangesAsync();
+            return true;
+        }
+        
         private async Task CopyStream(Stream stream, string downloadPath)
         {
             using (var fileStream = new FileStream(downloadPath, FileMode.Create, FileAccess.Write))
@@ -207,6 +220,8 @@ namespace MDDReservationAPI.Repositories
                await stream.CopyToAsync(fileStream);
             }
         }
+        
+        
         #endregion
     }
 }
