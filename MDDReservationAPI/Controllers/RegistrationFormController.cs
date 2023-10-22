@@ -100,6 +100,8 @@ namespace MDDReservationAPI.Controllers
             }
 
             var createdForm = await _reservationRepository.AddRegistrationFormAsync(form);
+            await _reservationRepository.ChangeRegisterFormId(fullRegistrationFormDto.StudentListFileId, createdForm.Id);
+            await _reservationRepository.ChangeRegisterFormId(fullRegistrationFormDto.ManagerFormId, createdForm.Id);
 
             return Ok("Successfully created.");
         }

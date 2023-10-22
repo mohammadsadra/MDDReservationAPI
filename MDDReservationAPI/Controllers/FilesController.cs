@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace MDDReservationAPI.Controllers;
 
-    [Route("api/[controller]")]
+    [Route("files")]
     [ApiController]
     public class FilesController : ControllerBase
     {
@@ -16,11 +16,7 @@ namespace MDDReservationAPI.Controllers;
             _reservationRepository = mddReservationRepository ?? throw new ArgumentNullException(nameof(mddReservationRepository));
         }
 
-        /// <summary>
-        /// Single File Upload
-        /// </summary>
-        /// <param name="file"></param>
-        /// <returns></returns>
+
         [HttpPost("PostSingleFile")]
         public async Task<ActionResult> PostSingleFile([FromForm] FileUploadDTO fileDetails)
         {
@@ -40,11 +36,7 @@ namespace MDDReservationAPI.Controllers;
             }
         }
 
-        /// <summary>
-        /// Multiple File Upload
-        /// </summary>
-        /// <param name="file"></param>
-        /// <returns></returns>
+
         [HttpPost("PostMultipleFile")]
         public async Task<ActionResult> PostMultipleFile([FromForm] List<FileUploadDTO> fileDetails)
         {
@@ -64,11 +56,7 @@ namespace MDDReservationAPI.Controllers;
             }
         }
 
-        /// <summary>
-        /// Download File
-        /// </summary>
-        /// <param name="file"></param>
-        /// <returns></returns>
+
         [HttpGet("DownloadFile")]
         public async Task<ActionResult> DownloadFile(Guid guid)
         {

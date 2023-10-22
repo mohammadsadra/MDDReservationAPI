@@ -145,7 +145,7 @@ namespace MDDReservationAPI.Repositories
                     file.FileData = stream.ToArray();
                 }
 
-                var result = _context.FileDetails.Add(file);
+                _context.FileDetails.Add(file);
                 await _context.SaveChangesAsync();
                 return file.Id;
             }
