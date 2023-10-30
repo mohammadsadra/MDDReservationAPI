@@ -147,6 +147,41 @@ namespace MDDReservationAPI.Migrations
                     b.ToTable("RegistrationForms");
                 });
 
+            modelBuilder.Entity("MDDReservationAPI.Models.ReservationSelectedDay", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("INTEGER");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("TEXT");
+
+                    b.Property<int>("EventDaysId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<bool>("IsSelected")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<bool>("IsVerify")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("Month")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("RegestrationFormId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("TeamId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("Year")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ReservationSelectedDay");
+                });
+
             modelBuilder.Entity("MDDReservationAPI.Models.School", b =>
                 {
                     b.Property<int>("Id")
@@ -265,7 +300,7 @@ namespace MDDReservationAPI.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2023, 10, 7, 10, 30, 5, 776, DateTimeKind.Utc).AddTicks(7330),
+                            CreatedAt = new DateTime(2023, 10, 22, 12, 49, 42, 938, DateTimeKind.Utc).AddTicks(5840),
                             Email = "mohammadsadrahaeri@gmail.com",
                             IsVerify = true,
                             Name = "MohammadSadra Haeri",

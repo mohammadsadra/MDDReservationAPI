@@ -71,5 +71,11 @@ namespace MDDReservationAPI.Repositories
 
         public Task<bool> ChangeRegisterFormId(int fileId,int registerFormId);
         #endregion
+        
+        #region ReservationDays
+
+        public Task<IEnumerable<ReservationSelectedDay>> GetMonthSelectedDays(int year, int month);
+
+        #endregion
     }
 }
