@@ -35,8 +35,8 @@ public class RegistrationForm
     public int? ProjectId { get; set; }
     
     // Relation
-    [ForeignKey("EventDays")]
-    public int EventDays { get; set; }
+    [ForeignKey("ReservationSelectedDaysId")]
+    public int ReservationSelectedDaysId { get; set; }
 
     [Required]
     [DataType(DataType.DateTime)]

@@ -114,17 +114,7 @@ namespace MDDReservationAPI.Repositories
         }
 
         #endregion
-
-        #region EventDyas
-
-        public async Task<EventDays> AddEventDaysAsync(EventDays eventDays)
-        {
-            _context.EventDays.Add(eventDays);
-            await SaveChangesAsync();
-            return eventDays;
-        }
-
-        #endregion
+        
 
         #region File
 
@@ -226,10 +216,11 @@ namespace MDDReservationAPI.Repositories
         #endregion
 
         #region ReservationDays
-        public Task<IEnumerable<ReservationSelectedDay>> GetMonthSelectedDays(int year, int month)
-        {
-            var list =  _context.ReservationSelectedDay.Where(r => r.Year == year && r.Month == month).ToArray();
-            return Task.FromResult<IEnumerable<ReservationSelectedDay>>(list);
+        public async Task<ReservationSelectedDay> AddSelectedDays(ReservationSelectedDay reservationSelectedDay)
+        { _context.ReservationSelectedDay.Add(reservationSelectedDay);
+            await SaveChangesAsync();
+
+            return reservationSelectedDay;
         }
 
         #endregion

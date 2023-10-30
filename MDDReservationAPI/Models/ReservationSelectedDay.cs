@@ -9,6 +9,7 @@ public class ReservationSelectedDay
     {
         this.CreatedAt = DateTime.UtcNow;
         this.IsVerify = false;
+        this.SelectedDay = 0;
     }
 
     [Key]
@@ -16,22 +17,11 @@ public class ReservationSelectedDay
     public int Id { get; set; }
     
     public bool IsVerify { get; set; }
+    public int SelectedDay { get; set; }
     
-    public bool IsSelected { get; set; }
+    public DateTime FirstDay { get; set; }
     
-    public int Year { get; set; }
-    
-    public int Month { get; set; }
-
-    // Relation
-    [ForeignKey("RegestrationFormId")]
-    public int RegestrationFormId { get; set; }
-    
-    [ForeignKey("EventDaysId")]
-    public int EventDaysId { get; set; }
-    
-    [ForeignKey("TeamId")]
-    public int TeamId { get; set; }
+    public DateTime SecondDay { get; set; }
 
     [DataType(DataType.DateTime)]
     public DateTime CreatedAt { get; set; }

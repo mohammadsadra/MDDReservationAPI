@@ -7,7 +7,7 @@ public class FullRegistrationFormDTO
     public SchoolClassCreationDTO schoolClassCreationDto { get; set; }
     public bool hasProject { get; set; }
     public ProjectCreationDTO? projectCreationDto { get; set; }
-    public EventDaysCreationDTO eventDaysCreationDto { get; set; }
+    public ReservationSelectedDaysDTO reservationSelectedDays { get; set; }
     public int StudentListFileId { get; set; }
     public int ManagerFormId { get; set; }
 }

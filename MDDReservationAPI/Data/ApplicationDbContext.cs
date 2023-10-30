@@ -37,7 +37,6 @@ public class ApplicationDbContext : DbContext
     public DbSet<Student> Students { get; set; }
     public DbSet<RegistrationForm> RegistrationForms { get; set; }
     public DbSet<Project> Projects { get; set; }
-    public DbSet<EventDays> EventDays { get; set; }
     public DbSet<FileDetails> FileDetails { get; set; }
     public DbSet<ReservationSelectedDay> ReservationSelectedDay { get; set; }
 }

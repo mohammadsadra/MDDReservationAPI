@@ -17,38 +17,6 @@ namespace MDDReservationAPI.Migrations
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "7.0.10");
 
-            modelBuilder.Entity("MDDReservationAPI.Models.EventDays", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<bool>("Friday")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<bool>("Monday")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<bool>("Saturday")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<bool>("Sunday")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<bool>("Thursday")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<bool>("Tuesday")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<bool>("Wednesday")
-                        .HasColumnType("INTEGER");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("EventDays");
-                });
-
             modelBuilder.Entity("MDDReservationAPI.Models.FileDetails", b =>
                 {
                     b.Property<int>("Id")
@@ -119,13 +87,13 @@ namespace MDDReservationAPI.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("EventDays")
-                        .HasColumnType("INTEGER");
-
                     b.Property<int>("ManagerId")
                         .HasColumnType("INTEGER");
 
                     b.Property<int?>("ProjectId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("ReservationSelectedDaysId")
                         .HasColumnType("INTEGER");
 
                     b.Property<int>("SchoolClassId")
@@ -156,26 +124,14 @@ namespace MDDReservationAPI.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("EventDaysId")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<bool>("IsSelected")
-                        .HasColumnType("INTEGER");
+                    b.Property<DateTime>("FirstDay")
+                        .HasColumnType("TEXT");
 
                     b.Property<bool>("IsVerify")
                         .HasColumnType("INTEGER");
 
-                    b.Property<int>("Month")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("RegestrationFormId")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("TeamId")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("Year")
-                        .HasColumnType("INTEGER");
+                    b.Property<DateTime>("SecondDay")
+                        .HasColumnType("TEXT");
 
                     b.HasKey("Id");
 
@@ -300,7 +256,7 @@ namespace MDDReservationAPI.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2023, 10, 22, 12, 49, 42, 938, DateTimeKind.Utc).AddTicks(5840),
+                            CreatedAt = new DateTime(2023, 10, 30, 8, 46, 13, 751, DateTimeKind.Utc).AddTicks(5070),
                             Email = "mohammadsadrahaeri@gmail.com",
                             IsVerify = true,
                             Name = "MohammadSadra Haeri",

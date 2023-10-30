@@ -38,13 +38,13 @@ public class ReservationSelectedDayController: ControllerBase
     }
     #endregion
     
-    [HttpPost]
-    [Route("getAllSelectedDays")]
-    [Produces("application/json")]
-    public async Task<ActionResult<RegistrationForm>> GetMonthSelectedDays(int year, int month)
-    {
-        var result = await _reservationRepository.GetMonthSelectedDays(year, month);
-
-        return Ok(result);
-    }
+    // [HttpPost]
+    // [Route("getAllSelectedDays")]
+    // [Produces("application/json")]
+    // public async Task<ActionResult<RegistrationForm>> GetMonthSelectedDays(int year, int month)
+    // {
+    //     var result = await _reservationRepository.GetMonthSelectedDays(year, month);
+    //
+    //     return Ok(result);
+    // }
 }

@@ -54,12 +54,7 @@ namespace MDDReservationAPI.Repositories
         Task<bool> SaveChangesAsync();
 
         #endregion
-
-        #region EventDays
-
-        Task<EventDays> AddEventDaysAsync(EventDays eventDays);
-
-        #endregion
+        
        
         #region File
         public Task<int> PostFileAsync(FileUploadDTO fileDetails);
@@ -74,7 +69,7 @@ namespace MDDReservationAPI.Repositories
         
         #region ReservationDays
 
-        public Task<IEnumerable<ReservationSelectedDay>> GetMonthSelectedDays(int year, int month);
+        public Task<ReservationSelectedDay> AddSelectedDays(ReservationSelectedDay reservationSelectedDay);
 
         #endregion
     }

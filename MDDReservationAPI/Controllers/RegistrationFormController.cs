@@ -54,7 +54,7 @@ namespace MDDReservationAPI.Controllers
             var manager = _mapper.Map<Manager>(fullRegistrationFormDto.managerCreationDto);
             var school = _mapper.Map<School>(fullRegistrationFormDto.schoolCreationDto);
             var schoolClass = _mapper.Map<SchoolClass>(fullRegistrationFormDto.schoolClassCreationDto);
-            var eventDays = _mapper.Map<EventDays>(fullRegistrationFormDto.eventDaysCreationDto);
+            var days = _mapper.Map<ReservationSelectedDay>(fullRegistrationFormDto.reservationSelectedDays);
             var project = new Project();
             if (fullRegistrationFormDto.hasProject)
             {
@@ -74,7 +74,7 @@ namespace MDDReservationAPI.Controllers
                 createdProject = await _reservationRepository.AddProjectAsync(project);
             }
 
-            var createdEventDays = await _reservationRepository.AddEventDaysAsync(eventDays);
+            var createdDay = await _reservationRepository.AddSelectedDays(days);
 
             RegistrationForm form;
             if (fullRegistrationFormDto.hasProject)
@@ -84,7 +84,7 @@ namespace MDDReservationAPI.Controllers
                     ManagerId = createdManager.Id,
                     SchoolId = createdSchool.Id,
                     SchoolClassId = createdClass.Id,
-                    EventDays = createdEventDays.Id,
+                    ReservationSelectedDaysId = createdDay.Id,
                     ProjectId = createdProject.Id
                 };
             }
@@ -95,7 +95,7 @@ namespace MDDReservationAPI.Controllers
                     ManagerId = createdManager.Id,
                     SchoolId = createdSchool.Id,
                     SchoolClassId = createdClass.Id,
-                    EventDays = createdEventDays.Id
+                    ReservationSelectedDaysId = createdDay.Id,
                 };
             }
 
