@@ -29,17 +29,26 @@ builder.Services.AddDbContext<ApplicationDbContext>(option =>
 });
 builder.Services.AddScoped<IMDDReservationRepository, MDDReservationRepository>();
 const string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+// builder.Services.AddCors(options =>
+// {
+//     options.AddPolicy(MyAllowSpecificOrigins,
+//         policy =>
+//         {
+//             policy.WithOrigins("http://localhost:63342")
+//                 .AllowAnyHeader()
+//                 .AllowAnyMethod();
+//         });
+// });
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy(MyAllowSpecificOrigins,
-        policy =>
-        {
-            policy.WithOrigins("http://localhost:63342")
-                .AllowAnyHeader()
-                .AllowAnyMethod();
-        });
+    options.AddPolicy("AllowAll", b =>
+    {
+        b
+            .AllowAnyOrigin()
+            .AllowAnyMethod()
+            .AllowAnyHeader();
+    });
 });
-
 
 var app = builder.Build();
 
@@ -53,6 +62,8 @@ if (app.Environment.IsDevelopment())
 app.UseCors(MyAllowSpecificOrigins);
 
 app.UseHttpsRedirection();
+
+app.UseCors("AllowAll");
 
 app.UseRouting();
 

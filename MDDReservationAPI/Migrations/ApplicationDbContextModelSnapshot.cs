@@ -133,6 +133,9 @@ namespace MDDReservationAPI.Migrations
                     b.Property<DateTime>("SecondDay")
                         .HasColumnType("TEXT");
 
+                    b.Property<int>("SelectedDay")
+                        .HasColumnType("INTEGER");
+
                     b.HasKey("Id");
 
                     b.ToTable("ReservationSelectedDay");
@@ -256,7 +259,7 @@ namespace MDDReservationAPI.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2023, 10, 30, 8, 46, 13, 751, DateTimeKind.Utc).AddTicks(5070),
+                            CreatedAt = new DateTime(2023, 10, 30, 8, 50, 29, 467, DateTimeKind.Utc).AddTicks(3880),
                             Email = "mohammadsadrahaeri@gmail.com",
                             IsVerify = true,
                             Name = "MohammadSadra Haeri",
