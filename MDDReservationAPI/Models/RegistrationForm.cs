@@ -16,22 +16,18 @@ public class RegistrationForm
 
     // Relation
     [ForeignKey("ManagerId")]
-    public Manager Manager { get; set; }
     public int ManagerId {get; set;}
 
     // Relation
     [ForeignKey("SchoolId")]
-    public School School { get; set; }
     public int SchoolId { get; set; }
 
     // Relation
     [ForeignKey("SchoolClassId")]
-    public SchoolClass SchoolClass { get; set; }
     public int SchoolClassId { get; set; }
 
     // Relation
     [ForeignKey("ProjectId")]
-    public Project? Project { get; set; }
     public int? ProjectId { get; set; }
     
     // Relation

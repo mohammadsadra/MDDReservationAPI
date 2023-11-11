@@ -26,7 +26,6 @@ public class SchoolClass
 
     // Relation
     [ForeignKey("SchoolId")]
-    public School School { get; set; }
     public int SchoolId { get; set; }
 
     [DataType(DataType.DateTime)]

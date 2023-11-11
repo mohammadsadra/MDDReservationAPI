@@ -13,19 +13,19 @@ public class ApplicationDbContext : DbContext
     
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<Admin>()
-            .HasData(
-                new Admin()
-                {
-                    Id = 1,
-                    Name = "MohammadSadra Haeri",
-                    Role = (int) RoleEnum.Admin,
-                    Email = "mohammadsadrahaeri@gmail.com",
-                    Phone = "09127959211",
-                    CreatedAt = DateTime.UtcNow,
-                    IsVerify = true
-                }
-            );
+        // modelBuilder.Entity<Admin>()
+        //     .HasData(
+        //         new Admin()
+        //         {
+        //             Id = 1,
+        //             Name = "MohammadSadra Haeri",
+        //             Role = (int) RoleEnum.Admin,
+        //             Email = "mohammadsadrahaeri@gmail.com",
+        //             Phone = "09127959211",
+        //             CreatedAt = DateTime.UtcNow,
+        //             IsVerify = true
+        //         }
+        //     );
         base.OnModelCreating(modelBuilder);
     }
     

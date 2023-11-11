@@ -14,6 +14,5 @@ public class Student : User
     
     // Relation
     [ForeignKey("SchoolClassId")]
-    public SchoolClass? SchoolClass { get; set; }
     public int SchoolClassId { get; set; }
 }

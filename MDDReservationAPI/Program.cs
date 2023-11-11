@@ -25,8 +25,12 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddDbContext<ApplicationDbContext>(option =>
 {
-    option.UseSqlite(builder.Configuration["ConnectionStrings:DefaultConnection"]);
+    option.UseSqlServer(builder.Configuration["ConnectionStrings:DefaultConnection"]);
 });
+// builder.Services.AddDbContext<ApplicationDbContext>(option =>
+// {
+//     option.UseSqlite(builder.Configuration["ConnectionStrings:DefaultConnection"]);
+// });
 builder.Services.AddScoped<IMDDReservationRepository, MDDReservationRepository>();
 const string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
 // builder.Services.AddCors(options =>
