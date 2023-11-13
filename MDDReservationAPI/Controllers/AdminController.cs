@@ -35,6 +35,7 @@ namespace MDDReservationAPI.Controllers
 
             var createdAdmin = _mapper.Map<Admin>(adminCreationDto);
             var result = await _reservationRepository.AddAdminAsync(createdAdmin);
+            _logger.LogError(result.ToString());
 
             return Ok(result);
         }
