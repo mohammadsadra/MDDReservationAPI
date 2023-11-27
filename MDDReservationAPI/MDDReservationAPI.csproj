@@ -34,5 +34,6 @@
   <ItemGroup>
     <Folder Include="FileDownloaded\" />
     <Folder Include="Services\" />
+    <Folder Include="Upload\BazididFiles\" />
   </ItemGroup>
 </Project>

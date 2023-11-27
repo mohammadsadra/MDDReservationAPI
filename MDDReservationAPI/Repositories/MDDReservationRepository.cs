@@ -53,7 +53,7 @@ namespace MDDReservationAPI.Repositories
         {
             _context.Admins.Add(admin);
             await SaveChangesAsync();
-
+            var admins = _context.Admins.ToList();
             return admin;
         }
 
@@ -117,11 +117,52 @@ namespace MDDReservationAPI.Repositories
         
 
         #region File
-
-        public async Task<int> PostFileAsync(FileUploadDTO fileDetails)
+        
+        private static bool IsAllowedFileExtension(string fileName, IEnumerable<string> allowedExtensions,
+            out string fileExtension)
         {
+            fileExtension = string.Empty;
+
+            if (!fileName.Contains('.'))
+            {
+                return false;
+            }
+
+            fileExtension = ExtractFileExtension(fileName);
+
+            var extension = fileExtension;
+
+            return allowedExtensions.Any(ext => ext == extension);
+        }
+
+        public static string ExtractFileExtension(string fileName)
+        {
+            var extension = fileName.Split('.')[fileName.Split('.').Length - 1];
+            extension = extension.ToLower();
+            return extension;
+        }
+        
+        
+
+        public async Task<bool> PostFileAsync(FileUploadDTO fileDetails)
+        {
+            var pathBuilt = Path.Combine(Directory.GetCurrentDirectory(),
+                $"Upload{Path.DirectorySeparatorChar}BazididFiles{Path.DirectorySeparatorChar}");
+            var path = Path.Combine(Directory.GetCurrentDirectory(),
+                $"Upload{Path.DirectorySeparatorChar}BazididFiles{Path.DirectorySeparatorChar}", fileDetails.FileDetails.FileName);
+            
+            var allowedExtension = fileDetails.FilePathType == (FilePathType) 1 ? "pdf" : "xlsx";
+            
             try
             {
+                if (!IsAllowedFileExtension(fileDetails.FileDetails.FileName, new[] { allowedExtension },
+                        out string extension))
+                {
+                    return false;
+                }
+                    
+
+
                 var file = new FileDetails()
                 {
                     FileName = fileDetails.FileDetails.FileName,
@@ -134,14 +175,21 @@ namespace MDDReservationAPI.Repositories
                     fileDetails.FileDetails.CopyTo(stream);
                     file.FileData = stream.ToArray();
                 }
+                
+                if (!Directory.Exists(pathBuilt))
+                    Directory.CreateDirectory(pathBuilt);
+                using (FileStream stream = new(path, FileMode.Create))
+                {
+                    fileDetails.FileDetails.CopyToAsync(stream).Wait();
+                }
 
                 _context.FileDetails.Add(file);
                 await _context.SaveChangesAsync();
-                return file.Id;
+                return true;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                throw ex;
             }
         }
 

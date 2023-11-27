@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Serilog;
 
 Log.Logger = new LoggerConfiguration()
-    .MinimumLevel.Error()
+    .MinimumLevel.Warning()
     .WriteTo.Console()
     .WriteTo.File("logs/logsinfo.txt", rollingInterval: RollingInterval.Day)
     .CreateLogger();

@@ -57,7 +57,7 @@ namespace MDDReservationAPI.Repositories
         
        
         #region File
-        public Task<int> PostFileAsync(FileUploadDTO fileDetails);
+        public Task<bool> PostFileAsync(FileUploadDTO fileDetails);
         
 
         public Task PostMultiFileAsync(List<FileUploadDTO> fileData);

@@ -15,6 +15,7 @@ namespace MDDReservationAPI.Controllers;
         {
             _reservationRepository = mddReservationRepository ?? throw new ArgumentNullException(nameof(mddReservationRepository));
         }
+        
 
 
         [HttpPost("PostSingleFile")]
@@ -30,9 +31,9 @@ namespace MDDReservationAPI.Controllers;
                 var id = await _reservationRepository.PostFileAsync(fileDetails);
                 return Ok(id);
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                throw;
+                throw e;
             }
         }
 
