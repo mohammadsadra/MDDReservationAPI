@@ -1,4 +1,7 @@
-﻿using MDDReservationAPI.Controllers;
+﻿using System.Globalization;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+using MDDReservationAPI.Controllers;
 using MDDReservationAPI.Data;
 using MDDReservationAPI.DTO;
 using MDDReservationAPI.Enums;
@@ -28,11 +31,19 @@ namespace MDDReservationAPI.Repositories
             await SaveChangesAsync();
             return school;
         }
+        
+        public async Task<School?> GetSchoolByIdAsync(int id)
+        {
+            var school = await _context.Schools.Where(x => x.Id == id).FirstOrDefaultAsync();
+            return school;
+        }
 
         public async Task<bool> SchoolExistsAsync(int schoolId)
         {
             return await _context.Schools.AnyAsync(s => s.Id == schoolId);
         }
+        
+        
         #endregion
 
         #region Manager
@@ -42,6 +53,12 @@ namespace MDDReservationAPI.Repositories
             _context.Managers.Add(manager);
             await SaveChangesAsync();
 
+            return manager;
+        }
+        
+        public async Task<Manager?> GetManagerByIdAsync(int id)
+        {
+            var manager = await _context.Managers.Where(x => x.Id == id).FirstOrDefaultAsync();
             return manager;
         }
 
@@ -56,6 +73,12 @@ namespace MDDReservationAPI.Repositories
             var admins = _context.Admins.ToList();
             return admin;
         }
+        
+        public async Task<Admin?> GetAdminByIdAsync(int id)
+        {
+            var admin = await _context.Admins.Where(x => x.Id == id).FirstOrDefaultAsync();
+            return admin;
+        }
 
         #endregion
 
@@ -66,6 +89,12 @@ namespace MDDReservationAPI.Repositories
             _context.Students.Add(student);
             await SaveChangesAsync();
 
+            return student;
+        }
+        
+        public async Task<Student?> GetStudentByIdAsync(int id)
+        {
+            var student = await _context.Students.Where(x => x.Id == id).FirstOrDefaultAsync();
             return student;
         }
 
@@ -80,6 +109,12 @@ namespace MDDReservationAPI.Repositories
 
             return project;
         }
+        
+        public async Task<Project?> GetProjectByIdAsync(int id)
+        {
+            var project = await _context.Projects.Where(x => x.Id == id).FirstOrDefaultAsync();
+            return project;
+        }
 
         #endregion
 
@@ -89,6 +124,12 @@ namespace MDDReservationAPI.Repositories
         {
             _context.SchoolsClasses.Add(schoolClass);
             await SaveChangesAsync();
+            return schoolClass;
+        }
+        
+        public async Task<SchoolClass?> GetSchoolClassByIdAsync(int id)
+        {
+            var schoolClass = await _context.SchoolsClasses.Where(x => x.Id == id).FirstOrDefaultAsync();
             return schoolClass;
         }
 
@@ -102,6 +143,181 @@ namespace MDDReservationAPI.Repositories
             await SaveChangesAsync();
 
             return registrationForm;
+        }
+        
+        public async Task<RegistrationForm?> GetRegistrationFormByIdAsync(int id)
+        {
+            var form = await _context.RegistrationForms.Where(x => x.Id == id).FirstOrDefaultAsync();
+            _logger.LogInformation("Form: " + form.SchoolId.ToString());
+            return form;
+        }
+        
+        public async Task<string> CreatePdfFromRegistrationFormId(int id)
+        {
+            using (var memoryStream = new MemoryStream())
+            {
+                var form = await GetRegistrationFormByIdAsync(id); 
+                var school = await GetSchoolByIdAsync(form!.SchoolId); 
+                var schoolClass = await  GetSchoolClassByIdAsync(form!.SchoolClassId); 
+                var manager = await GetManagerByIdAsync(form.ManagerId); 
+                var days =  await GetSelectedDaysByReservationId(form.ReservationSelectedDaysId); 
+                // var project =  GetManagerByIdAsync(form.Result!.ProjectId); 
+                
+                // Find the Tehran Time Zone
+                TimeZoneInfo tehranTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Iran Standard Time");
+
+                var fileName = Guid.NewGuid() + "_" + school!.Name + ".pdf";
+                
+                using (Document pdfDoc = new Document(PageSize.A4, 10f, 10f, 10f, 0f))
+                {
+                    PdfWriter.GetInstance(pdfDoc, new FileStream(fileName, FileMode.Create));
+                    pdfDoc.Open();
+                    pdfDoc.NewPage();
+                    BaseFont bf = BaseFont.CreateFont("./Fonts/IRANSansX-Regular.ttf", BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
+                    Font font = new Font(bf, 12);
+
+                    if (form != null)
+                    {
+                        PdfPTable table = new PdfPTable(1);
+                        PdfPCell cell = new PdfPCell(new Phrase("گزارش ثبت‌نام مدرسه", font))
+                        {
+                            RunDirection = PdfWriter.RUN_DIRECTION_RTL,
+                            Border = 1,
+                            Padding = 10
+                            
+                        };
+                        table.AddCell(cell);
+                        
+                        PdfPCell cell2 = new PdfPCell(new Phrase("نام مدرسه:  " + school.Name, font))
+                        {
+                            RunDirection = PdfWriter.RUN_DIRECTION_RTL,
+                            Border = 1,
+                            Padding = 10
+                        };
+                        table.AddCell(cell2);
+                        PdfPCell cell2_1 = new PdfPCell(new Phrase("جنسیت دانش‌آموزان:  " + Enum.GetName(typeof(Gender), school.Gender!)  , font))
+                        {
+                            RunDirection = PdfWriter.RUN_DIRECTION_RTL,
+                            Border = 0,
+                            Padding = 10
+                        };
+                        table.AddCell(cell2_1);
+                        PdfPCell cell2_2 = new PdfPCell(new Phrase("مقطع:  " + Enum.GetName(typeof(GradeEnum), schoolClass!.Grade)  , font))
+                        {
+                            RunDirection = PdfWriter.RUN_DIRECTION_RTL,
+                            Border = 0,
+                            Padding = 10
+                        };
+                        table.AddCell(cell2_2);
+                        PdfPCell cell2_3 = new PdfPCell(new Phrase("نوع مدرسه:  " + Enum.GetName(typeof(SchoolType), school.SchoolType!)  , font))
+                        {
+                            RunDirection = PdfWriter.RUN_DIRECTION_RTL,
+                            Border = 0,
+                            Padding = 10
+                        };
+                        table.AddCell(cell2_3);
+                        
+                        PdfPCell cell3 = new PdfPCell(new Phrase("نام ثبت‌نام کننده: " + manager.Name, font))
+                        {
+                            RunDirection = PdfWriter.RUN_DIRECTION_RTL,
+                            Border = 0,
+                            Padding = 10
+                        };
+                        table.AddCell(cell3);
+                        
+                        PdfPCell cell4 = new PdfPCell(new Phrase(" شماره تماس ثبت‌نام کننده: " + manager.Phone,font))
+                        {
+                            RunDirection = PdfWriter.RUN_DIRECTION_RTL,
+                            Border = 0,
+                            Padding = 10
+                        };
+                        table.AddCell(cell4);
+                        
+                        PdfPCell cell5 = new PdfPCell(new Phrase( " سمت: " + manager.Position, font))
+                        {
+                            RunDirection = PdfWriter.RUN_DIRECTION_RTL,
+                            Border = 0,
+                            Padding = 10
+                        };
+                        table.AddCell(cell5);
+                        
+                        
+                        var ans = schoolClass.IsProgrammer ? "بله" : "خیر";
+                        _logger.LogError(ans);
+                        PdfPCell cell6 = new PdfPCell(new Phrase("آیا برنامه‌نویس هستند: " + ans, font))
+                        {
+                            RunDirection = PdfWriter.RUN_DIRECTION_RTL,
+                            Border = 0,
+                            Padding = 10
+                        };
+                        table.AddCell(cell6);
+                        
+                        if (schoolClass.IsProgrammer) 
+                        { 
+                            PdfPCell cell7 = new PdfPCell(new Phrase("زبان برنامه‌نویسی: " + Enum.GetName(typeof(ProgrammingLanguage),  schoolClass.ProgrammingLanguage), font))
+                            {
+                                RunDirection = PdfWriter.RUN_DIRECTION_RTL,
+                                Border = 0,
+                                Padding = 10
+                            };
+                            table.AddCell(cell7);
+                        }
+                        PersianCalendar pc = new PersianCalendar();
+                        var gregorianDate = TimeZoneInfo.ConvertTimeFromUtc(days.FirstDay, tehranTimeZone);
+                        int year = pc.GetYear(gregorianDate);
+                        int month = pc.GetMonth(gregorianDate);
+                        int day = pc.GetDayOfMonth(gregorianDate);
+                        
+                        PdfPCell cell8 = new PdfPCell(new Phrase("روز اول: ", font))
+                        {
+                            RunDirection = PdfWriter.RUN_DIRECTION_RTL,
+                            Border = 0,
+                            Padding = 5
+                        };
+                        table.AddCell(cell8);
+                        PdfPCell cell8_1 = new PdfPCell(new Phrase($"{year}/{month.ToString("00")}/{day.ToString("00")}", font))
+                        {
+                            RunDirection = PdfWriter.RUN_DIRECTION_LTR,
+                            Border = 0,
+                            Padding = 10
+                        };
+                        table.AddCell(cell8_1);
+                        
+                        if (days.SecondDay != null)
+                        {
+                            PersianCalendar pc2 = new PersianCalendar();
+                            var gregorianDate2 = TimeZoneInfo.ConvertTimeFromUtc(days.SecondDay, tehranTimeZone);
+                            int year2 = pc2.GetYear(gregorianDate2);
+                            int month2 = pc2.GetMonth(gregorianDate2);
+                            int day2 = pc2.GetDayOfMonth(gregorianDate2);
+                            PdfPCell cell9 = new PdfPCell(new Phrase("روز دوم: ", font))
+                            {
+                                RunDirection = PdfWriter.RUN_DIRECTION_RTL,
+                                Border = 0,
+                                Padding = 5
+                            };
+                            table.AddCell(cell9);
+                            PdfPCell cell9_1 = new PdfPCell(new Phrase($"{year2}/{month2.ToString("00")}/{day2.ToString("00")}", font))
+                            {
+                                RunDirection = PdfWriter.RUN_DIRECTION_LTR,
+                                Border = 0,
+                                Padding = 10
+                            };
+                            table.AddCell(cell9_1);
+                            
+                        }
+                        
+                        pdfDoc.Add(table);
+                    }
+                    else
+                    {
+                        pdfDoc.Add(new Paragraph("No data available."));
+                    }
+
+                    pdfDoc.Close();
+                }
+                return "https://bazididapi.hamrah.academy/download/" + fileName;
+            }
         }
 
         #endregion
@@ -268,6 +484,14 @@ namespace MDDReservationAPI.Repositories
         { _context.ReservationSelectedDay.Add(reservationSelectedDay);
             await SaveChangesAsync();
 
+            return reservationSelectedDay;
+        }
+
+        
+
+        public async Task<ReservationSelectedDay?> GetSelectedDaysByReservationId(int reservationId)
+        {
+            var reservationSelectedDay = await _context.ReservationSelectedDay.Where(x => x.Id == reservationId).FirstOrDefaultAsync();
             return reservationSelectedDay;
         }
 

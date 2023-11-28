@@ -37,38 +37,43 @@ namespace MDDReservationAPI.Controllers;
             }
         }
 
-
-        [HttpPost("PostMultipleFile")]
-        public async Task<ActionResult> PostMultipleFile([FromForm] List<FileUploadDTO> fileDetails)
+        
+        [HttpGet]
+        [Route("/download/{fileName}")]
+        public IActionResult DownloadFile(string fileName)
         {
-            if (fileDetails == null)
+            // Define the path to the file
+            var filePath = Path.Combine(Directory.GetCurrentDirectory(), fileName);
+
+            // Check if file exists
+            if (!System.IO.File.Exists(filePath))
             {
-                return BadRequest();
+                return NotFound();
             }
 
-            try
-            {
-                await _reservationRepository.PostMultiFileAsync(fileDetails);
-                return Ok();
-            }
-            catch (Exception)
-            {
-                throw;
-            }
+            // Read the file into a byte array
+            byte[] fileBytes = System.IO.File.ReadAllBytes(filePath);
+
+            // Return the file with a file download name
+            return File(fileBytes, "application/octet-stream", fileName);
         }
 
-
-        [HttpGet("DownloadFile")]
-        public async Task<ActionResult> DownloadFile(Guid guid)
-        {
-            try
-            {
-                await _reservationRepository.DownloadFileById(guid);
-                return Ok();
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-        }
+        // [HttpPost("PostMultipleFile")]
+        // public async Task<ActionResult> PostMultipleFile([FromForm] List<FileUploadDTO> fileDetails)
+        // {
+        //     if (fileDetails == null)
+        //     {
+        //         return BadRequest();
+        //     }
+        //
+        //     try
+        //     {
+        //         await _reservationRepository.PostMultiFileAsync(fileDetails);
+        //         return Ok();
+        //     }
+        //     catch (Exception)
+        //     {
+        //         throw;
+        //     }
+        // }
     }

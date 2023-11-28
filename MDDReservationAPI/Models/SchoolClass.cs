@@ -30,6 +30,4 @@ public class SchoolClass
 
     [DataType(DataType.DateTime)]
     public DateTime CreatedAt { get; set; }
-    
-    public ICollection<Student>? Students { get; set; }
 }

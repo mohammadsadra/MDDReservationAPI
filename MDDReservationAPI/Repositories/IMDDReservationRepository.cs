@@ -9,6 +9,9 @@ namespace MDDReservationAPI.Repositories
         #region School
 
         Task<School> AddSchoolAsync(School school);
+        
+        Task<School?> GetSchoolByIdAsync(int id);
+        
         Task<bool> SchoolExistsAsync(int schoolId);
 
         #endregion
@@ -16,24 +19,32 @@ namespace MDDReservationAPI.Repositories
         #region Manager
 
         Task<Manager> AddManagerAsync(Manager manager);
+        
+        Task<Manager?> GetManagerByIdAsync(int id);
 
         #endregion
 
         #region Admin
 
         Task<Admin> AddAdminAsync(Admin admin);
+        
+        Task<Admin?> GetAdminByIdAsync(int id);
 
         #endregion
 
         #region Student
 
         Task<Student> AddStudentAsync(Student student);
+        
+        Task<Student?> GetStudentByIdAsync(int id);
 
         #endregion
 
         #region Project
 
         Task<Project> AddProjectAsync(Project project);
+        
+        Task<Project?> GetProjectByIdAsync(int id);
 
         #endregion
 
@@ -41,11 +52,17 @@ namespace MDDReservationAPI.Repositories
 
         Task<SchoolClass> AddSchoolClassAsync(SchoolClass schoolClass);
 
+        Task<SchoolClass?> GetSchoolClassByIdAsync(int id);
+
         #endregion
 
         #region RegistrationForm
 
         Task<RegistrationForm> AddRegistrationFormAsync(RegistrationForm project);
+
+        Task<RegistrationForm?> GetRegistrationFormByIdAsync(int id);
+
+        Task<string> CreatePdfFromRegistrationFormId(int id);
 
         #endregion
 
@@ -70,6 +87,8 @@ namespace MDDReservationAPI.Repositories
         #region ReservationDays
 
         public Task<ReservationSelectedDay> AddSelectedDays(ReservationSelectedDay reservationSelectedDay);
+        
+        public Task<ReservationSelectedDay?> GetSelectedDaysByReservationId(int reservationId);
 
         #endregion
     }
