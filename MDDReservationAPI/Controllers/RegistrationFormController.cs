@@ -1,6 +1,7 @@
 ﻿using System.Globalization;
 using System.Net;
 using System.Net.Http.Headers;
+using System.Net.Mail;
 using AutoMapper;
 using MDDReservationAPI.DTO;
 using MDDReservationAPI.Models;
@@ -10,6 +11,7 @@ using iTextSharp;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
 using MDDReservationAPI.Enums;
+using MDDReservationAPI.Services;
 
 namespace MDDReservationAPI.Controllers
 {
@@ -20,19 +22,25 @@ namespace MDDReservationAPI.Controllers
         private readonly ILogger<RegistrationFormController> _logger;
         private readonly IMapper _mapper;
         private readonly IMDDReservationRepository _reservationRepository;
+        private readonly IMailService _mailService;
 
-        public RegistrationFormController(ILogger<RegistrationFormController> logger, IMapper mapper, IMDDReservationRepository mddReservationRepository)
+        public RegistrationFormController(ILogger<RegistrationFormController> logger, IMapper mapper,
+            IMDDReservationRepository mddReservationRepository, IMailService localMailService)
         {
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
             _mapper = mapper ?? throw new ArgumentNullException(nameof(mapper));
-            _reservationRepository = mddReservationRepository ?? throw new ArgumentNullException(nameof(mddReservationRepository));
+            _reservationRepository = mddReservationRepository ??
+                                     throw new ArgumentNullException(nameof(mddReservationRepository));
+            _mailService = localMailService ?? throw new ArgumentException(nameof(localMailService));
         }
 
         #region POST
+
         [HttpPost]
         [Route("create")]
         [Produces("application/json")]
-        public async Task<ActionResult<RegistrationForm>> CreateRegistrationFormAsync([FromBody] RegistrationFormCreationDTO registrationFormCreationDto)
+        public async Task<ActionResult<RegistrationForm>> CreateRegistrationFormAsync(
+            [FromBody] RegistrationFormCreationDTO registrationFormCreationDto)
         {
             if (!ModelState.IsValid)
             {
@@ -45,18 +53,19 @@ namespace MDDReservationAPI.Controllers
 
             return Ok(result);
         }
-        
+
         [HttpPost]
         [Route("createFullForm")]
         [Produces("application/json")]
-        public async Task<ActionResult<RegistrationForm>> CreateRegistrationFullFormAsync([FromBody] FullRegistrationFormDTO fullRegistrationFormDto)
+        public async Task<ActionResult<RegistrationForm>> CreateRegistrationFullFormAsync(
+            [FromBody] FullRegistrationFormDTO fullRegistrationFormDto)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest();
             }
-            
-            
+
+
 
             var manager = _mapper.Map<Manager>(fullRegistrationFormDto.managerCreationDto);
             var school = _mapper.Map<School>(fullRegistrationFormDto.schoolCreationDto);
@@ -65,9 +74,9 @@ namespace MDDReservationAPI.Controllers
             var project = new Project();
             if (fullRegistrationFormDto.hasProject)
             {
-                 project = _mapper.Map<Project>(fullRegistrationFormDto.projectCreationDto);
+                project = _mapper.Map<Project>(fullRegistrationFormDto.projectCreationDto);
             }
-            
+
 
             var createdManager = await _reservationRepository.AddManagerAsync(manager);
             school.ManagerId = createdManager.Id;
@@ -97,7 +106,7 @@ namespace MDDReservationAPI.Controllers
             }
             else
             {
-                form =  new RegistrationForm()
+                form = new RegistrationForm()
                 {
                     ManagerId = createdManager.Id,
                     SchoolId = createdSchool.Id,
@@ -107,29 +116,33 @@ namespace MDDReservationAPI.Controllers
             }
 
             var createdForm = await _reservationRepository.AddRegistrationFormAsync(form);
-            await _reservationRepository.ChangeRegisterFormId(fullRegistrationFormDto.StudentListFileId, createdForm.Id);
+            await _reservationRepository.ChangeRegisterFormId(fullRegistrationFormDto.StudentListFileId,
+                createdForm.Id);
             await _reservationRepository.ChangeRegisterFormId(fullRegistrationFormDto.ManagerFormId, createdForm.Id);
+            var result = await _reservationRepository.CreatePdfFromRegistrationFormId(createdForm.Id);
+            _mailService.Email(subject: "گزارش ثبت‌نام مدرسه", htmlString: result);
+
+
 
             return Ok("Successfully created.");
         }
-        
+
         #endregion
-        
+
         #region GET
+
         [HttpGet]
         [Route("api/createReport")]
         public async Task<string> CreatePdfFromQuery(int id)
         {
             // Assume GetDataFromQuery is a method that executes SQL query and returns data
-            
-            using (var memoryStream = new MemoryStream())
-            {
-                var result = await _reservationRepository.CreatePdfFromRegistrationFormId(id); 
-                
-                return result;
-            }
+
+            var result = await _reservationRepository.CreatePdfFromRegistrationFormId(id);
+            _mailService.Email(subject: "گزارش ثبت‌نام مدرسه", htmlString: result);
+
+            return result;
         }
-        
+
         // [HttpGet]
         // [Route("api/createReport")]
         // public async Task<string> CreatePdfFromQuery(int query)
@@ -302,7 +315,7 @@ namespace MDDReservationAPI.Controllers
         //     }
         // }
 
-        
+
         // [HttpGet]
         // [Route("api/downloadpdf")]
         // public async Task<HttpResponseMessage> DownloadPdf(int query)
@@ -321,10 +334,10 @@ namespace MDDReservationAPI.Controllers
         //
         //     return result;
         // }
-        
-       
 
-        
+
+
+
         #endregion
     }
 }

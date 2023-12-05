@@ -1,5 +1,6 @@
 ﻿using MDDReservationAPI.Data;
 using MDDReservationAPI.Repositories;
+using MDDReservationAPI.Services;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
 
@@ -33,6 +34,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(option =>
 // });
 builder.Services.AddScoped<IMDDReservationRepository, MDDReservationRepository>();
 const string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+builder.Services.AddSingleton<IMailService, LocalMailService>();
 // builder.Services.AddCors(options =>
 // {
 //     options.AddPolicy(MyAllowSpecificOrigins,

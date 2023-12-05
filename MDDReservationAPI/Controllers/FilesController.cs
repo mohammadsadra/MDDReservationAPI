@@ -1,3 +1,5 @@
+using System.Net;
+using System.Net.Mail;
 using MDDReservationAPI.DTO;
 using MDDReservationAPI.Repositories;
 using Microsoft.AspNetCore.Mvc;

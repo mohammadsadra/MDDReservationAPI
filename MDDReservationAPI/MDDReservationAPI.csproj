@@ -36,7 +36,6 @@
   <ItemGroup>
     <Folder Include="FileDownloaded\" />
     <Folder Include="Fonts\" />
-    <Folder Include="Services\" />
     <Folder Include="Upload\BazididFiles\" />
   </ItemGroup>
 </Project>
