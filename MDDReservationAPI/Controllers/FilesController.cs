@@ -45,7 +45,7 @@ namespace MDDReservationAPI.Controllers;
         public IActionResult DownloadFile(string fileName)
         {
             // Define the path to the file
-            var filePath = Path.Combine(Directory.GetCurrentDirectory(), fileName);
+            var filePath = Path.Combine(Directory.GetCurrentDirectory() + "/Reports", fileName);
 
             // Check if file exists
             if (!System.IO.File.Exists(filePath))
@@ -59,23 +59,24 @@ namespace MDDReservationAPI.Controllers;
             // Return the file with a file download name
             return File(fileBytes, "application/octet-stream", fileName);
         }
+        
+        [HttpGet]
+        [Route("/download/documents/{fileName}")]
+        public IActionResult DownloadDocumentsFile(string fileName)
+        {
+            // Define the path to the file
+            var filePath = Path.Combine(Directory.GetCurrentDirectory() + "/Upload/BazididFiles", fileName);
 
-        // [HttpPost("PostMultipleFile")]
-        // public async Task<ActionResult> PostMultipleFile([FromForm] List<FileUploadDTO> fileDetails)
-        // {
-        //     if (fileDetails == null)
-        //     {
-        //         return BadRequest();
-        //     }
-        //
-        //     try
-        //     {
-        //         await _reservationRepository.PostMultiFileAsync(fileDetails);
-        //         return Ok();
-        //     }
-        //     catch (Exception)
-        //     {
-        //         throw;
-        //     }
-        // }
+            // Check if file exists
+            if (!System.IO.File.Exists(filePath))
+            {
+                return NotFound();
+            }
+
+            // Read the file into a byte array
+            byte[] fileBytes = System.IO.File.ReadAllBytes(filePath);
+
+            // Return the file with a file download name
+            return File(fileBytes, "application/octet-stream", fileName);
+        }
     }

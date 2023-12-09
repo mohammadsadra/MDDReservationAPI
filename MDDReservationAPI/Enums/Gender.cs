@@ -2,6 +2,6 @@ namespace MDDReservationAPI.Enums;
 
 public enum Gender
 {
-    Mail = 0,
+    Male = 0,
     Femail = 1
 }

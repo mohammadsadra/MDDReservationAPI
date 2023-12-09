@@ -64,6 +64,8 @@ namespace MDDReservationAPI.Repositories
 
         Task<string> CreatePdfFromRegistrationFormId(int id);
 
+        Task<string> CreateExcelFromRegistrationFormId(int id);
+
         #endregion
 
         #region DB

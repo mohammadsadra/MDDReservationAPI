@@ -8,6 +8,8 @@ using MDDReservationAPI.Enums;
 using MDDReservationAPI.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using OfficeOpenXml;
+
 
 namespace MDDReservationAPI.Repositories
 {
@@ -317,6 +319,102 @@ namespace MDDReservationAPI.Repositories
                     pdfDoc.Close();
                 }
                 return "https://bazididapi.hamrah.academy/download/" + fileName;
+            }
+        }
+        
+        public async Task<string> CreateExcelFromRegistrationFormId(int id)
+        {
+            using (var package = new ExcelPackage())
+            {
+                var form = await GetRegistrationFormByIdAsync(id); 
+                var school = await GetSchoolByIdAsync(form!.SchoolId); 
+                var schoolClass = await GetSchoolClassByIdAsync(form!.SchoolClassId); 
+                var manager = await GetManagerByIdAsync(form.ManagerId); 
+                var days = await GetSelectedDaysByReservationId(form.ReservationSelectedDaysId);
+
+                // Find the Tehran Time Zone
+                TimeZoneInfo tehranTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Iran Standard Time");
+
+                var worksheet = package.Workbook.Worksheets.Add("Registration Report");
+
+                // Set font for the entire worksheet
+                worksheet.Cells.Style.Font.Name = "IRANSansX";
+                worksheet.Cells.Style.Font.Size = 12;
+
+                // Populate the worksheet with data
+                int row = 1;
+
+                worksheet.Cells[row, 1].Value = "گزارش ثبت‌نام مدرسه";
+                row++;
+                
+                worksheet.Cells[row, 1].Value = "نام مدرسه: ";
+                worksheet.Cells[row, 2].Value = school.Name;
+                row++;
+                
+                worksheet.Cells[row, 1].Value = "جنسیت دانش‌آموزان: ";
+                worksheet.Cells[row, 2].Value = Enum.GetName(typeof(Gender), school.Gender!);
+                row++;
+                
+                worksheet.Cells[row, 1].Value = "مقطع: ";
+                worksheet.Cells[row, 2].Value = Enum.GetName(typeof(GradeEnum), schoolClass!.Grade);
+                row++;
+                
+                worksheet.Cells[row, 1].Value = "نوع مدرسه: ";
+                worksheet.Cells[row, 2].Value = Enum.GetName(typeof(SchoolType), school.SchoolType!);
+                row++;
+                
+                worksheet.Cells[row, 1].Value = "نام ثبت‌نام کننده:";
+                worksheet.Cells[row, 2].Value = manager.Name;
+                row++;
+                
+                worksheet.Cells[row, 1].Value = "شماره تماس ثبت‌نام کننده:" ;
+                worksheet.Cells[row, 2].Value = manager.Phone;
+                row++;
+                
+                worksheet.Cells[row, 1].Value = " سمت:" ;
+                worksheet.Cells[row, 2].Value = manager.Position;
+                row++;
+                
+                var ans = schoolClass.IsProgrammer ? "بله" : "خیر";
+                worksheet.Cells[row, 1].Value = "آیا برنامه‌نویس هستند:" ;
+                worksheet.Cells[row, 2].Value = ans;
+                row++;
+                
+                if (schoolClass.IsProgrammer) 
+                { 
+                    worksheet.Cells[row, 1].Value = "زبان برنامه‌نویسی: " ;
+                    worksheet.Cells[row, 2].Value = Enum.GetName(typeof(ProgrammingLanguage),  schoolClass.ProgrammingLanguage);
+                    row++;
+                }
+                
+                PersianCalendar pc = new PersianCalendar();
+                var gregorianDate = TimeZoneInfo.ConvertTimeFromUtc(days.FirstDay, tehranTimeZone);
+                worksheet.Cells[row, 1].Value = "روز اول: ";
+                worksheet.Cells[row, 2].Value = $"{pc.GetYear(gregorianDate)}/{pc.GetMonth(gregorianDate).ToString("00")}/{pc.GetDayOfMonth(gregorianDate).ToString("00")}";
+                row++;
+                
+                if (days.SecondDay != null)
+                {
+                    PersianCalendar pc2 = new PersianCalendar();
+                    var gregorianDate2 = TimeZoneInfo.ConvertTimeFromUtc(days.SecondDay, tehranTimeZone);
+                    worksheet.Cells[row, 1].Value = "روز دوم: ";
+                    worksheet.Cells[row, 2].Value = $"{pc2.GetYear(gregorianDate2)}/{pc2.GetMonth(gregorianDate2).ToString("00")}/{pc2.GetDayOfMonth(gregorianDate2).ToString("00")}";
+                    // row++;
+                }
+
+                // Saving the Excel file
+                string directoryPath = @"Reports";
+                var fileName = form.Id + "_" + school!.Name + ".xlsx";
+                string fullPath = Path.Combine(directoryPath, fileName);
+                if (!Directory.Exists(directoryPath))
+                {
+                    Directory.CreateDirectory(directoryPath);
+                }
+                FileInfo fileInfo = new FileInfo(fullPath);
+                package.SaveAs(fileInfo);
+
+                // Return the path or URL to the file
+                return "https://bazididapi.hamrah.academy/download/" + fileInfo.Name;
             }
         }
 
