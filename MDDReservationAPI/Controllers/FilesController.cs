@@ -31,6 +31,10 @@ namespace MDDReservationAPI.Controllers;
             try
             {
                 var id = await _reservationRepository.PostFileAsync(fileDetails);
+                if (id == 0)
+                {
+                    return BadRequest("File type not supported");
+                }
                 return Ok(id);
             }
             catch (Exception e)

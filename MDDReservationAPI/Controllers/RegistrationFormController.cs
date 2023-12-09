@@ -118,13 +118,11 @@ namespace MDDReservationAPI.Controllers
             var createdForm = await _reservationRepository.AddRegistrationFormAsync(form);
             await _reservationRepository.ChangeRegisterFormId(fullRegistrationFormDto.StudentListFileId,
                 createdForm.Id);
-            await _reservationRepository.ChangeRegisterFormId(fullRegistrationFormDto.ManagerFormId, createdForm.Id);
+            await _reservationRepository.ChangeRegisterFormId(fullRegistrationFormDto.ManagerFormFileId, createdForm.Id);
             // var result = await _reservationRepository.CreatePdfFromRegistrationFormId(createdForm.Id);
             var result = await _reservationRepository.CreateExcelFromRegistrationFormId(createdForm.Id);
             _mailService.Email(subject: "گزارش ثبت‌نام مدرسه", htmlString: result);
-
-
-
+            
             return Ok("Successfully created.");
         }
 

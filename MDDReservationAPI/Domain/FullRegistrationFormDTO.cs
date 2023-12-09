@@ -9,5 +9,5 @@ public class FullRegistrationFormDTO
     public ProjectCreationDTO? projectCreationDto { get; set; }
     public ReservationSelectedDaysDTO reservationSelectedDays { get; set; }
     public int StudentListFileId { get; set; }
-    public int ManagerFormId { get; set; }
+    public int ManagerFormFileId { get; set; }
 }

@@ -401,6 +401,10 @@ namespace MDDReservationAPI.Repositories
                     worksheet.Cells[row, 2].Value = $"{pc2.GetYear(gregorianDate2)}/{pc2.GetMonth(gregorianDate2).ToString("00")}/{pc2.GetDayOfMonth(gregorianDate2).ToString("00")}";
                     // row++;
                 }
+                
+                worksheet.Cells[row, 1].Value = "فایل ثبت‌نام دانش‌آموزان:" ;
+                // worksheet.Cells[row, 2].Value = form.man;
+                // row++;
 
                 // Saving the Excel file
                 string directoryPath = @"Reports";
@@ -458,12 +462,12 @@ namespace MDDReservationAPI.Repositories
         
         
 
-        public async Task<bool> PostFileAsync(FileUploadDTO fileDetails)
+        public async Task<int> PostFileAsync(FileUploadDTO fileDetails)
         {
             var pathBuilt = Path.Combine(Directory.GetCurrentDirectory(),
                 $"Upload{Path.DirectorySeparatorChar}BazididFiles{Path.DirectorySeparatorChar}");
             var path = Path.Combine(Directory.GetCurrentDirectory(),
-                $"Upload{Path.DirectorySeparatorChar}BazididFiles{Path.DirectorySeparatorChar}", fileDetails.FileDetails.FileName);
+                $"Upload{Path.DirectorySeparatorChar}BazididFiles{Path.DirectorySeparatorChar}",  fileDetails.FileDetails.FileName +  "_" + Guid.NewGuid());
             
             var allowedExtension = fileDetails.FilePathType == (FilePathType) 1 ? "pdf" : "xlsx";
             
@@ -472,14 +476,14 @@ namespace MDDReservationAPI.Repositories
                 if (!IsAllowedFileExtension(fileDetails.FileDetails.FileName, new[] { allowedExtension },
                         out string extension))
                 {
-                    return false;
+                    return 0;
                 }
                     
 
 
                 var file = new FileDetails()
                 {
-                    FileName = fileDetails.FileDetails.FileName,
+                    FileName = fileDetails.FileDetails.FileName +  "_" + Guid.NewGuid(),
                     FilePathType = fileDetails.FilePathType,
                     FileKind = fileDetails.FileKind
                 };
@@ -499,7 +503,7 @@ namespace MDDReservationAPI.Repositories
 
                 _context.FileDetails.Add(file);
                 await _context.SaveChangesAsync();
-                return true;
+                return file.Id;
             }
             catch (Exception ex)
             {
