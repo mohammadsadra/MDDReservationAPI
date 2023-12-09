@@ -8,3 +8,4 @@ public enum SchoolType
     GovernmentSample = 4,
     Other = 5
 }
+

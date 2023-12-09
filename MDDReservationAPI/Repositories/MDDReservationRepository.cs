@@ -44,8 +44,36 @@ namespace MDDReservationAPI.Repositories
         {
             return await _context.Schools.AnyAsync(s => s.Id == schoolId);
         }
+
+        public string schoolEnumToString(string? value)
+        {
+            if (value == "NonProfit")
+            {
+                return "غیرانتفاعی";
+            }
+            else if (value == "Governmental")
+            {
+                return "دولتی";
+            }
+            else if (value == "Sampad")
+            {
+                return "سمپاد";
+            }
+            else if (value == "GovernmentSample")
+            {
+                return "نمونه‌دولتی";
+            }
+            else if (value == "Other")
+            {
+                return "سایر";
+            }
+            else
+            {
+                return "سایر";
+            }
+        }
         
-        
+
         #endregion
 
         #region Manager
@@ -288,7 +316,7 @@ namespace MDDReservationAPI.Repositories
                         if (days.SecondDay != null)
                         {
                             PersianCalendar pc2 = new PersianCalendar();
-                            var gregorianDate2 = TimeZoneInfo.ConvertTimeFromUtc(days.SecondDay, tehranTimeZone);
+                            var gregorianDate2 = TimeZoneInfo.ConvertTimeFromUtc((DateTime) days.SecondDay, tehranTimeZone);
                             int year2 = pc2.GetYear(gregorianDate2);
                             int month2 = pc2.GetMonth(gregorianDate2);
                             int day2 = pc2.GetDayOfMonth(gregorianDate2);
@@ -331,6 +359,7 @@ namespace MDDReservationAPI.Repositories
                 var schoolClass = await GetSchoolClassByIdAsync(form!.SchoolClassId); 
                 var manager = await GetManagerByIdAsync(form.ManagerId); 
                 var days = await GetSelectedDaysByReservationId(form.ReservationSelectedDaysId);
+                var files = await GetFileDataFromDb(id);
 
                 // Find the Tehran Time Zone
                 TimeZoneInfo tehranTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Iran Standard Time");
@@ -352,15 +381,15 @@ namespace MDDReservationAPI.Repositories
                 row++;
                 
                 worksheet.Cells[row, 1].Value = "جنسیت دانش‌آموزان: ";
-                worksheet.Cells[row, 2].Value = Enum.GetName(typeof(Gender), school.Gender!);
+                worksheet.Cells[row, 2].Value = school.Gender! == 0 ? "پسر" : "دختر";
                 row++;
                 
                 worksheet.Cells[row, 1].Value = "مقطع: ";
-                worksheet.Cells[row, 2].Value = Enum.GetName(typeof(GradeEnum), schoolClass!.Grade);
+                worksheet.Cells[row, 2].Value = schoolClass!.Grade == 1 ? "متوسطه اول" : "متوسطه دوم";
                 row++;
                 
                 worksheet.Cells[row, 1].Value = "نوع مدرسه: ";
-                worksheet.Cells[row, 2].Value = Enum.GetName(typeof(SchoolType), school.SchoolType!);
+                worksheet.Cells[row, 2].Value = schoolEnumToString(Enum.GetName(typeof(SchoolType), school.SchoolType!));
                 row++;
                 
                 worksheet.Cells[row, 1].Value = "نام ثبت‌نام کننده:";
@@ -393,18 +422,34 @@ namespace MDDReservationAPI.Repositories
                 worksheet.Cells[row, 2].Value = $"{pc.GetYear(gregorianDate)}/{pc.GetMonth(gregorianDate).ToString("00")}/{pc.GetDayOfMonth(gregorianDate).ToString("00")}";
                 row++;
                 
+                
                 if (days.SecondDay != null)
                 {
+                    _logger.LogError("day 2");
                     PersianCalendar pc2 = new PersianCalendar();
-                    var gregorianDate2 = TimeZoneInfo.ConvertTimeFromUtc(days.SecondDay, tehranTimeZone);
+                    var gregorianDate2 = TimeZoneInfo.ConvertTimeFromUtc((DateTime) days.SecondDay, tehranTimeZone);
                     worksheet.Cells[row, 1].Value = "روز دوم: ";
                     worksheet.Cells[row, 2].Value = $"{pc2.GetYear(gregorianDate2)}/{pc2.GetMonth(gregorianDate2).ToString("00")}/{pc2.GetDayOfMonth(gregorianDate2).ToString("00")}";
+                    row++;
+                }
+
+                if (files.Count == 2)
+                {
+                    worksheet.Cells[row, 1].Value = files[0].FilePathType == FilePathType.PDF ? "فایل نامه درخواست مدرسه:" : "فایل لیست دانش‌آموزان:" ;
+                    worksheet.Cells[row, 2].Value = "https://bazididapi.hamrah.academy/download/documents/" + files[0].FileName;
+                    row++;
+                
+                    worksheet.Cells[row, 1].Value = files[1].FilePathType == FilePathType.PDF ? "فایل نامه درخواست مدرسه:" : "فایل لیست دانش‌آموزان:" ;
+                    worksheet.Cells[row, 2].Value = "https://bazididapi.hamrah.academy/download/documents/" + files[1].FileName;
                     // row++;
                 }
                 
-                worksheet.Cells[row, 1].Value = "فایل ثبت‌نام دانش‌آموزان:" ;
-                // worksheet.Cells[row, 2].Value = form.man;
-                // row++;
+                if (files.Count == 1)
+                {
+                    worksheet.Cells[row, 1].Value = files[0].FilePathType == FilePathType.PDF ? "فایل نامه درخواست مدرسه:" : "فایل لیست دانش‌آموزان:" ;
+                    worksheet.Cells[row, 2].Value = "https://bazididapi.hamrah.academy/download/documents/" + files[0].FileName;
+                    // row++;
+                }
 
                 // Saving the Excel file
                 string directoryPath = @"Reports";
@@ -459,15 +504,13 @@ namespace MDDReservationAPI.Repositories
             extension = extension.ToLower();
             return extension;
         }
-        
-        
 
         public async Task<int> PostFileAsync(FileUploadDTO fileDetails)
         {
             var pathBuilt = Path.Combine(Directory.GetCurrentDirectory(),
                 $"Upload{Path.DirectorySeparatorChar}BazididFiles{Path.DirectorySeparatorChar}");
             var path = Path.Combine(Directory.GetCurrentDirectory(),
-                $"Upload{Path.DirectorySeparatorChar}BazididFiles{Path.DirectorySeparatorChar}",  fileDetails.FileDetails.FileName +  "_" + Guid.NewGuid());
+                $"Upload{Path.DirectorySeparatorChar}BazididFiles{Path.DirectorySeparatorChar}",  Guid.NewGuid() + "_" + fileDetails.FileDetails.FileName);
             
             var allowedExtension = fileDetails.FilePathType == (FilePathType) 1 ? "pdf" : "xlsx";
             
@@ -483,7 +526,7 @@ namespace MDDReservationAPI.Repositories
 
                 var file = new FileDetails()
                 {
-                    FileName = fileDetails.FileDetails.FileName +  "_" + Guid.NewGuid(),
+                    FileName = Guid.NewGuid() + "_" + fileDetails.FileDetails.FileName,
                     FilePathType = fileDetails.FilePathType,
                     FileKind = fileDetails.FileKind
                 };
@@ -576,6 +619,12 @@ namespace MDDReservationAPI.Repositories
             {
                await stream.CopyToAsync(fileStream);
             }
+        }
+        
+        private async Task<List<FileDetails>> GetFileDataFromDb(int id)
+        {
+            var files = await _context.FileDetails.Where(x => x.RegistrationFormId == id).ToListAsync();
+            return files;
         }
         
         

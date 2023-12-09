@@ -21,7 +21,7 @@ public class ReservationSelectedDay
     
     public DateTime FirstDay { get; set; }
     
-    public DateTime SecondDay { get; set; }
+    public DateTime? SecondDay { get; set; }
 
     [DataType(DataType.DateTime)]
     public DateTime CreatedAt { get; set; }
