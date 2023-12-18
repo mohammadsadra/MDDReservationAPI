@@ -181,6 +181,39 @@ namespace MDDReservationAPI.Repositories
             _logger.LogInformation("Form: " + form.SchoolId.ToString());
             return form;
         }
+
+        public async Task<List<RegisteriationFormDTO>> GetAllFormsDataAsync()
+        {
+            // Assuming _context is your database context and RegistrationForms is your DbSet
+            var allForms = await _context.RegistrationForms.ToListAsync();
+            var allFormsDto = new List<RegisteriationFormDTO>();
+            foreach (var form in allForms)
+            {
+                var school = await GetSchoolByIdAsync(form.SchoolId); 
+                var schoolClass = await  GetSchoolClassByIdAsync(form.SchoolClassId); 
+                var manager = await GetManagerByIdAsync(form.ManagerId); 
+                var days =  await GetSelectedDaysByReservationId(form.ReservationSelectedDaysId); 
+                var formDto = new RegisteriationFormDTO()
+                {
+                    Id = form.Id,
+                    ManagerId = form.ManagerId,
+                    Manager = manager,
+                    SchoolId = form.SchoolId,
+                    School = school,
+                    SchoolClassId = form.SchoolClassId,
+                    SchoolClass = schoolClass,
+                    ProjectId = form.ProjectId,
+                    ReservationSelectedDaysId = form.ReservationSelectedDaysId,
+                    ReservationSelectedDays = days,
+                    CreatedAt = form.CreatedAt
+                };
+                allFormsDto.Add(formDto);
+            }
+
+            _logger.LogError(allFormsDto.Count.ToString());
+            return allFormsDto;
+        }
+
         
         public async Task<string> CreatePdfFromRegistrationFormId(int id)
         {

@@ -153,6 +153,16 @@ namespace MDDReservationAPI.Controllers
 
             return result;
         }
+
+        [HttpGet]
+        [Route("api/getAllRegistrations")]
+        [Produces("application/json")]
+        public async Task<List<RegisteriationFormDTO>> GetAllForms()
+        {
+            var result = await _reservationRepository.GetAllFormsDataAsync();
+            return result;
+        }
+        
         
         #endregion
     }

@@ -61,6 +61,7 @@ namespace MDDReservationAPI.Repositories
         Task<RegistrationForm> AddRegistrationFormAsync(RegistrationForm project);
 
         Task<RegistrationForm?> GetRegistrationFormByIdAsync(int id);
+        Task<List<RegisteriationFormDTO>> GetAllFormsDataAsync();
 
         Task<string> CreatePdfFromRegistrationFormId(int id);
 
