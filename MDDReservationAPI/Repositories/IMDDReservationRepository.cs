@@ -87,6 +87,10 @@ namespace MDDReservationAPI.Repositories
         public Task DownloadFileById(Guid guid);
 
         public Task<bool> ChangeRegisterFormId(int fileId,int registerFormId);
+
+        public Task<bool> AddFileDetailToDB(FileDetails fileDetails);
+
+        public Task<string> CheckExcelFileAvailable(int formID);
         #endregion
         
         #region ReservationDays

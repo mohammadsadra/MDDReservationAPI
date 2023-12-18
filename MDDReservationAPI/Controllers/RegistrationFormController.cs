@@ -2,6 +2,7 @@
 using System.Net;
 using System.Net.Http.Headers;
 using System.Net.Mail;
+using System.Text;
 using AutoMapper;
 using MDDReservationAPI.DTO;
 using MDDReservationAPI.Models;
@@ -144,14 +145,37 @@ namespace MDDReservationAPI.Controllers
         
         [HttpGet]
         [Route("api/createReportExcel")]
-        public async Task<string> CreateExcelFromQuery(int id)
+        public async Task<ActionResult<String>> CreateExcelFromQuery(int id)
         {
-            // Assume GetDataFromQuery is a method that executes SQL query and returns data
+            var fileName = await _reservationRepository.CheckExcelFileAvailable(id);
+            if (fileName == "")
+            {
+                var result = await _reservationRepository.CreateExcelFromRegistrationFormId(id);
+                // _mailService.Email(subject: "گزارش ثبت‌نام مدرسه", htmlString: result);
+                var fileDetails = new FileDetails
+                {
+                    FileKind = FileKind.Document,
+                    FilePathType = FilePathType.XLSX,
+                    FileName = result.Split("https://bazididapi.hamrah.academy/download/")[1],
+                    FileData = Encoding.UTF8.GetBytes(""),
+                    RegistrationFormId = id
+                };
+                var result2 = await _reservationRepository.AddFileDetailToDB(fileDetails: fileDetails);
+                if (result2)
+                {
+                    return Ok(result);
+                }
+                else
+                {
+                    return BadRequest("Something went wrong.");
+                }
+            } else
+            {
+                _logger.LogError("Available file found.");
+                return Ok("https://bazididapi.hamrah.academy/download/" + fileName);
+            }
 
-            var result = await _reservationRepository.CreateExcelFromRegistrationFormId(id);
-            _mailService.Email(subject: "گزارش ثبت‌نام مدرسه", htmlString: result);
-
-            return result;
+            
         }
 
         [HttpGet]

@@ -178,7 +178,6 @@ namespace MDDReservationAPI.Repositories
         public async Task<RegistrationForm?> GetRegistrationFormByIdAsync(int id)
         {
             var form = await _context.RegistrationForms.Where(x => x.Id == id).FirstOrDefaultAsync();
-            _logger.LogInformation("Form: " + form.SchoolId.ToString());
             return form;
         }
 
@@ -209,8 +208,7 @@ namespace MDDReservationAPI.Repositories
                 };
                 allFormsDto.Add(formDto);
             }
-
-            _logger.LogError(allFormsDto.Count.ToString());
+            
             return allFormsDto;
         }
         
@@ -305,7 +303,6 @@ namespace MDDReservationAPI.Repositories
                         
                         
                         var ans = schoolClass.IsProgrammer ? "بله" : "خیر";
-                        _logger.LogError(ans);
                         PdfPCell cell6 = new PdfPCell(new Phrase("آیا برنامه‌نویس هستند: " + ans, font))
                         {
                             RunDirection = PdfWriter.RUN_DIRECTION_RTL,
@@ -457,7 +454,6 @@ namespace MDDReservationAPI.Repositories
                 
                 if (days.SecondDay != null)
                 {
-                    _logger.LogError("day 2");
                     PersianCalendar pc2 = new PersianCalendar();
                     var gregorianDate2 = TimeZoneInfo.ConvertTimeFromUtc((DateTime) days.SecondDay, tehranTimeZone);
                     worksheet.Cells[row, 1].Value = "روز دوم: ";
@@ -696,6 +692,26 @@ namespace MDDReservationAPI.Repositories
         {
             var files = await _context.FileDetails.Where(x => x.RegistrationFormId == id).ToListAsync();
             return files;
+        }
+        
+        public async Task<bool> AddFileDetailToDB(FileDetails fileDetails)
+        {
+            _context.FileDetails.Add(fileDetails);
+            await SaveChangesAsync();
+            return true;
+        }
+
+        public async Task<string> CheckExcelFileAvailable(int formID)
+        {
+            var result = await _context.FileDetails.Where(x => x.RegistrationFormId ==formID && x.FilePathType == FilePathType.XLSX && x.FileKind == FileKind.Document).FirstOrDefaultAsync();
+            if (result == null)
+            {
+                return "";
+            }
+            else
+            {
+                return result.FileName;
+            }
         }
         
         
