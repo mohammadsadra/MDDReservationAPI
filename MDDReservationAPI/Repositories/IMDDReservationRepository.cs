@@ -94,6 +94,7 @@ namespace MDDReservationAPI.Repositories
         public Task<ReservationSelectedDay> AddSelectedDays(ReservationSelectedDay reservationSelectedDay);
         
         public Task<ReservationSelectedDay?> GetSelectedDaysByReservationId(int reservationId);
+        public Task<bool> ChangeReservationSelectedDayId(int reservationSelectedDayId, int selectedDay);
 
         #endregion
     }

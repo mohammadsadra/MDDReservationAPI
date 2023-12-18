@@ -716,6 +716,25 @@ namespace MDDReservationAPI.Repositories
             var reservationSelectedDay = await _context.ReservationSelectedDay.Where(x => x.Id == reservationId).FirstOrDefaultAsync();
             return reservationSelectedDay;
         }
+        
+        public async Task<bool> ChangeReservationSelectedDayId(int reservationSelectedDayId, int selectedDay)
+        {
+            var selectedDays = await _context.ReservationSelectedDay.Where(x => x.Id == reservationSelectedDayId)
+                .FirstOrDefaultAsync();
+            if (selectedDays != null)
+            {
+                selectedDays.SelectedDay = selectedDay;
+                selectedDays.IsVerify = true;
+            }
+            else
+            {
+                return false;
+            }
+
+            await _context.SaveChangesAsync();
+
+            return true;
+        }
 
         #endregion
     }

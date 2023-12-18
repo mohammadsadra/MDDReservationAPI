@@ -38,6 +38,29 @@ public class ReservationSelectedDayController: ControllerBase
     }
     #endregion
     
+    #region PUT
+    
+    [HttpPut]
+    [Route("updateSelectedDay")]
+    [Produces("application/json")]
+    public async Task<ActionResult<String>> UpdateSelectedDayAsync(int id, int selectedDay)
+    {
+        if (selectedDay > 2 || selectedDay < 0) 
+        {
+            return BadRequest("SelectedDay number is wrong!");
+        }
+        var result = await _reservationRepository.ChangeReservationSelectedDayId(id, selectedDay);
+        if (result)
+        {
+            return Ok("SelectedDay updated!");
+        }
+        else
+        {
+            return BadRequest("Something went wrong!");
+        }
+    }
+
+    #endregion
     // [HttpPost]
     // [Route("getAllSelectedDays")]
     // [Produces("application/json")]
