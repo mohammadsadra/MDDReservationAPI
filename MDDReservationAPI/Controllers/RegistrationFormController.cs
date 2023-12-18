@@ -165,5 +165,19 @@ namespace MDDReservationAPI.Controllers
         
         
         #endregion
+        
+        #region DELETE
+        
+        [HttpDelete]
+        [Route("api/deleteRegistrationForm")]
+        [Produces("application/json")]
+        public async Task<bool> DeleteRegistrationForm(int id)
+        {
+            var result = await _reservationRepository.DeleteRegistrationForm(id);
+            return result;
+        }
+        
+        #endregion
+        
     }
 }

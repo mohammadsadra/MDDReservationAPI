@@ -213,7 +213,6 @@ namespace MDDReservationAPI.Repositories
             _logger.LogError(allFormsDto.Count.ToString());
             return allFormsDto;
         }
-
         
         public async Task<string> CreatePdfFromRegistrationFormId(int id)
         {
@@ -499,6 +498,45 @@ namespace MDDReservationAPI.Repositories
                 return "https://bazididapi.hamrah.academy/download/" + fileInfo.Name;
             }
         }
+
+        public async Task<bool> DeleteRegistrationForm(int id)
+        {
+            // Retrieve the item from the database
+            var item = await _context.RegistrationForms.Where(x => x.Id == id).FirstOrDefaultAsync();
+
+            // Check if the item exists
+            if (item == null)
+            {
+                // Item not found, handle accordingly, maybe throw an exception or return a specific value
+                return false;
+            }
+            var reservationSelectedDay = _context.ReservationSelectedDay.Where(x => x.Id == item.ReservationSelectedDaysId).FirstOrDefault();
+            if (reservationSelectedDay != null) _context.ReservationSelectedDay.Remove(reservationSelectedDay);
+            
+            var manager = _context.Managers.Where(x => x.Id == item.ManagerId).FirstOrDefault();
+            if (manager != null) _context.Managers.Remove(manager);
+            
+            var schoolClass = _context.SchoolsClasses.Where(x => x.Id == item.SchoolClassId).FirstOrDefault();
+            if (schoolClass != null) _context.SchoolsClasses.Remove(schoolClass);
+
+            var school = _context.Schools.Where(x => x.Id == item.SchoolId).FirstOrDefault();
+            if (school != null) _context.Schools.Remove(school);
+
+            var files = await _context.FileDetails.Where(x => x.RegistrationFormId == item.Id).ToListAsync();
+            foreach (var file in files)
+            {
+                _context.FileDetails.Remove(file);
+            }
+            
+            // Remove the item from the database context
+            _context.RegistrationForms.Remove(item);
+
+            // Save changes to the database
+            await _context.SaveChangesAsync();
+            
+            return true;
+        }
+
 
         #endregion
 
