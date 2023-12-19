@@ -23,6 +23,8 @@ public class RegisteriationFormDTO
     public int ReservationSelectedDaysId { get; set; }
     
     public ReservationSelectedDay? ReservationSelectedDays { get; set; }
+    
+    public String DownloadLink { get; set; }
 
     public DateTime CreatedAt { get; set; }
 }

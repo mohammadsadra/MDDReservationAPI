@@ -1,4 +1,5 @@
 ﻿using System.Globalization;
+using System.Text;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
 using MDDReservationAPI.Controllers;
@@ -191,7 +192,9 @@ namespace MDDReservationAPI.Repositories
                 var school = await GetSchoolByIdAsync(form.SchoolId); 
                 var schoolClass = await  GetSchoolClassByIdAsync(form.SchoolClassId); 
                 var manager = await GetManagerByIdAsync(form.ManagerId); 
-                var days =  await GetSelectedDaysByReservationId(form.ReservationSelectedDaysId); 
+                var days =  await GetSelectedDaysByReservationId(form.ReservationSelectedDaysId);
+                var reportLink = await CreateExcelFromRegistrationFormId(form.Id);
+                
                 var formDto = new RegisteriationFormDTO()
                 {
                     Id = form.Id,
@@ -204,6 +207,7 @@ namespace MDDReservationAPI.Repositories
                     ProjectId = form.ProjectId,
                     ReservationSelectedDaysId = form.ReservationSelectedDaysId,
                     ReservationSelectedDays = days,
+                    DownloadLink = reportLink,
                     CreatedAt = form.CreatedAt
                 };
                 allFormsDto.Add(formDto);
@@ -381,6 +385,12 @@ namespace MDDReservationAPI.Repositories
         
         public async Task<string> CreateExcelFromRegistrationFormId(int id)
         {
+            
+            var fileNameInDb = await CheckExcelFileAvailable(id);
+            if (fileNameInDb != "")
+            {
+                return "https://bazididapi.hamrah.academy/download/" + fileNameInDb; 
+            }
             using (var package = new ExcelPackage())
             {
                 var form = await GetRegistrationFormByIdAsync(id); 
@@ -489,6 +499,17 @@ namespace MDDReservationAPI.Repositories
                 }
                 FileInfo fileInfo = new FileInfo(fullPath);
                 package.SaveAs(fileInfo);
+                
+                var fileDetails = new FileDetails
+                {
+                    FileKind = FileKind.Document,
+                    FilePathType = FilePathType.XLSX,
+                    FileName =  fileInfo.Name,
+                    FileData = Encoding.UTF8.GetBytes(""),
+                    RegistrationFormId = id
+                };
+                
+                await AddFileDetailToDB(fileDetails: fileDetails);
 
                 // Return the path or URL to the file
                 return "https://bazididapi.hamrah.academy/download/" + fileInfo.Name;
