@@ -25,6 +25,8 @@ public class RegisteriationFormDTO
     public ReservationSelectedDay? ReservationSelectedDays { get; set; }
     
     public String DownloadLink { get; set; }
+    public String DownloadStudentLink { get; set; }
+    public String DownloadLetterLink { get; set; }
 
     public DateTime CreatedAt { get; set; }
 }

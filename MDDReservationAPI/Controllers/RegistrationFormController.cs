@@ -66,8 +66,6 @@ namespace MDDReservationAPI.Controllers
                 return BadRequest();
             }
 
-
-
             var manager = _mapper.Map<Manager>(fullRegistrationFormDto.managerCreationDto);
             var school = _mapper.Map<School>(fullRegistrationFormDto.schoolCreationDto);
             var schoolClass = _mapper.Map<SchoolClass>(fullRegistrationFormDto.schoolClassCreationDto);

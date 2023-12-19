@@ -194,6 +194,23 @@ namespace MDDReservationAPI.Repositories
                 var manager = await GetManagerByIdAsync(form.ManagerId); 
                 var days =  await GetSelectedDaysByReservationId(form.ReservationSelectedDaysId);
                 var reportLink = await CreateExcelFromRegistrationFormId(form.Id);
+                var files = await GetFileDataFromDb(form.Id);
+                var student = "";
+                var letter = "";
+                
+                foreach(FileDetails f in files)
+                {
+                    if (f.FilePathType == FilePathType.PDF && f.FileKind == FileKind.ManagerForm)
+                    {
+                        student = "https://bazididapi.hamrah.academy/download/documents/" + f.FileName;
+                    }
+
+                    if (f.FilePathType == FilePathType.XLSX && files[0].FileKind == FileKind.StudentList)
+                    {
+                        letter = "https://bazididapi.hamrah.academy/download/documents/" + f.FileName;
+                    }
+                }
+                
                 
                 var formDto = new RegisteriationFormDTO()
                 {
@@ -208,6 +225,8 @@ namespace MDDReservationAPI.Repositories
                     ReservationSelectedDaysId = form.ReservationSelectedDaysId,
                     ReservationSelectedDays = days,
                     DownloadLink = reportLink,
+                    DownloadStudentLink = student,
+                    DownloadLetterLink = letter,
                     CreatedAt = form.CreatedAt
                 };
                 allFormsDto.Add(formDto);
@@ -470,24 +489,41 @@ namespace MDDReservationAPI.Repositories
                     worksheet.Cells[row, 2].Value = $"{pc2.GetYear(gregorianDate2)}/{pc2.GetMonth(gregorianDate2).ToString("00")}/{pc2.GetDayOfMonth(gregorianDate2).ToString("00")}";
                     row++;
                 }
+                
+                foreach(FileDetails f in files)
+                {
+                    if (f.FilePathType == FilePathType.PDF && f.FileKind == FileKind.ManagerForm)
+                    {
+                        worksheet.Cells[row, 1].Value =  "فایل نامه درخواست مدرسه:";
+                        worksheet.Cells[row, 2].Value = "https://bazididapi.hamrah.academy/download/documents/" + f.FileName;
+                        row++;
+                    }
 
-                if (files.Count == 2)
-                {
-                    worksheet.Cells[row, 1].Value = files[0].FilePathType == FilePathType.PDF ? "فایل نامه درخواست مدرسه:" : "فایل لیست دانش‌آموزان:" ;
-                    worksheet.Cells[row, 2].Value = "https://bazididapi.hamrah.academy/download/documents/" + files[0].FileName;
-                    row++;
-                
-                    worksheet.Cells[row, 1].Value = files[1].FilePathType == FilePathType.PDF ? "فایل نامه درخواست مدرسه:" : "فایل لیست دانش‌آموزان:" ;
-                    worksheet.Cells[row, 2].Value = "https://bazididapi.hamrah.academy/download/documents/" + files[1].FileName;
-                    // row++;
+                    if (f.FilePathType == FilePathType.XLSX && f.FileKind == FileKind.StudentList)
+                    {
+                        worksheet.Cells[row, 1].Value = "فایل لیست دانش‌آموزان:" ;
+                        worksheet.Cells[row, 2].Value = "https://bazididapi.hamrah.academy/download/documents/" + f.FileName;
+                        row++;
+                    }
                 }
-                
-                if (files.Count == 1)
-                {
-                    worksheet.Cells[row, 1].Value = files[0].FilePathType == FilePathType.PDF ? "فایل نامه درخواست مدرسه:" : "فایل لیست دانش‌آموزان:" ;
-                    worksheet.Cells[row, 2].Value = "https://bazididapi.hamrah.academy/download/documents/" + files[0].FileName;
-                    // row++;
-                }
+
+                // if (files.Count == 2)
+                // {
+                //     worksheet.Cells[row, 1].Value = files[0].FilePathType == FilePathType.PDF ? "فایل نامه درخواست مدرسه:" : "فایل لیست دانش‌آموزان:" ;
+                //     worksheet.Cells[row, 2].Value = "https://bazididapi.hamrah.academy/download/documents/" + files[0].FileName;
+                //     row++;
+                //
+                //     worksheet.Cells[row, 1].Value = files[1].FilePathType == FilePathType.PDF ? "فایل نامه درخواست مدرسه:" : "فایل لیست دانش‌آموزان:" ;
+                //     worksheet.Cells[row, 2].Value = "https://bazididapi.hamrah.academy/download/documents/" + files[1].FileName;
+                //     // row++;
+                // }
+                //
+                // if (files.Count == 1)
+                // {
+                //     worksheet.Cells[row, 1].Value = files[0].FilePathType == FilePathType.PDF ? "فایل نامه درخواست مدرسه:" : "فایل لیست دانش‌آموزان:" ;
+                //     worksheet.Cells[row, 2].Value = "https://bazididapi.hamrah.academy/download/documents/" + files[0].FileName;
+                //     // row++;
+                // }
 
                 // Saving the Excel file
                 string directoryPath = @"Reports";
