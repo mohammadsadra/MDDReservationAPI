@@ -205,7 +205,7 @@ namespace MDDReservationAPI.Repositories
                         student = "https://bazididapi.hamrah.academy/download/documents/" + f.FileName;
                     }
 
-                    if (f.FilePathType == FilePathType.XLSX && files[0].FileKind == FileKind.StudentList)
+                    if (f.FilePathType == FilePathType.XLSX && f.FileKind == FileKind.StudentList)
                     {
                         letter = "https://bazididapi.hamrah.academy/download/documents/" + f.FileName;
                     }
@@ -601,7 +601,6 @@ namespace MDDReservationAPI.Repositories
         }
 
         #endregion
-        
 
         #region File
         
@@ -631,10 +630,12 @@ namespace MDDReservationAPI.Repositories
 
         public async Task<int> PostFileAsync(FileUploadDTO fileDetails)
         {
+            var guid = Guid.NewGuid();
+            var fileName = guid + "_" + fileDetails.FileDetails.FileName;
             var pathBuilt = Path.Combine(Directory.GetCurrentDirectory(),
                 $"Upload{Path.DirectorySeparatorChar}BazididFiles{Path.DirectorySeparatorChar}");
             var path = Path.Combine(Directory.GetCurrentDirectory(),
-                $"Upload{Path.DirectorySeparatorChar}BazididFiles{Path.DirectorySeparatorChar}",  Guid.NewGuid() + "_" + fileDetails.FileDetails.FileName);
+                $"Upload{Path.DirectorySeparatorChar}BazididFiles{Path.DirectorySeparatorChar}",  fileName);
             
             var allowedExtension = fileDetails.FilePathType == (FilePathType) 1 ? "pdf" : "xlsx";
             
@@ -645,19 +646,18 @@ namespace MDDReservationAPI.Repositories
                 {
                     return 0;
                 }
-                    
-
+                
 
                 var file = new FileDetails()
                 {
-                    FileName = Guid.NewGuid() + "_" + fileDetails.FileDetails.FileName,
+                    FileName = fileName,
                     FilePathType = fileDetails.FilePathType,
                     FileKind = fileDetails.FileKind
                 };
 
                 using (var stream = new MemoryStream())
                 {
-                    fileDetails.FileDetails.CopyTo(stream);
+                    await fileDetails.FileDetails.CopyToAsync(stream);
                     file.FileData = stream.ToArray();
                 }
                 

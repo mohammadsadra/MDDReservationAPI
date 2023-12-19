@@ -54,7 +54,7 @@ namespace MDDReservationAPI.Controllers;
             // Check if file exists
             if (!System.IO.File.Exists(filePath))
             {
-                return NotFound();
+                return NotFound("File not found!");
             }
 
             // Read the file into a byte array
