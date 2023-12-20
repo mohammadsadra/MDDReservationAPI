@@ -18,8 +18,7 @@ namespace MDDReservationAPI.Controllers;
             _reservationRepository = mddReservationRepository ?? throw new ArgumentNullException(nameof(mddReservationRepository));
         }
         
-
-
+        // Uploading files
         [HttpPost("PostSingleFile")]
         public async Task<ActionResult> PostSingleFile([FromForm] FileUploadDTO fileDetails)
         {
@@ -43,7 +42,7 @@ namespace MDDReservationAPI.Controllers;
             }
         }
 
-        
+        // Download Reports
         [HttpGet]
         [Route("/download/{fileName}")]
         public IActionResult DownloadFile(string fileName)
@@ -64,6 +63,7 @@ namespace MDDReservationAPI.Controllers;
             return File(fileBytes, "application/octet-stream", fileName);
         }
         
+        // Download registaration uploaded files
         [HttpGet]
         [Route("/download/documents/{fileName}")]
         public IActionResult DownloadDocumentsFile(string fileName)
