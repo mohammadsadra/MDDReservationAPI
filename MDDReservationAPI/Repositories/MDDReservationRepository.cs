@@ -193,8 +193,8 @@ namespace MDDReservationAPI.Repositories
                 var schoolClass = await  GetSchoolClassByIdAsync(form.SchoolClassId); 
                 var manager = await GetManagerByIdAsync(form.ManagerId); 
                 var days =  await GetSelectedDaysByReservationId(form.ReservationSelectedDaysId);
-                var reportLink = await CreateExcelFromRegistrationFormId(form.Id);
                 var files = await GetFileDataFromDb(form.Id);
+                var reportLink = "";
                 var student = "";
                 var letter = "";
                 
@@ -202,12 +202,17 @@ namespace MDDReservationAPI.Repositories
                 {
                     if (f.FilePathType == FilePathType.PDF && f.FileKind == FileKind.ManagerForm)
                     {
-                        student = "https://bazididapi.hamrah.academy/download/documents/" + f.FileName;
+                        letter = "https://bazididapi.hamrah.academy/download/documents/" + f.FileName;
                     }
 
                     if (f.FilePathType == FilePathType.XLSX && f.FileKind == FileKind.StudentList)
                     {
-                        letter = "https://bazididapi.hamrah.academy/download/documents/" + f.FileName;
+                        student = "https://bazididapi.hamrah.academy/download/documents/" + f.FileName;
+                    }
+
+                    if (f.FilePathType == FilePathType.XLSX && f.FileKind == FileKind.Document)
+                    {
+                        reportLink = "https://bazididapi.hamrah.academy/download/" + f.FileName;
                     }
                 }
                 
@@ -507,24 +512,6 @@ namespace MDDReservationAPI.Repositories
                     }
                 }
 
-                // if (files.Count == 2)
-                // {
-                //     worksheet.Cells[row, 1].Value = files[0].FilePathType == FilePathType.PDF ? "فایل نامه درخواست مدرسه:" : "فایل لیست دانش‌آموزان:" ;
-                //     worksheet.Cells[row, 2].Value = "https://bazididapi.hamrah.academy/download/documents/" + files[0].FileName;
-                //     row++;
-                //
-                //     worksheet.Cells[row, 1].Value = files[1].FilePathType == FilePathType.PDF ? "فایل نامه درخواست مدرسه:" : "فایل لیست دانش‌آموزان:" ;
-                //     worksheet.Cells[row, 2].Value = "https://bazididapi.hamrah.academy/download/documents/" + files[1].FileName;
-                //     // row++;
-                // }
-                //
-                // if (files.Count == 1)
-                // {
-                //     worksheet.Cells[row, 1].Value = files[0].FilePathType == FilePathType.PDF ? "فایل نامه درخواست مدرسه:" : "فایل لیست دانش‌آموزان:" ;
-                //     worksheet.Cells[row, 2].Value = "https://bazididapi.hamrah.academy/download/documents/" + files[0].FileName;
-                //     // row++;
-                // }
-
                 // Saving the Excel file
                 string directoryPath = @"Reports";
                 var fileName = form.Id + "_" + school!.Name + ".xlsx";
@@ -652,7 +639,8 @@ namespace MDDReservationAPI.Repositories
                 {
                     FileName = fileName,
                     FilePathType = fileDetails.FilePathType,
-                    FileKind = fileDetails.FileKind
+                    FileKind = fileDetails.FileKind,
+                    RegistrationFormId = fileDetails.RegistrationFormId
                 };
 
                 using (var stream = new MemoryStream())
@@ -728,12 +716,14 @@ namespace MDDReservationAPI.Repositories
         public async Task<bool> ChangeRegisterFormId(int fileId, int registerFormId)
         {
             var file = await _context.FileDetails.Where(x => x.Id == fileId).FirstOrDefaultAsync();
+            _logger.LogError(file.Id.ToString());
             if (file != null) file.RegistrationFormId = registerFormId;
             else
             {
                 return false;
             }
             await _context.SaveChangesAsync();
+            _logger.LogError(file.RegistrationFormId.ToString());
             return true;
         }
         

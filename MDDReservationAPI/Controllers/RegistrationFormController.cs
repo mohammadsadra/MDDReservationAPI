@@ -114,6 +114,9 @@ namespace MDDReservationAPI.Controllers
                 };
             }
 
+            _logger.LogError(fullRegistrationFormDto.ManagerFormFileId.ToString());
+            _logger.LogError(fullRegistrationFormDto.StudentListFileId.ToString());
+            
             var createdForm = await _reservationRepository.AddRegistrationFormAsync(form);
             await _reservationRepository.ChangeRegisterFormId(fullRegistrationFormDto.StudentListFileId,
                 createdForm.Id);
@@ -124,6 +127,98 @@ namespace MDDReservationAPI.Controllers
             
             return Ok("Successfully created.");
         }
+        
+        [HttpPost]
+        [Route("createFullFormWithFiles")]
+        [Produces("application/json")]
+        public async Task<ActionResult<RegistrationForm>> CreateRegistrationFullFormWithFilesAsync(
+            [FromForm] FormWithFileDTO formWithFiles)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest();
+            }
+
+            // Handling Manager, School, and SchoolClass creation as before
+            var manager = _mapper.Map<Manager>(formWithFiles.managerCreationDto);
+            var school = _mapper.Map<School>(formWithFiles.schoolCreationDto);
+            var schoolClass = _mapper.Map<SchoolClass>(formWithFiles.schoolClassCreationDto);
+            var days = _mapper.Map<ReservationSelectedDay>(formWithFiles.reservationSelectedDays);
+            var project = new Project();
+            
+            if (formWithFiles.hasProject)
+            {
+                project = _mapper.Map<Project>(formWithFiles.projectCreationDto);
+            }
+
+            
+            var createdManager = await _reservationRepository.AddManagerAsync(manager);
+            school.ManagerId = createdManager.Id;
+            var createdSchool = await _reservationRepository.AddSchoolAsync(school);
+            schoolClass.SchoolId = createdSchool.Id;
+            var createdClass = await _reservationRepository.AddSchoolClassAsync(schoolClass);
+            project.SchoolId = createdSchool.Id;
+            var createdProject = new Project();
+            if (formWithFiles.hasProject)
+            {
+                createdProject = await _reservationRepository.AddProjectAsync(project);
+            }
+
+            var createdDay = await _reservationRepository.AddSelectedDays(days);
+            
+            RegistrationForm form;
+            if (formWithFiles.hasProject)
+            {
+                form = new RegistrationForm()
+                {
+                    ManagerId = createdManager.Id,
+                    SchoolId = createdSchool.Id,
+                    SchoolClassId = createdClass.Id,
+                    ReservationSelectedDaysId = createdDay.Id,
+                    ProjectId = createdProject.Id
+                };
+            }
+            else
+            {
+                form = new RegistrationForm()
+                {
+                    ManagerId = createdManager.Id,
+                    SchoolId = createdSchool.Id,
+                    SchoolClassId = createdClass.Id,
+                    ReservationSelectedDaysId = createdDay.Id,
+                };
+            }
+            
+            var createdForm = await _reservationRepository.AddRegistrationFormAsync(form);
+
+            // Similar logic as before for project and other entities
+            // ...
+
+            // Handle file uploads
+            int studentFileId = 0, managerFileId = 0;
+            if (formWithFiles.StudentFile != null)
+            {
+                formWithFiles.StudentFile.RegistrationFormId = createdForm.Id;
+                studentFileId = await _reservationRepository.PostFileAsync(formWithFiles.StudentFile);
+            }
+            if (formWithFiles.ManagerFile != null)
+            {
+                formWithFiles.ManagerFile.RegistrationFormId = createdForm.Id;
+                managerFileId = await _reservationRepository.PostFileAsync(formWithFiles.ManagerFile);
+            }
+
+            var res =await _reservationRepository.CreateExcelFromRegistrationFormId(createdForm.Id);
+            _logger.LogError(res);
+
+            // Check if file IDs are valid
+            if (studentFileId == 0 || managerFileId == 0)
+            {
+                return BadRequest("File type not supported or upload failed");
+            }
+
+            return Ok("Successfully created.");
+        }
+
 
         #endregion
 

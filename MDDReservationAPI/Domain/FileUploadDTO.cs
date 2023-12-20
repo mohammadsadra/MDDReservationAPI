@@ -9,6 +9,4 @@ public class FileUploadDTO
     public FilePathType FilePathType { get; set; }
     public FileKind FileKind { get; set; }
     public int? RegistrationFormId { get; set; }
-
-
 }
